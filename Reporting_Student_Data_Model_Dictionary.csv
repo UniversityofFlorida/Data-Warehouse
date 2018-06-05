@@ -1,5 +1,5 @@
 Owner,Table Name,Column Name,Data Type,Data Length,Precision,Description
-CS,UF_B_PERSON_STDNT_GRP,PERSON_SID,NUMBER,999,0,Person surrogate identification
+CS,UF_B_PERSON_STDNT_GRP,PERSON_SID,NUMBER,9999,0,Person surrogate identification
 CS,UF_B_PERSON_STDNT_GRP,STDNT_GROUP_SID,NUMBER,999,0,Student Group surrogate identification
 CS,UF_B_PERSON_STDNT_GRP,INSTITUTION_SID,NUMBER,999,0,Institution surrogate identification
 CS,UF_B_PERSON_STDNT_GRP,EFFDT_SID,NUMBER,999,0,Effect start date surrogate identification
