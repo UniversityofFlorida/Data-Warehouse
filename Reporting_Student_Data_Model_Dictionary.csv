@@ -35,7 +35,7 @@ CS,UF_B_STDNT_TERM,ENRL_FLG,VARCHAR2,1,,Enrollment/Registered Flag for the term
 CS,UF_B_STDNT_TERM,SSR_TRMAC_LAST_DT,DATE,7,,Max Academic Program Effective Date for the Term
 CS,UF_B_STDNT_TERM,ACAD_LEVEL_BOT,VARCHAR2,3,,Beginning of Term Academic Level Code
 CS,UF_B_STDNT_TERM,ACAD_LEVEL_EOT,VARCHAR2,3,,End of Term Academic Level Code
-CS,UF_B_STDNT_TERM,UF_CLASS,VARCHAR2,1,,UF student classification level (0-9)
+CS,UF_B_STDNT_TERM,UF_CLASS,VARCHAR2,1,,UF student classification2 level (0-9)
 CS,UF_B_STDNT_TERM,RESIDENCY,VARCHAR2,5,,Residency Code
 CS,UF_B_STDNT_TERM,LASTUPD_EW_DTTM,TIMESTAMP(6),11,6,Last updated timestamp - Warehousing column and indicates when the row was last updated from a transaction commit time on the source
 CS,UF_D_ACAD_CAR,ACAD_CAR_SID,NUMBER,999,0,Academic Career surrogate identification
@@ -114,12 +114,12 @@ CS,UF_D_ACAD_PLAN,STUDY_FLD_CD,VARCHAR2,999,,Field of Study Code
 CS,UF_D_ACAD_PLAN,STUDY_FLD_SD,VARCHAR2,999,,Field of Study Short Description
 CS,UF_D_ACAD_PLAN,STUDY_FLD_LD,VARCHAR2,30,,Field of Study Long Description
 CS,UF_D_ACAD_PLAN,STUDY_FLD_FD,VARCHAR2,50,,Field of Study Formal Description
-CS,UF_D_ACAD_PLAN,CIP_CD,VARCHAR2,13,,Classification of Instructional Programs Code
-CS,UF_D_ACAD_PLAN,CIP_LD,VARCHAR2,30,,Classification of Instructional Programs Long Description
+CS,UF_D_ACAD_PLAN,CIP_CD,VARCHAR2,13,,classification2 of Instructional Programs Code
+CS,UF_D_ACAD_PLAN,CIP_LD,VARCHAR2,30,,classification2 of Instructional Programs Long Description
 CS,UF_D_ACAD_PLAN,HEGIS_CD,VARCHAR2,8,,The Higher Education General Information Survey (HEGIS) Series Code
 CS,UF_D_ACAD_PLAN,HEGIS_LD,VARCHAR2,30,,The Higher Education General Information Survey (HEGIS) Series Long Description
 CS,UF_D_ACAD_PLAN,DEGREE,VARCHAR2,8,,Degree Code
-CS,UF_D_ACAD_PLAN,SSR_NSC_CRD_LVL,VARCHAR2,1,,NSC Classification Level
+CS,UF_D_ACAD_PLAN,SSR_NSC_CRD_LVL,VARCHAR2,1,,NSC classification2 Level
 CS,UF_D_ACAD_PLAN,UF_SR_UFONLINE,VARCHAR2,1,,Common Attribute Framework for Academic Plan - UF Online
 CS,UF_D_ACAD_PLAN,UF_SR_INNOVACAD,VARCHAR2,1,,Common Attribute Framework for Academic Plan - Innovation Academy
 CS,UF_D_ACAD_PLAN,UF_SR_PACE,VARCHAR2,1,,Common Attribute Framework for Academic Plan - Pathway to Campus Enr (PaCE)
@@ -179,8 +179,8 @@ CS,UF_D_ACAD_PROG,ACAD_CAL_SD,VARCHAR2,999,,Academic Calendar Identification Sho
 CS,UF_D_ACAD_PROG,ACAD_CAL_LD,VARCHAR2,30,,Academic Calendar Identification Long Description
 CS,UF_D_ACAD_PROG,NORM_CMPLTN_YR_NUM,NUMBER,999,0,Normal Completion Years - Currently not utilized 
 CS,UF_D_ACAD_PROG,RES_REQ_FLG,VARCHAR2,1,,Residency required flag for an academic program
-CS,UF_D_ACAD_PROG,CIP_CD,VARCHAR2,13,,Classification of Instructional Programs Code
-CS,UF_D_ACAD_PROG,CIP_LD,VARCHAR2,30,,Classification of Instructional Programs Long Description
+CS,UF_D_ACAD_PROG,CIP_CD,VARCHAR2,13,,classification2 of Instructional Programs Code
+CS,UF_D_ACAD_PROG,CIP_LD,VARCHAR2,30,,classification2 of Instructional Programs Long Description
 CS,UF_D_ACAD_PROG,HEGIS_CD,VARCHAR2,8,,The Higher Education General Information Survey (HEGIS) Series Code
 CS,UF_D_ACAD_PROG,HEGIS_LD,VARCHAR2,30,,The Higher Education General Information Survey (HEGIS) Series Long Description
 CS,UF_D_ACAD_PROG,EFF_START_DT,DATE,7,,Effective start date of the row within PeopleSoft - Used in conjunction with Type 2 dimension
@@ -219,8 +219,8 @@ CS,UF_D_ACAD_SPLAN,ACAD_SPLAN_TYPE_CD,VARCHAR2,3,,"Academic Sub Plan Type Code -
 CS,UF_D_ACAD_SPLAN,ACAD_SPLAN_TYPE_SD,VARCHAR2,999,,Academic Sub Plan Type Short Description
 CS,UF_D_ACAD_SPLAN,ACAD_SPLAN_TYPE_LD,VARCHAR2,30,,Academic Sub Plan Type Long Description
 CS,UF_D_ACAD_SPLAN,DIPLOMA_LD,VARCHAR2,9990,,Diploma Long Description
-CS,UF_D_ACAD_SPLAN,CIP_CD,VARCHAR2,13,,Classification of Instructional Programs Code
-CS,UF_D_ACAD_SPLAN,CIP_LD,VARCHAR2,30,,Classification of Instructional Programs Long Description
+CS,UF_D_ACAD_SPLAN,CIP_CD,VARCHAR2,13,,classification2 of Instructional Programs Code
+CS,UF_D_ACAD_SPLAN,CIP_LD,VARCHAR2,30,,classification2 of Instructional Programs Long Description
 CS,UF_D_ACAD_SPLAN,HEGIS_CD,VARCHAR2,8,,The Higher Education General Information Survey (HEGIS) Series Code
 CS,UF_D_ACAD_SPLAN,HEGIS_LD,VARCHAR2,30,,The Higher Education General Information Survey (HEGIS) Series Long Description
 CS,UF_D_ACAD_SPLAN,UF_SR_UFONLINE,VARCHAR2,1,,Common Attribute Framework for Academic Plan - UF Online
@@ -479,9 +479,9 @@ CS,UF_D_TERM,TERM_LD,VARCHAR2,30,,Term Long Description
 CS,UF_D_TERM,ACAD_YR_SID,NUMBER,999,0,Academic Year Surrogate Identification - Corresponds to the same four digit year
 CS,UF_D_TERM,TERM_BEGIN_DT,DATE,7,,Begin Date of the term
 CS,UF_D_TERM,TERM_END_DT,DATE,7,,End Date of the term
-CS,UF_D_TERM,TERM_CTGRY_CD,VARCHAR2,1,,Category/Classification of the Term
-CS,UF_D_TERM,TERM_CTGRY_SD,VARCHAR2,999,,Category/Classification Short Description
-CS,UF_D_TERM,TERM_CTGRY_LD,VARCHAR2,30,,Category/Classification Long Description
+CS,UF_D_TERM,TERM_CTGRY_CD,VARCHAR2,1,,Category/classification2 of the Term
+CS,UF_D_TERM,TERM_CTGRY_SD,VARCHAR2,999,,Category/classification2 Short Description
+CS,UF_D_TERM,TERM_CTGRY_LD,VARCHAR2,30,,Category/classification2 Long Description
 CS,UF_D_TERM,HOLIDAY_SCHED_CD,VARCHAR2,6,,
 CS,UF_D_TERM,HOLIDAY_SCHED_SD,VARCHAR2,999,,Term Holiday Schedule Short Description
 CS,UF_D_TERM,HOLIDAY_SCHED_LD,VARCHAR2,30,,Term Holiday Schedule Long Description
@@ -506,7 +506,7 @@ CS,UF_B_TERM_SPLAN,TERM_SID,NUMBER,22,999,Term surrogate identification
 CS,UF_B_TERM_SPLAN,PERSON_SID,NUMBER,22,999,Person surrogate identification
 CS,UF_B_TERM_SPLAN,LASTUPD_EW_DTTM,TIMESTAMP(6),11,,Last updated timestamp - Warehousing column and indicates when the row was last updated from a transaction commit time on the source
 CS,UF_D_ACAD_LEVEL,ACAD_LEVEL_SID,NUMBER,22,999,Academic Level for the term Surrogate Identification
-CS,UF_D_ACAD_LEVEL,ACAD_LEVEL_CD,VARCHAR2,4,,Academic Level Code ( PeopleSoft Student Classification Levels)
+CS,UF_D_ACAD_LEVEL,ACAD_LEVEL_CD,VARCHAR2,4,,Academic Level Code ( PeopleSoft Student classification2 Levels)
 CS,UF_D_ACAD_LEVEL,ACAD_LEVEL_SD,VARCHAR2,999,,Academic Level Short Description
 CS,UF_D_ACAD_LEVEL,ACAD_LEVEL_LD,VARCHAR2,30,,Academic Level Long Description
 CS,UF_D_ACAD_LEVEL,EFFDT,DATE,7,,"An effective date is when a table row becomes effective, or the date that an action begins. The PeopleSoft system supports the concept of effective-dated rows."
@@ -514,8 +514,8 @@ CS,UF_D_ACAD_LEVEL,EFF_STAT_CD,VARCHAR2,1,,"Effective Status Code (A- Active, I-
 CS,UF_D_ACAD_LEVEL,SRC_SYS_ID,VARCHAR2,5,,Source System ID - Warehousing column and identifies the source system this data originated from 
 CS,UF_D_ACAD_LEVEL,CREATED_EW_DTTM,TIMESTAMP(6),11,,Created timestamp - Warehousing column and indicates when this row was created in the warehouse
 CS,UF_D_ACAD_LEVEL,LASTUPD_EW_DTTM,TIMESTAMP(6),11,,Last updated timestamp - Warehousing column and indicates when the row was last updated from a transaction commit time on the source
-CS,UF_D_ACAD_LEVEL,UF_CLASS,VARCHAR2,1,,UF student classification level (0-9)
-CS,UF_D_ACAD_LEVEL,UF_CLASS_DESC,VARCHAR2,250,,UF student classification level (0-9) description
+CS,UF_D_ACAD_LEVEL,UF_CLASS,VARCHAR2,1,,UF student classification2 level (0-9)
+CS,UF_D_ACAD_LEVEL,UF_CLASS_DESC,VARCHAR2,250,,UF student classification2 level (0-9) description
 CS,UF_D_ACAD_LOAD,ACAD_LOAD_SID,NUMBER,22,999,Academic Load Surrogate Identification
 CS,UF_D_ACAD_LOAD,ACAD_LOAD_CD,VARCHAR2,4,,"Academic Load Code (i.e. full-time, part-time, etc.)"
 CS,UF_D_ACAD_LOAD,ACAD_LOAD_SD,VARCHAR2,999,,Academic Load Short Description
@@ -713,8 +713,8 @@ CS,UF_D_CRSE,SSR_COMP_CD,VARCHAR2,3,,"Section type (component) Code (Lecture, La
 CS,UF_D_CRSE,SSR_COMP_SD,VARCHAR2,999,,Section type (component) Short Description
 CS,UF_D_CRSE,SSR_COMP_LD,VARCHAR2,30,,Section type (component) Long Description
 CS,UF_D_CRSE,RQMNT_DESIGNTN,VARCHAR2,4,,"Requirements designated for the course (i.e.  WR - Writing Requirement Course, MR -  Math Requirement (Gordon Rule))"
-CS,UF_D_CRSE,CIP_CD,VARCHAR2,13,,Classification of Instructional Programs Code
-CS,UF_D_CRSE,CIP_LD,VARCHAR2,30,,Classification of Instructional Programs Long Description
+CS,UF_D_CRSE,CIP_CD,VARCHAR2,13,,classification2 of Instructional Programs Code
+CS,UF_D_CRSE,CIP_LD,VARCHAR2,30,,classification2 of Instructional Programs Long Description
 CS,UF_D_CRSE,HEGIS_CD,VARCHAR2,8,,The Higher Education General Information Survey (HEGIS) Series Code
 CS,UF_D_CRSE,HEGIS_LD,VARCHAR2,30,,The Higher Education General Information Survey (HEGIS) Series Long Description
 CS,UF_D_CRSE,CRSE_REPEAT_FLG,VARCHAR2,1,,Repeat flag at the course offering level
@@ -822,9 +822,9 @@ CS,UF_D_SES_TERM,SESSION_BEGIN_DT,DATE,7,,Begin date of the session
 CS,UF_D_SES_TERM,SESSION_END_DT,DATE,7,,End date of the session
 CS,UF_D_SES_TERM,TERM_BEGIN_DT,DATE,7,,Begin Date of the term
 CS,UF_D_SES_TERM,TERM_END_DT,DATE,7,,End Date of the term
-CS,UF_D_SES_TERM,TERM_CTGRY_CD,VARCHAR2,1,,Category/Classification of the Term
-CS,UF_D_SES_TERM,TERM_CTGRY_SD,VARCHAR2,999,,Category/Classification Short Description
-CS,UF_D_SES_TERM,TERM_CTGRY_LD,VARCHAR2,30,,Category/Classification Long Description
+CS,UF_D_SES_TERM,TERM_CTGRY_CD,VARCHAR2,1,,Category/classification2 of the Term
+CS,UF_D_SES_TERM,TERM_CTGRY_SD,VARCHAR2,999,,Category/classification2 Short Description
+CS,UF_D_SES_TERM,TERM_CTGRY_LD,VARCHAR2,30,,Category/classification2 Long Description
 CS,UF_D_SES_TERM,HOLIDAY_SCHED_CD,VARCHAR2,6,,Term Holiday Schedule Code - Currently not utilized
 CS,UF_D_SES_TERM,HOLIDAY_SCHED_SD,VARCHAR2,999,,Term Holiday Schedule Short Description
 CS,UF_D_SES_TERM,HOLIDAY_SCHED_LD,VARCHAR2,30,,Term Holiday Schedule Long Description
