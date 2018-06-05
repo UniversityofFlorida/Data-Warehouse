@@ -14,7 +14,7 @@
 | UF_D_SES_TERM | ACAD_CAR_SD       | VARCHAR2     | 10 |    | Academic Career Short Description for the Academic Career Code                                                                       |
 | UF_D_SES_TERM | ACAD_CAR_LD       | VARCHAR2     | 30 |    | Academic Career Long Description for the Academic Career Code                                                                        |
 | UF_D_SES_TERM | TERM_SID          | NUMBER       | 22 | 10 | Term surrogate identification                                                                                                        |
-| UF_D_SES_TERM | TERM_CD           | VARCHAR2     | 4  |    | Term Identification Code                                                                                                             |
+| UF_D_SES_TERM | TERM_CD           | VARCHAR2     | 4  |    | Term Identification Code That is Changed                                                                                                            |
 | UF_D_SES_TERM | TERM_SD           | VARCHAR2     | 10 |    | Term Short Description                                                                                                               |
 | UF_D_SES_TERM | TERM_LD           | VARCHAR2     | 30 |    | Term Long Description                                                                                                                |
 | UF_D_SES_TERM | ACAD_YR_SID       | NUMBER       | 22 | 10 | Academic Year Surrogate Identification - Corresponds to the same four digit year                                                     |
