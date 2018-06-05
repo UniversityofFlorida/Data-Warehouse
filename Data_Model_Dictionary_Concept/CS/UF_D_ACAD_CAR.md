@@ -3,8 +3,9 @@
 UF_D_ACAD_CAR is a type 1 (max effective change) dimension. This dimension contains information about Academic Careers. Academic Careers designate all course work undertaken by a student at an academic institution. The join between this dimension and fact table should be with  the ACAD_CAR_SID.
 
 
+| Column Name     | Data Type    | Data Length | Precision | Description                                                                                                                          | 
+|-----------------|--------------|-------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------| 
 | ACAD_CAR_SID    | NUMBER       | 10 | 0 | Academic Career surrogate identification                                                                                                                        |
-|-----------------|--------------|----|---|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | INSTITUTION_SID | NUMBER       | 10 | 0 | Institution surrogate identification                                                                                                                            |
 | INSTITUTION_CD  | VARCHAR2     | 5  |   | Institution Code - Currently all values contain UFLOR for University of Florida                                                                                 |
 | INSTITUTION_SD  | VARCHAR2     | 10 |   | Institution Short Description of the Institution code                                                                                                           |
