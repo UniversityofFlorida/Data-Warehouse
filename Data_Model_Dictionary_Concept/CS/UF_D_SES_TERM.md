@@ -14,7 +14,7 @@ ACAD_CAR_CD       | VARCHAR2     | 4  |    | Academic Career Code - designates a
 ACAD_CAR_SD       | VARCHAR2     | 10 |    | Academic Career Short Description for the Academic Career Code                                                                       |
 ACAD_CAR_LD       | VARCHAR2     | 30 |    | Academic Career Long Description for the Academic Career Code                                                                        |
 TERM_SID          | NUMBER       | 22 | 10 | Term surrogate identification                                                                                                        |
-TERM_CD           | VARCHAR2     | 4  |    | Term Identification Code That is changed                                                                                                        |
+TERM_CD           | VARCHAR2     | 4  |    | Term Identification Code                                                                                                        |
 TERM_SD           | VARCHAR2     | 10 |    | Term Short Description                                                                                                               |
 TERM_LD           | VARCHAR2     | 30 |    | Term Long Description                                                                                                                |
 ACAD_YR_SID       | NUMBER       | 22 | 10 | Academic Year Surrogate Identification - Corresponds to the same four digit year                                                     |
