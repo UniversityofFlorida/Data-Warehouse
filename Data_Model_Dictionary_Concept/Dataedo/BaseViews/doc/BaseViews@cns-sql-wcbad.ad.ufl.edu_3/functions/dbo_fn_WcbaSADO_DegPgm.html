@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions" class="ajax" data-target="#right">Functions</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_WcbaSADO_DegPgm" class="ajax" data-target="#right">dbo.fn_WcbaSADO_DegPgm</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-function "></i>dbo.fn_WcbaSADO_DegPgm</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>fn_WcbaSADO_DegPgm</td>
+        </tr>
+        <tr>
+          <td>ExtendedProp</td>
+          <td>Calculates a text string that was stored in t_CS2l.SADO_DegPgm, and whose format and creation logic was defined by the original designers of the WCBAs SourceData system.  To ensure backward compatibility, the string creation logic is reimplemented in this function exactly as in the SourceData system.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>OUT</td>
+              <td>Returns</td>
+              <td>varchar(10)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>IN</td>
+              <td>college</td>
+              <td>varchar(2)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">CurrentCollege from BaseViews.dbo.bv_StudentCurrentRecord</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>IN</td>
+              <td>class</td>
+              <td>varchar(1)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">CurrentClass from BaseViews.dbo.bv_StudentCurrentRecord</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>IN</td>
+              <td>major</td>
+              <td>varchar(3)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">CurrentMajor from BaseViews.dbo.bv_StudentCurrentRecord</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>IN</td>
+              <td>degreetrack</td>
+              <td>varchar(3)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">CurrentDegreeTrack from BaseViews.dbo.bv_StudentCurrentRecord</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="uses">
+      <div class="collapsible-link font-large font-bold">Uses</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+              <td>
+                <div style="margin-left: 0px">
+                  <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-function" title="Function"></i></div>
+                  <div style="margin-left: 44px">dbo.fn_WcbaSADO_DegPgm</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-view" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_dv_Majors" class="ajax" data-target="#right">dbo.dv_Majors</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="5" data-parent-node-id="2">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.dt_Colleges</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="6" data-parent-node-id="2">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.dt_Degrees</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="7" data-parent-node-id="2">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.dt_Majors</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="8" data-parent-node-id="2">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.dt_OrganizationalUnits</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="3" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-view" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_dv_OrganizationalUnits" class="ajax" data-target="#right">dbo.dv_OrganizationalUnits</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="9" data-parent-node-id="3">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.dt_OrganizationalUnits</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="4" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_LRTrim" class="ajax" data-target="#right">dbo.fn_LRTrim</a></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">FUNCTION</span> [dbo].[fn_WcbaSADO_DegPgm] 
+(
+    @college <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(2),
+    @class <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(1),
+    @major <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(3),
+    @degreetrack <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(3)
+)
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        fn_WcbaSADO_DegPgm
+
+  Description:	    Calculates a text string that was stored in t_CS2l.SADO_DegPgm, and whose format 
+                    and creation logic was defined by the original designers of the WCBA&#39;s SourceData
+                    system.  To ensure backward compatibility, the string creation logic is reimplemented 
+                    in this function exactly as in the SourceData system.
+  
+  Input:            @college        VARCHAR(2)  CurrentCollege from BaseViews.dbo.bv_StudentCurrentRecord
+                    @class          VARCHAR(1)  CurrentClass from BaseViews.dbo.bv_StudentCurrentRecord
+                    @major          VARCHAR(3)  CurrentMajor from BaseViews.dbo.bv_StudentCurrentRecord
+                    @degreetrack    VARCHAR(3)  CurrentDegreeTrack from BaseViews.dbo.bv_StudentCurrentRecord
+  
+  Usage:            SELECT BaseViews.dbo.fn_WcbaSADO_DegPgm(@college, @class, @major, @degreetrack)
+  
+                    Example: 
+                        SELECT BaseViews.dbo.fn_WcbaSADO_DegPgm( &#39;BA&#39;, &#39;4&#39;, &#39;ES&#39;, &#39;B/M&#39;)
+                    Returns: &#39;BA-ES B/M&#39;
+
+  Created:	        10/23/2009 by John Holmes
+
+  Modified:         08/02/2011 by John Holmes
+                    In step 6, correct reference to OUShortName by replacing with OUID.
+  	
+**************************************************************************************************/</span>
+
+<span style="color:Blue;">RETURNS</span> <span style="color:Blue;">VARCHAR</span>(10)
+
+<span style="color:Blue;">AS</span>
+
+<span style="color:Blue;">BEGIN</span>
+    
+	<span style="color:Green;">-- Declare the return variable</span>
+	<span style="color:Blue;">DECLARE</span> @out <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(10) 
+	
+	
+	<span style="color:Green;">-- Step 1</span>
+	<span style="color:Blue;">SET</span> @out = @college + <span style="color:#A31515;">&#39;-&#39;</span>
+	
+	<span style="color:Green;">-- Step 2</span>
+	<span style="color:Blue;">SET</span> @out = @out + 
+	    <span style="color:Blue;">CASE</span> 
+            <span style="color:Blue;">WHEN</span> <span style="color:Magenta;">LEN</span>(<span style="color:Magenta;">RTRIM</span>(@major)) = 2 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">RTRIM</span>(@major) + <span style="color:#A31515;">&#39; &#39;</span>
+            <span style="color:Blue;">ELSE</span> @major
+        <span style="color:Blue;">END</span>
+        
+    <span style="color:Green;">-- Step 3</span>
+    <span style="color:Blue;">SET</span> @out = 
+        <span style="color:Blue;">CASE</span> @class
+            <span style="color:Blue;">WHEN</span> <span style="color:#A31515;">&#39;6&#39;</span> <span style="color:Blue;">THEN</span> @out + <span style="color:#A31515;">&#39;PB&#39;</span>
+            <span style="color:Blue;">ELSE</span> @out + <span style="color:Magenta;">LTRIM</span>(@degreetrack)
+        <span style="color:Blue;">END</span>
+	
+	<span style="color:Green;">-- Step 4 </span>
+    <span style="color:Blue;">IF</span> (@college = <span style="color:#A31515;">&#39;CD&#39;</span> <span style="color:Blue;">AND</span> (@major = <span style="color:#A31515;">&#39;ATG&#39;</span> <span style="color:Blue;">OR</span> @degreetrack = <span style="color:#A31515;">&#39;ATG&#39;</span>))
+        <span style="color:Blue;">SET</span> @out = <span style="color:#A31515;">&#39;AC-ATG&#39;</span> 
+	
+	<span style="color:Green;">-- Step 5</span>
+	<span style="color:Blue;">IF</span> (@college = <span style="color:#A31515;">&#39;&#39;</span> <span style="color:Blue;">OR</span> @major = <span style="color:#A31515;">&#39;&#39;</span>)
+	    <span style="color:Blue;">SET</span> @out = <span style="color:#A31515;">&#39;ERROR&#39;</span>
+	
+	<span style="color:Green;">-- Step 6</span>
+	<span style="color:Blue;">IF</span> @major <span style="color:Blue;">IN</span> (  <span style="color:Green;">-- MBA Major Codes</span>
+	                <span style="color:Blue;">SELECT</span> 
+	                    [maj].[Major]
+	                <span style="color:Blue;">FROM</span> 
+	                    [BaseViews].[dbo].[dv_Majors] <span style="color:Blue;">AS</span> [maj]
+	                <span style="color:Blue;">JOIN</span> 
+	                    [BaseViews].[dbo].[dv_OrganizationalUnits] <span style="color:Blue;">AS</span> [ou] 
+	                    <span style="color:Blue;">ON</span> [maj].[OUID] = [ou].[OUID]
+	                <span style="color:Blue;">WHERE</span> 
+	                    [ou].[OUID] = 12    <span style="color:Green;">-- [ou].[OUShortName] = &#39;MBA&#39;</span>
+	            )
+	    <span style="color:Blue;">SET</span> @out = <span style="color:#A31515;">&#39;BA-MBABGS&#39;</span>
+    
+    <span style="color:Green;">-- Step 7</span>
+    <span style="color:Blue;">IF</span> (@major = <span style="color:#A31515;">&#39;GBA&#39;</span> <span style="color:Blue;">AND</span> <span style="color:Magenta;">COALESCE</span>(@degreetrack,<span style="color:#A31515;">&#39;&#39;</span>) != <span style="color:#A31515;">&#39;&#39;</span>)
+        <span style="color:Blue;">SET</span> @out = <span style="color:Blue;">LEFT</span>(@out,6)
+    
+    <span style="color:Green;">-- Step 8</span>
+    <span style="color:Blue;">SET</span> @out = [BaseViews].[dbo].[fn_LRTrim](@out)
+    
+	<span style="color:Green;">-- Return the result</span>
+	<span style="color:Blue;">RETURN</span> @out
+	
+<span style="color:Blue;">END</span>
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

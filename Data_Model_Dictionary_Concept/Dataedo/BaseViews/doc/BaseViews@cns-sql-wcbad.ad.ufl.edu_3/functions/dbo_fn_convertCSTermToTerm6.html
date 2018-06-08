@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions" class="ajax" data-target="#right">Functions</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_convertCSTermToTerm6" class="ajax" data-target="#right">dbo.fn_convertCSTermToTerm6</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-function "></i>dbo.fn_convertCSTermToTerm6</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>fn_convertCSTermToTerm6</td>
+        </tr>
+        <tr>
+          <td>ExtendedProp</td>
+          <td>Convert Campus Solutions 4-char Term string into Term6 format</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>OUT</td>
+              <td>Returns</td>
+              <td>varchar(6)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>IN</td>
+              <td>termIN</td>
+              <td>varchar(4)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">Character string representing the term. LEN = 4</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">FUNCTION</span> [dbo].[fn_convertCSTermToTerm6] 
+(
+    @termIN <span style="color:Blue;">AS</span> <span style="color:Blue;">varchar</span>(4)
+)
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        fn_convertCSTermToTerm6
+
+  Description:	    BaseViews - Convert Campus Solutions 4-char Term string into Term6 format.
+  
+  Input:            @termIN:    Character string representing the term. LEN = 4
+  
+  Usage:            BaseViews.dbo.fn_convertCSTermToTerm6(&#39;Term_To_Convert&#39;)
+  
+                    Example: SELECT BaseViews.dbo.fn_convertCSTermToTerm6(&#39;2188&#39;)
+                    Returns: &#39;201808&#39;
+
+  Created:	        04/03/2018 by John Holmes
+
+  Modified:
+  	
+**************************************************************************************************/</span>
+
+<span style="color:Blue;">RETURNS</span> <span style="color:Blue;">varchar</span>(6)
+
+<span style="color:Blue;">AS</span>
+
+<span style="color:Blue;">BEGIN</span>
+    
+	<span style="color:Green;">-- Declare and initialize the return and working variables</span>
+	<span style="color:Blue;">DECLARE</span> @termOUT <span style="color:Blue;">AS</span> <span style="color:Blue;">varchar</span>(6) = <span style="color:#A31515;">&#39;&#39;</span> ;
+	
+	
+	<span style="color:Blue;">IF</span> <span style="color:Magenta;">LEN</span>(@termIN) &lt;&gt; 4			<span style="color:Green;">-- Error Checking: input length</span>
+		<span style="color:Blue;">SET</span> @termOUT = <span style="color:#A31515;">&#39;INPERR&#39;</span> ;
+    <span style="color:Blue;">ELSE</span>							<span style="color:Green;">-- If no input errors, perform conversion</span>
+		<span style="color:Blue;">SET</span> @termOUT = 
+			<span style="color:Blue;">LEFT</span>(@termIN, 1) + 
+			<span style="color:Blue;">CASE</span> <span style="color:Blue;">WHEN</span> <span style="color:Blue;">LEFT</span>(@termIN, 1) = <span style="color:#A31515;">&#39;1&#39;</span> <span style="color:Blue;">THEN</span> <span style="color:#A31515;">&#39;9&#39;</span> <span style="color:Blue;">ELSE</span> <span style="color:#A31515;">&#39;0&#39;</span> <span style="color:Blue;">END</span> + 
+			<span style="color:Blue;">LEFT</span>(<span style="color:Blue;">RIGHT</span>(@termIN, 3), 2) + <span style="color:#A31515;">&#39;0&#39;</span> + <span style="color:Blue;">RIGHT</span>(@termIN, 1) ;
+	
+
+	<span style="color:Green;">-- Return the result</span>
+	<span style="color:Blue;">RETURN</span> @termOUT 
+	
+<span style="color:Blue;">END</span>
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions" class="ajax" data-target="#right">Functions</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_ProperCaseAddress" class="ajax" data-target="#right">dbo.fn_ProperCaseAddress</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-function "></i>dbo.fn_ProperCaseAddress</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>fn_ProperCaseAddress</td>
+        </tr>
+        <tr>
+          <td>ExtendedProp</td>
+          <td>Proper case an address string with correct quandrant (NW, SE, etc.) and street numbering (1st, 207th, etc.) casing.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>OUT</td>
+              <td>Returns</td>
+              <td>varchar(255)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>IN</td>
+              <td>input</td>
+              <td>varchar(255)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">An address string</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="uses">
+      <div class="collapsible-link font-large font-bold">Uses</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+              <td>
+                <div style="margin-left: 0px">
+                  <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-function" title="Function"></i></div>
+                  <div style="margin-left: 44px">dbo.fn_ProperCaseAddress</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_LRTrim" class="ajax" data-target="#right">dbo.fn_LRTrim</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="3" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_ProperCase" class="ajax" data-target="#right">dbo.fn_ProperCase</a></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="used-by">
+      <div class="collapsible-link font-large font-bold">Used by</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+              <td>
+                <div style="margin-left: 0px">
+                  <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-function" title="Function"></i></div>
+                  <div style="margin-left: 44px">dbo.fn_ProperCaseAddress</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetAddressList" class="ajax" data-target="#right">dbo.fn_GetAddressList</a></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">FUNCTION</span> [dbo].[fn_ProperCaseAddress] (
+    @input <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(255)
+)
+
+<span style="color:Blue;">RETURNS</span> <span style="color:Blue;">VARCHAR</span>(255)
+
+<span style="color:Blue;">AS</span> 
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        fn_ProperCaseAddress
+
+  Description:	    Proper case an address string with correct quandrant (NW, SE, etc.) and street
+                    numbering (1st, 207th, etc.) casing.
+  
+  Input:            @input:  an address string
+  
+  Usage:            BaseViews.dbo.fn_ProperCaseAddress(@input)
+  
+                    Example: SELECT BaseViews.dbo.fn_ProperCaseAddress(&#39;1000 SW 8TH AVE&#39;)
+                    Returns: &#39;1000 SW 8th Ave&#39;
+
+  Created:	        10/22/2009 by John Holmes
+
+  Modified:         07/15/2011 by John Holmes
+                    Add &#39;Po&#39; to &#39;PO&#39; conversion.
+  	
+**************************************************************************************************/</span>
+
+<span style="color:Blue;">BEGIN</span>
+
+    <span style="color:Green;">-- Declare the return variable</span>
+    <span style="color:Blue;">DECLARE</span> @out <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(255)
+
+    <span style="color:Green;">-- Cleanse the input</span>
+    <span style="color:Blue;">SET</span> @out = [BaseViews].[dbo].[fn_LRTrim](@input)
+
+    <span style="color:Green;">-- Apply proper casing</span>
+    <span style="color:Blue;">SET</span> @out = [BaseViews].[dbo].[fn_ProperCase](@out)
+    
+    <span style="color:Green;">-- Replace Po with PO</span>
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39;Po &#39;</span>, <span style="color:#A31515;">&#39;PO &#39;</span>)
+
+    <span style="color:Green;">-- Replace Nw, Ne, Sw, and Se with upper case if surrounded by spaces</span>
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39; Nw &#39;</span>, <span style="color:#A31515;">&#39; NW &#39;</span>)
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39; Sw &#39;</span>, <span style="color:#A31515;">&#39; SW &#39;</span>)
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39; Ne &#39;</span>, <span style="color:#A31515;">&#39; NE &#39;</span>)
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39; Se &#39;</span>, <span style="color:#A31515;">&#39; SE &#39;</span>)
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39; Po &#39;</span>, <span style="color:#A31515;">&#39; PO &#39;</span>)
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39; Rr &#39;</span>, <span style="color:#A31515;">&#39; RR &#39;</span>)
+
+
+    <span style="color:Green;">-- Replace Nw, Ne, Sw, and Se with upper case if at the end of address</span>
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39; Nw&#39;</span>, <span style="color:#A31515;">&#39; NW&#39;</span>)
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39; Sw&#39;</span>, <span style="color:#A31515;">&#39; SW&#39;</span>)
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39; Ne&#39;</span>, <span style="color:#A31515;">&#39; NE&#39;</span>)
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39; Se&#39;</span>, <span style="color:#A31515;">&#39; SE&#39;</span>)
+
+    <span style="color:Green;">-- Replace St, Nd, Rd and Th with lower case</span>
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39;1St &#39;</span>, <span style="color:#A31515;">&#39;1st &#39;</span>)
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39;2Nd &#39;</span>, <span style="color:#A31515;">&#39;2nd &#39;</span>)
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39;3Rd &#39;</span>, <span style="color:#A31515;">&#39;3rd &#39;</span>)
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39;4Th &#39;</span>, <span style="color:#A31515;">&#39;4th &#39;</span>)
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39;5Th &#39;</span>, <span style="color:#A31515;">&#39;5th &#39;</span>)
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39;6Th &#39;</span>, <span style="color:#A31515;">&#39;6th &#39;</span>)
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39;7Th &#39;</span>, <span style="color:#A31515;">&#39;7th &#39;</span>)
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39;8Th &#39;</span>, <span style="color:#A31515;">&#39;8th &#39;</span>)
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39;9Th &#39;</span>, <span style="color:#A31515;">&#39;9th &#39;</span>)
+    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">REPLACE</span>(@out, <span style="color:#A31515;">&#39;0Th &#39;</span>, <span style="color:#A31515;">&#39;0th &#39;</span>)
+
+    <span style="color:Green;">-- Return the result</span>
+    <span style="color:Blue;">RETURN</span> @out
+
+<span style="color:Blue;">END</span>
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="cf">
+        <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views" class="ajax" data-target="#right">Views</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_bv_UFFlagDescriptions" class="ajax" data-target="#right">dbo.bv_UFFlagDescriptions</a></div>
+        <div id="tools">
+          <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+        </div>
+      </div>
+      <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+      <h1><i class=" icon2x-view "></i>dbo.bv_UFFlagDescriptions</h1>
+      <table class="table table-vertical">
+        <tbody>
+          <tr>
+            <td>Schema</td>
+            <td>dbo</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>bv_UFFlagDescriptions</td>
+          </tr>
+          <tr>
+            <td>ExtendedProp</td>
+            <td>Student Flag Descriptions</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="collapsible" data-key="uses">
+        <div class="collapsible-link font-large font-bold">Uses</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+                <td>
+                  <div style="margin-left: 0px">
+                    <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-view" title="View"></i></div>
+                    <div style="margin-left: 44px">dbo.bv_UFFlagDescriptions</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">BaseData.bd.bt_FLAG_DESC</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="script">
+        <div class="collapsible-link font-large font-bold">Script</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">VIEW</span> [dbo].[bv_UFFlagDescriptions] <span style="color:Blue;">AS</span> 
+    
+<span style="color:Green;">/*****************************************************************************************
+  Name:		    bv_UFFlagDescriptions
+
+  Description:  Student Flag Descriptions
+
+  Created:	    09/25/2009 by John Holmes
+
+  Modified:     09/06/2011 by John Holmes
+                v1.1.0 - Source object renaming in support of ERP (Oracle) Warehouse.
+                
+*****************************************************************************************/</span> 
+    
+<span style="color:Blue;">SELECT</span>  
+	[UF_FLAG_CD] <span style="color:Blue;">AS</span> [FlagID]                              <span style="color:Green;">-- Flag Code (Indentifier)</span>
+	,[UF_FLAG_NM] <span style="color:Blue;">AS</span> [FlagName]                           <span style="color:Green;">-- Flag Name </span>
+	,[UF_FLAG_DESC] <span style="color:Blue;">AS</span> [FlagDescriptions]                 <span style="color:Green;">-- Flag Description (long)</span>
+	,[UF_HOLD_NBR] <span style="color:Blue;">AS</span> [FlagHoldNumber]                    <span style="color:Green;">-- Flag Hold Number</span>
+	,[UF_ADMIT] <span style="color:Blue;">AS</span> [StopAdmit]                            <span style="color:Green;">-- Stop Admit</span>
+	,[UF_RE_ADMIT] <span style="color:Blue;">AS</span> [StopReAdmit]                       <span style="color:Green;">-- Stop Re-admit</span>
+	,[UF_ALL_REG] <span style="color:Blue;">AS</span> [StopAllRegistration]                <span style="color:Green;">-- Stop All Registration</span>
+	,[UF_ALL_ADV_REG] <span style="color:Blue;">AS</span> [StopAllAdvanceRegistration]     <span style="color:Green;">-- Stop All Advance Registration</span>
+	,[UF_ALL_REG_REG] <span style="color:Blue;">AS</span> [StopAllRegularRegistration]     <span style="color:Green;">-- Stop All Regular Registration</span>
+	,[UF_ALL_DA] <span style="color:Blue;">AS</span> [StopAllDropAdd]                      <span style="color:Green;">-- Stop All Drop/Add</span>
+	,[UF_ALL_LATE_REG] <span style="color:Blue;">AS</span> [StopAllLateRegistration]       <span style="color:Green;">-- Stop All Late Registration</span>
+	,[UF_FAL_POST_DA] <span style="color:Blue;">AS</span> [StopFallPostDropAdd]            <span style="color:Green;">-- Stop Fall Post Drop/Add</span>
+	,[UF_FAL_ADV_REG] <span style="color:Blue;">AS</span> [StopFallAdvRegistration]        <span style="color:Green;">-- Stop Fall Advance Registration</span>
+	,[UF_FAL_REG_REG] <span style="color:Blue;">AS</span> [StopFallRegularRegistration]    <span style="color:Green;">-- Stop Fall Regular Registration</span>
+	,[UF_FAL_DA] <span style="color:Blue;">AS</span> [StopFallDropAdd]                     <span style="color:Green;">-- Stop Fall Drop/Add</span>
+	,[UF_FAL_LATE_REG] <span style="color:Blue;">AS</span> [StopFallLateRegistration]      <span style="color:Green;">-- Stop Fall Late Registration</span>
+	,[UF_SPR_POST_DA] <span style="color:Blue;">AS</span> [StopSpringPostDropAdd]          <span style="color:Green;">-- Stop Spring Post Drop/Add</span>
+	,[UF_SPR_ADV_REG] <span style="color:Blue;">AS</span> [StopSpringAdvanceRegistration]  <span style="color:Green;">-- Stop Spring Advance Registration</span>
+	,[UF_SPR_REG_REG] <span style="color:Blue;">AS</span> [StopSpringRegularRegistration]  <span style="color:Green;">-- Stop Spring Regular Registration</span>
+	,[UF_SPR_DA] <span style="color:Blue;">AS</span> [StopSpringDropAdd]                   <span style="color:Green;">-- Stop Spring Drop/Add</span>
+	,[UF_SPR_LATE_REG] <span style="color:Blue;">AS</span> [StopSpringLateRegistration]    <span style="color:Green;">-- Stop Spring Late Registration</span>
+	,[UF_SUM_POST_DA] <span style="color:Blue;">AS</span> [StopSummerPostDropAdd]          <span style="color:Green;">-- Stop Summer Post Drop/Add</span>
+	,[UF_SUM_ADV_REG] <span style="color:Blue;">AS</span> [StopSummerAdvanceRegistration]  <span style="color:Green;">-- Stop Summer Advance Registration</span>
+	,[UF_SUM_REG_REG] <span style="color:Blue;">AS</span> [StopSummerRegularRegistration]  <span style="color:Green;">-- Stop Summer Regular Registration</span>
+	,[UF_SUM_DA] <span style="color:Blue;">AS</span> [StopSummerDropAdd]                   <span style="color:Green;">-- Stop Summer Drop/Add</span>
+	,[UF_SUM_LATE_REG] <span style="color:Blue;">AS</span> [StopSummerLateRegistration]    <span style="color:Green;">-- Stop Summer Late Registration</span>
+	,[UF_DEG_CERT_FLG] <span style="color:Blue;">AS</span> [StopDegreeCertifications]      <span style="color:Green;">-- Stop Degree Certifications</span>
+	,[UF_DIPLOMA_FLG] <span style="color:Blue;">AS</span> [StopDiploma]                    <span style="color:Green;">-- Stop Diploma</span>
+	,[UF_GRADES_FLG] <span style="color:Blue;">AS</span> [StopGrades]                      <span style="color:Green;">-- Stop Grades</span>
+	,[UF_SCHEDULE_FLG] <span style="color:Blue;">AS</span> [StopSchedule]                  <span style="color:Green;">-- Stop Schedule</span>
+	,[UF_XCRIPT_FLG] <span style="color:Blue;">AS</span> [StopTranscript]                  <span style="color:Green;">-- Stop Transcript</span>
+	,[UF_CERT_FLG] <span style="color:Blue;">AS</span> [StopCertifications]                <span style="color:Green;">-- Stop Certifications</span>
+	,[UF_DIRECTRY_FLG] <span style="color:Blue;">AS</span> [StopDirectoryInfo]             <span style="color:Green;">-- Stop Directory Info</span>
+	,[UF_REG_APPT_FLG] <span style="color:Blue;">AS</span> [StopRegistrationAppointment]   <span style="color:Green;">-- Stop Registration Appointment</span>
+	,[UF_FUTURE_1] <span style="color:Blue;">AS</span> [Future1]                           <span style="color:Green;">-- Flag For Future Use</span>
+	,[UF_FUTURE_2] <span style="color:Blue;">AS</span> [Future2]                           <span style="color:Green;">-- Flag For Future Use</span>
+	,[UF_FUTURE_3] <span style="color:Blue;">AS</span> [Future3]                           <span style="color:Green;">-- Flag For Future Use</span>
+	,[UF_FUTURE_4] <span style="color:Blue;">AS</span> [Future4]                           <span style="color:Green;">-- Flag For Future Use</span>
+	,[UF_FUTURE_5] <span style="color:Blue;">AS</span> [Future5]                           <span style="color:Green;">-- Flag For Future Use</span>
+	,[UF_FUTURE_6] <span style="color:Blue;">AS</span> [Future6]                           <span style="color:Green;">-- Flag For Future Use</span>
+	,[UF_FUTURE_7] <span style="color:Blue;">AS</span> [Future7]                           <span style="color:Green;">-- Flag For Future Use</span>
+	,[UF_FUTURE_8] <span style="color:Blue;">AS</span> [Future8]                           <span style="color:Green;">-- Flag For Future Use</span>
+	,[UF_FUTURE_9] <span style="color:Blue;">AS</span> [Future9]                           <span style="color:Green;">-- Flag For Future Use</span>
+	,[UF_FUTURE_10] <span style="color:Blue;">AS</span> [Future10]                         <span style="color:Green;">-- Flag For Future Use</span>
+	,[UF_FUTURE_11] <span style="color:Blue;">AS</span> [Future11]                         <span style="color:Green;">-- Flag For Future Use</span>
+	,[UF_IS_COLLECT] <span style="color:Blue;">AS</span> [ISCollections]                   <span style="color:Green;">-- IS - Collections</span>
+	,[UF_IS_FUTURE_1] <span style="color:Blue;">AS</span> [ISFuture1]                      <span style="color:Green;">-- IS - For Future Use</span>
+	,[UF_IS_FUTURE_2] <span style="color:Blue;">AS</span> [ISFuture2]                      <span style="color:Green;">-- IS - For Future Use</span>
+	,[UF_IS_FUTURE_3] <span style="color:Blue;">AS</span> [ISFuture3]                      <span style="color:Green;">-- IS - For Future Use</span>
+	,[UF_IS_FUTURE_4] <span style="color:Blue;">AS</span> [ISFuture4]                      <span style="color:Green;">-- IS - For Future Use</span>
+	,[UF_IS_FUTURE_5] <span style="color:Blue;">AS</span> [ISFuture5]                      <span style="color:Green;">-- IS - For Future Use</span>
+	,[UF_FIN_AID] <span style="color:Blue;">AS</span> [StopFinancialAid]                   <span style="color:Green;">-- Stop Financial Aid</span>
+	,[UF_FIN_AID_EX_1] <span style="color:Blue;">AS</span> [FinancialAid1]                 <span style="color:Green;">-- Financial Aid - Extra 1</span>
+	,[UF_FIN_AID_EX_2] <span style="color:Blue;">AS</span> [FinancialAid2]                 <span style="color:Green;">-- Financial Aid - Extra 2</span>
+	,[UF_AUTH_OFF_CD_1] <span style="color:Blue;">AS</span> [AuthOff1]
+	,[UF_AUTH_OFF_CD_2] <span style="color:Blue;">AS</span> [AuthOff2]
+	,[UF_AUTH_OFF_CD_3] <span style="color:Blue;">AS</span> [AuthOff3]
+	,[UF_AUTH_OFF_CD_4] <span style="color:Blue;">AS</span> [AuthOff4]
+	,[UF_AUTH_OFF_CD_5] <span style="color:Blue;">AS</span> [AuthOff5]
+	,[UF_AUTH_OFF_CD_6] <span style="color:Blue;">AS</span> [AuthOff6]
+	,[UF_AUTH_OFF_CD_7] <span style="color:Blue;">AS</span> [AuthOff7]
+	,[UF_AUTH_OFF_CD_8] <span style="color:Blue;">AS</span> [AuthOff8]
+	,[UF_AUTH_OFF_CD_9] <span style="color:Blue;">AS</span> [AuthOff9]
+	,[UF_AUTH_OFF_CD_10] <span style="color:Blue;">AS</span> [AuthOff10]
+	,[UF_AUTH_OFF_CD_11] <span style="color:Blue;">AS</span> [AuthOff11]
+	,[UF_AUTH_OFF_CD_12] <span style="color:Blue;">AS</span> [AuthOff12]
+	,[UF_AUTH_OFF_CD_13] <span style="color:Blue;">AS</span> [AuthOff13]
+	,[UF_AUTH_OFF_CD_14] <span style="color:Blue;">AS</span> [AuthOff14]
+	,[UF_AUTH_OFF_CD_15] <span style="color:Blue;">AS</span> [AuthOff15]
+	,[UF_AUTH_OFF_CD_16] <span style="color:Blue;">AS</span> [AuthOff16]
+	,[UF_AUTH_OFF_CD_17] <span style="color:Blue;">AS</span> [AuthOff17]
+	,[UF_AUTH_OFF_CD_18] <span style="color:Blue;">AS</span> [AuthOff18]
+	,[UF_AUTH_OFF_CD_19] <span style="color:Blue;">AS</span> [AuthOff19]
+	,[UF_AUTH_OFF_CD_20] <span style="color:Blue;">AS</span> [AuthOff20]
+	,[UF_COLLEGE_OWNR] <span style="color:Blue;">AS</span> [CollegeOwner]                  <span style="color:Green;">-- College Owner</span>
+	,[UF_APPLY_MAJOR] <span style="color:Blue;">AS</span> [MajorAppliedTo]                 <span style="color:Green;">-- Major Applied To</span>
+	,[UF_I_STU_IN_FLG] <span style="color:Blue;">AS</span> [IStuInFlag]
+	,[UF_I_STU_IN_OK] <span style="color:Blue;">AS</span> [IStuInOK]
+	,[UF_ALT_FLAG_NM] <span style="color:Blue;">AS</span> [AltFlagName]                    <span style="color:Green;">-- Alternate Flag Name</span>
+	,[UF_ALT_FLAG_CD] <span style="color:Blue;">AS</span> [AltFlagCode]                    <span style="color:Green;">-- Alternate Flag Code (Indentifier)</span>
+	,[UF_FLAG_EXP_DT] <span style="color:Blue;">AS</span> [FlagExpirationDate]             <span style="color:Green;">-- Expiration Date</span>
+	,[UF_SPEAK_SEG] <span style="color:Blue;">AS</span> [SpeakSeg]
+	,[WCBA_APPL_TERM6] <span style="color:Blue;">AS</span> [ApplTerm6]                     <span style="color:Green;">-- Term Applied?? (6 char)</span>
+	,[UF_KEY_WORD] <span style="color:Blue;">AS</span> [KeyWord]
+	,[UF_OWNR_OFF_CD] <span style="color:Blue;">AS</span> [OwnerOffCode]
+<span style="color:Green;">--	,[UF_MODIFIED] AS [LastModifiedDate]                  -- Last Modified Timestamp</span>
+	,[UF_MOD_DTTM] <span style="color:Blue;">AS</span> [LastModifiedDate]                  <span style="color:Green;">-- Last Modified Timestamp</span>
+	,[LOAD_DTTM] <span style="color:Blue;">AS</span> [LoadDate]                            <span style="color:Green;">-- Load Timestamp</span>
+<span style="color:Blue;">FROM</span> 
+    [BaseData].[bd].[bt_FLAG_DESC]
+</pre></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></div>
+  </body>
+</html>

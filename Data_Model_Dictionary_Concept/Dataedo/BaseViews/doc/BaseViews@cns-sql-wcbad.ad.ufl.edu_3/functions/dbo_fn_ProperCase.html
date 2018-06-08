@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions" class="ajax" data-target="#right">Functions</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_ProperCase" class="ajax" data-target="#right">dbo.fn_ProperCase</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-function "></i>dbo.fn_ProperCase</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>fn_ProperCase</td>
+        </tr>
+        <tr>
+          <td>ExtendedProp</td>
+          <td>Convert a text string to proper case.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>OUT</td>
+              <td>Returns</td>
+              <td>varchar(8000)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>IN</td>
+              <td>Text</td>
+              <td>varchar(8000)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">The string to convert</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="used-by">
+      <div class="collapsible-link font-large font-bold">Used by</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+              <td>
+                <div style="margin-left: 0px">
+                  <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-function" title="Function"></i></div>
+                  <div style="margin-left: 44px">dbo.fn_ProperCase</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-view" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_pv_DirCompatibility_EmployeeDisplay" class="ajax" data-target="#right">dbo.pv_DirCompatibility_EmployeeDisplay</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="3" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-view" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_pv_DirCompatibility_EmployeePublicDisplay" class="ajax" data-target="#right">dbo.pv_DirCompatibility_EmployeePublicDisplay</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="4" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-view" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_pv_DirCompatibility_FacultyDirectoryDisplay" class="ajax" data-target="#right">dbo.pv_DirCompatibility_FacultyDirectoryDisplay</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="5" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-view" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_pv_DirCompatibility_FacultyPublicDisplay" class="ajax" data-target="#right">dbo.pv_DirCompatibility_FacultyPublicDisplay</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="6" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-uses-view" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_pv_WcbaPeople" class="ajax" data-target="#right">dbo.pv_WcbaPeople</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="11" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-view" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_bv_FERPACertifications" class="ajax" data-target="#right">dbo.bv_FERPACertifications</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="12" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-view" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_bv_FERPACertificationsYesterday" class="ajax" data-target="#right">dbo.bv_FERPACertificationsYesterday</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="13" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-view" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_pv_roomsFacStaffGLIDs" class="ajax" data-target="#right">dbo.pv_roomsFacStaffGLIDs</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="14" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-view" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_pv_WcbaPeople_WHDUpdate" class="ajax" data-target="#right">dbo.pv_WcbaPeople_WHDUpdate</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="15" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px">dbo.archive_01-05-2017_p_GetAllActiveEmployees</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="16" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px">dbo.archive_01-05-2017_p_GetFacultyList</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="17" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px">dbo.archive_04-10-2017_p_GetFacultyList</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="18" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px">dbo.archive_04-10-2017_p_GetNonWCBAInstructors</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="19" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_FERPA_CertUpdateNotice" class="ajax" data-target="#right">dbo.p_FERPA_CertUpdateNotice</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="20" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_FERPA_ExpirationFinalNotice" class="ajax" data-target="#right">dbo.p_FERPA_ExpirationFinalNotice</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="21" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_FERPA_ExpirationFirstNotice" class="ajax" data-target="#right">dbo.p_FERPA_ExpirationFirstNotice</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="22" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_FERPA_ExpirationSecondNotice" class="ajax" data-target="#right">dbo.p_FERPA_ExpirationSecondNotice</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="23" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_FERPA_FullAuditReport" class="ajax" data-target="#right">dbo.p_FERPA_FullAuditReport</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="24" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_GetEmployeeList" class="ajax" data-target="#right">dbo.p_GetEmployeeList</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="25" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_PersonInfo_Get" class="ajax" data-target="#right">dbo.p_PersonInfo_Get</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="7" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_pp_DirCompatibility_BuildingResidentsXML_get" class="ajax" data-target="#right">dbo.pp_DirCompatibility_BuildingResidentsXML_get</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="8" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_pp_DirCompatibility_PersonInfoXML_get" class="ajax" data-target="#right">dbo.pp_DirCompatibility_PersonInfoXML_get</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="9" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetAddressList" class="ajax" data-target="#right">dbo.fn_GetAddressList</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="10" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_ProperCaseAddress" class="ajax" data-target="#right">dbo.fn_ProperCaseAddress</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="26" data-parent-node-id="10">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetAddressList" class="ajax" data-target="#right">dbo.fn_GetAddressList</a></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">FUNCTION</span> [dbo].[fn_ProperCase] 
+(
+    @Text <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(8000)
+)
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        fn_ProperCase
+
+  Description:	    Convert a text string to proper case.
+  
+  Input:            @Text:  The string to convert
+  
+  Usage:            SELECT BaseViews.dbo.fn_ProperCase(&#39;some text string&#39;)
+  
+                    Example: SELECT BaseViews.dbo.fn_ProperCase(&#39;some text string&#39;)
+                    Returns: &#39;Some Text String&#39;
+
+  Created:	        07/09/2009 by John Holmes
+
+  Modified:         10/06/2014 by John Holmes
+                    Add generational suffix corrections
+  	
+**************************************************************************************************/</span>
+
+<span style="color:Blue;">RETURNS</span> <span style="color:Blue;">VARCHAR</span>(8000)
+
+<span style="color:Blue;">AS</span> 
+
+<span style="color:Blue;">BEGIN</span>
+    <span style="color:Blue;">DECLARE</span> @Reset <span style="color:Blue;">BIT</span> ;
+    <span style="color:Blue;">DECLARE</span> @Ret <span style="color:Blue;">VARCHAR</span>(8000) ;
+    <span style="color:Blue;">DECLARE</span> @i <span style="color:Blue;">INT</span> ;
+    <span style="color:Blue;">DECLARE</span> @c <span style="color:Blue;">CHAR</span>(1) ;
+
+    <span style="color:Blue;">SELECT</span>
+        @Reset = 1,
+        @i = 1,
+        @Ret = <span style="color:#A31515;">&#39;&#39;</span> ;
+   
+    <span style="color:Blue;">WHILE</span> (@i &lt;= <span style="color:Magenta;">LEN</span>(@Text))
+        <span style="color:Blue;">SELECT</span>
+            @c = <span style="color:Magenta;">SUBSTRING</span>(@Text, @i, 1),
+            @Ret = @Ret + <span style="color:Blue;">CASE</span> <span style="color:Blue;">WHEN</span> @Reset = 1 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">UPPER</span>(@c)
+                               <span style="color:Blue;">ELSE</span> <span style="color:Magenta;">LOWER</span>(@c)
+                          <span style="color:Blue;">END</span>,
+            @Reset = <span style="color:Blue;">CASE</span> <span style="color:Blue;">WHEN</span> @c <span style="color:Blue;">LIKE</span> <span style="color:#A31515;">&#39;[a-zA-Z]&#39;</span> <span style="color:Blue;">THEN</span> 0
+                          <span style="color:Blue;">ELSE</span> 1
+                     <span style="color:Blue;">END</span>,
+            @i = @i + 1
+
+    <span style="color:Green;">-- Correct generational suffixes</span>
+    <span style="color:Blue;">SET</span> @Ret = <span style="color:Magenta;">REPLACE</span>(@Ret, <span style="color:#A31515;">&#39; Ii&#39;</span>, <span style="color:#A31515;">&#39; II&#39;</span>) ;
+    <span style="color:Blue;">SET</span> @Ret = <span style="color:Magenta;">REPLACE</span>(@Ret, <span style="color:#A31515;">&#39; Iii&#39;</span>, <span style="color:#A31515;">&#39; III&#39;</span>) ;
+    <span style="color:Blue;">SET</span> @Ret = <span style="color:Magenta;">REPLACE</span>(@Ret, <span style="color:#A31515;">&#39; Iv&#39;</span>, <span style="color:#A31515;">&#39; IV&#39;</span>) ;
+    <span style="color:Blue;">SET</span> @Ret = <span style="color:Magenta;">REPLACE</span>(@Ret, <span style="color:#A31515;">&#39; Vi&#39;</span>, <span style="color:#A31515;">&#39; VI&#39;</span>) ;
+    <span style="color:Blue;">SET</span> @Ret = <span style="color:Magenta;">REPLACE</span>(@Ret, <span style="color:#A31515;">&#39; Vii&#39;</span>, <span style="color:#A31515;">&#39; VII&#39;</span>) ;
+
+    <span style="color:Blue;">RETURN</span> @Ret ;
+<span style="color:Blue;">END</span>
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

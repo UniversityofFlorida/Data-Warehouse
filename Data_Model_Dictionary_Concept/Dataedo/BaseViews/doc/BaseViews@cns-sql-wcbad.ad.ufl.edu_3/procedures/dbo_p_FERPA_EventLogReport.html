@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures" class="ajax" data-target="#right">Procedures</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_FERPA_EventLogReport" class="ajax" data-target="#right">dbo.p_FERPA_EventLogReport</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-procedure "></i>dbo.p_FERPA_EventLogReport</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>p_FERPA_EventLogReport</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>IN</td>
+              <td>testEmail</td>
+              <td>varchar(254)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="uses">
+      <div class="collapsible-link font-large font-bold">Uses</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+              <td>
+                <div style="margin-left: 0px">
+                  <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-procedure" title="Procedure"></i></div>
+                  <div style="margin-left: 44px">dbo.p_FERPA_EventLogReport</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="4" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-procedure" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_SendEmail" class="ajax" data-target="#right">dbo.p_SendEmail</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="5" data-parent-node-id="4">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">msdb.dbo.sp_send_dbmail</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">AdminTools.dbo.fn_GetSystemEmailAddress</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="3" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.t_FERPAEventLog</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">PROCEDURE</span> [dbo].[p_FERPA_EventLogReport] 
+
+     @testEmail <span style="color:Blue;">VARCHAR</span>(254) = <span style="color:Blue;">NULL</span>
+	
+<span style="color:Blue;">AS</span> 
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        p_FERPA_EventLogReport
+
+  Description:	    Email a report of todays expiration email recipients
+                    
+					PARAM NAME      DATATYPE		REQUIRED    NOTES
+  Input:			@testEmail      varchar(254)	No			Email address for test mode
+																NULL (default) = System &quot;Reports&quot; address
+                    
+  
+  Output:           One or more email messages are sent.  
+  Usage:            EXEC [BaseViews].[dbo].[p_FERPA_EventLogReport] @testEmail
+                    Example:
+                        Enable Test mode:
+                        EXEC [BaseViews].[dbo].[p_FERPA_EventLogReport] 
+                             @testEmail = &#39;jcholmes@ufl.edu&#39; ;
+  
+  Created:	        05/20/2015 by John Holmes
+
+  Modified:         02/13/2017 by John Holmes
+					Add DMBTC as recipient
+
+					09/26/2017 by John Holmes
+					Handle null expriation date condition
+  	
+**************************************************************************************************/</span>
+
+<span style="color:Blue;">BEGIN</span>
+
+    <span style="color:Blue;">SET</span> <span style="color:Blue;">NOCOUNT</span> <span style="color:Blue;">ON</span> ;
+        
+	<span style="color:Green;">-- For Testing</span>
+	<span style="color:Green;">--DECLARE @testEmail VARCHAR(254) = &#39;jcholmes@ufl.edu&#39; ;</span>
+            
+	<span style="color:Green;">--------------------- Declare working vars ---------------------</span>
+            
+	<span style="color:Blue;">DECLARE</span> @date <span style="color:Blue;">NVARCHAR</span>(20) = <span style="color:Blue;">DATENAME</span>(MM, <span style="color:Magenta;">GETDATE</span>()) + <span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(12), <span style="color:Magenta;">GETDATE</span>(), 107), 9) ;  <span style="color:Green;">-- Today&#39;s data formatted as Month DD, YYYY</span>
+	<span style="color:Blue;">DECLARE</span> @body <span style="color:Blue;">NVARCHAR</span>(<span style="color:Magenta;">MAX</span>) = <span style="color:#A31515;">&#39;&#39;</span> ;          <span style="color:Green;">-- Final body of email</span>
+	<span style="color:Blue;">DECLARE</span> @body1 <span style="color:Blue;">NVARCHAR</span>(<span style="color:Magenta;">MAX</span>) = <span style="color:#A31515;">&#39;&#39;</span> ;         <span style="color:Green;">-- Pt 1 of email body</span>
+	<span style="color:Blue;">DECLARE</span> @body2 <span style="color:Blue;">NVARCHAR</span>(<span style="color:Magenta;">MAX</span>) = <span style="color:#A31515;">&#39;&#39;</span> ;         <span style="color:Green;">-- Pt 2 of email body</span>
+	<span style="color:Blue;">DECLARE</span> @subjectText <span style="color:Blue;">VARCHAR</span>(<span style="color:Magenta;">MAX</span>) = <span style="color:#A31515;">&#39;&#39;</span> ;    <span style="color:Green;">-- Email subject line</span>
+	<span style="color:Blue;">DECLARE</span> @xml <span style="color:Blue;">NVARCHAR</span>(<span style="color:Magenta;">MAX</span>) = <span style="color:#A31515;">&#39;&#39;</span> ;           <span style="color:Green;">-- Report data</span>
+	<span style="color:Blue;">DECLARE</span> @reportRecip <span style="color:Blue;">VARCHAR</span>(256) = <span style="color:#A31515;">&#39;&#39;</span> ;    <span style="color:Green;">-- Report recipient</span>
+            
+            
+	<span style="color:Green;">--------------------- Send report ---------------------</span>
+            
+	<span style="color:Green;">-- Get report data </span>
+	<span style="color:Blue;">SET</span> @xml = 
+		<span style="color:Magenta;">CAST</span>(
+			(<span style="color:Blue;">SELECT</span>
+				[Event] <span style="color:Blue;">AS</span> <span style="color:#A31515;">&#39;td&#39;</span>
+				,<span style="color:#A31515;">&#39;&#39;</span>     <span style="color:Green;">-- Do not remove this line</span>
+			   ,[UFID] <span style="color:Blue;">AS</span> <span style="color:#A31515;">&#39;td&#39;</span>
+				,<span style="color:#A31515;">&#39;&#39;</span>     <span style="color:Green;">-- Do not remove this line</span>
+			   ,[Name] <span style="color:Blue;">AS</span> <span style="color:#A31515;">&#39;td&#39;</span>
+				,<span style="color:#A31515;">&#39;&#39;</span>     <span style="color:Green;">-- Do not remove this line</span>
+			   ,[Email] <span style="color:Blue;">AS</span> <span style="color:#A31515;">&#39;td&#39;</span>
+				,<span style="color:#A31515;">&#39;&#39;</span>     <span style="color:Green;">-- Do not remove this line</span>
+			   ,[Course] + <span style="color:#A31515;">&#39; - &#39;</span> + [CourseTitle] <span style="color:Blue;">AS</span> <span style="color:#A31515;">&#39;td&#39;</span>
+				,<span style="color:#A31515;">&#39;&#39;</span>     <span style="color:Green;">-- Do not remove this line</span>
+			   ,<span style="color:Blue;">CASE</span> [Event]
+					<span style="color:Blue;">WHEN</span> <span style="color:#A31515;">&#39;Updated&#39;</span> <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>([CertDate] <span style="color:Blue;">AS</span> [varchar])
+					<span style="color:Blue;">ELSE</span> <span style="color:#A31515;">&#39;-------------&#39;</span>
+				<span style="color:Blue;">END</span> <span style="color:Blue;">AS</span> <span style="color:#A31515;">&#39;td&#39;</span>
+				,<span style="color:#A31515;">&#39;&#39;</span>     <span style="color:Green;">-- Do not remove this line</span>
+			   ,<span style="color:Blue;">CASE</span> [Event]
+					<span style="color:Blue;">WHEN</span> <span style="color:#A31515;">&#39;Updated&#39;</span> <span style="color:Blue;">THEN</span> <span style="color:#A31515;">&#39;-------------&#39;</span>
+					<span style="color:Blue;">ELSE</span> <span style="color:Magenta;">COALESCE</span>(<span style="color:Magenta;">CAST</span>([ExpDate] <span style="color:Blue;">AS</span> [varchar]), <span style="color:#A31515;">&#39;no data&#39;</span>)
+				<span style="color:Blue;">END</span> <span style="color:Blue;">AS</span> <span style="color:#A31515;">&#39;td&#39;</span>
+			<span style="color:Blue;">FROM</span>
+				[BaseData].[bd].[t_FERPAEventLog]
+			<span style="color:Blue;">WHERE</span> 
+				[Datestamp] = <span style="color:Magenta;">CAST</span>(<span style="color:Magenta;">GETDATE</span>() <span style="color:Blue;">AS</span> [date])
+			<span style="color:Blue;">ORDER</span> <span style="color:Blue;">BY</span>
+				[Event]
+			<span style="color:Blue;">FOR</span> <span style="color:Blue;">XML</span> 
+				PATH(<span style="color:#A31515;">&#39;tr&#39;</span>)
+				,ELEMENTS 
+			) <span style="color:Blue;">AS</span> <span style="color:Blue;">NVARCHAR</span>(<span style="color:Magenta;">MAX</span>)
+		) ;
+                
+	<span style="color:Green;">--Check for results</span>
+	<span style="color:Blue;">IF</span> <span style="color:Blue;">LEFT</span>(@xml, 3) = <span style="color:#A31515;">&#39;&lt;tr&#39;</span>  <span style="color:Green;">-- If was data on which to report</span>
+		<span style="color:Blue;">BEGIN</span> 
+			<span style="color:Green;">-- Set up the HTML document</span>
+			<span style="color:Blue;">SET</span> @body1 = 
+				<span style="color:#A31515;">&#39;&lt;html&gt;
+				&lt;head&gt;
+					&lt;style&gt;
+						body {
+							margin-left:20px;
+							font:10px Verdana, Geneva, Arial, Helvetica, sans-serif;
+						}
+						h1 {
+							font:12px Verdana, Geneva, Arial, Helvetica, sans-serif;
+							font-weight:bold;
+							margin-bottom:5px;
+						}
+						h2 {
+							font:10px Verdana, Geneva, Arial, Helvetica, sans-serif;
+							font-weight:bold;
+							margin-top:0px;
+							padding-bottom:10px;
+						}
+						table {
+							border:1px solid #AAAAAA;
+						}
+						th {
+							padding:2px;
+							text-align: left;
+							font:10px Verdana, Geneva, Arial, Helvetica, sans-serif;
+							font-weight:bold;
+							border-bottom:1px solid #AAAAAA;
+							border-right:1px solid #AAAAAA;
+						}
+						td {
+    						vertical-align:top;
+							text-align:left;
+							border-bottom:1px solid #AAAAAA;
+							border-right:1px solid #AAAAAA;
+							padding:2px 2px 2px 2px;
+							font:10px Verdana, Geneva, Arial, Helvetica, sans-serif;
+						}
+					&lt;/style&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+					&lt;h1&gt;FERPA Event Log for &#39;</span> + @date + <span style="color:#A31515;">&#39;&lt;/h1&gt;
+					&lt;table&gt;
+						&lt;tr&gt;
+							&lt;th&gt;Event&lt;/th&gt;
+							&lt;th&gt;UFID&lt;/th&gt;
+							&lt;th&gt;Name&lt;/th&gt;
+							&lt;th&gt;Email&lt;/th&gt;
+							&lt;th&gt;Course&lt;/th&gt;
+							&lt;th&gt;Cert Date&lt;/th&gt;
+							&lt;th&gt;Exp Date&lt;/th&gt;
+						&lt;/tr&gt;&#39;</span>  ;
+                                
+			<span style="color:Blue;">SET</span> @body2 = 
+				<span style="color:#A31515;">&#39;   &lt;/table&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;&#39;</span> ;
+                        
+			<span style="color:Green;">-- Construct the message body</span>
+			<span style="color:Blue;">SET</span> @body = @body1 + @xml + @body2 ;
+
+			<span style="color:Green;">-- Construct the message subject and recipient</span>
+			<span style="color:Blue;">SET</span> @subjectText = <span style="color:#A31515;">&#39;FERPA Report - Event Log&#39;</span> ;
+                    
+			<span style="color:Green;">-- Determine report recipient</span>
+			<span style="color:Green;">--SET @reportRecip = COALESCE(@testEmail, [AdminTools].[dbo].[fn_GetSystemEmailAddress](&#39;Reports&#39;)) ;</span>
+			<span style="color:Blue;">SET</span> @reportRecip =	<span style="color:Blue;">CASE</span> 
+									<span style="color:Blue;">WHEN</span> @testEmail <span style="color:Blue;">IS</span> <span style="color:Blue;">NULL</span> 
+										<span style="color:Blue;">THEN</span> [AdminTools].[dbo].[fn_GetSystemEmailAddress](<span style="color:#A31515;">&#39;Reports&#39;</span>) + <span style="color:#A31515;">&#39;;&#39;</span> + [AdminTools].[dbo].[fn_GetSystemEmailAddress](<span style="color:#A31515;">&#39;DMBTC&#39;</span>)
+									<span style="color:Blue;">ELSE</span> @testEmail
+								<span style="color:Blue;">END</span> ;
+                    
+			<span style="color:Green;">-- Send the email</span>
+			<span style="color:Blue;">EXEC</span> [BaseViews].[dbo].[p_SendEmail]
+				 @recipList = @reportRecip
+				,@subjectText = @subjectText
+				,@bodyText = @body
+				,@bodyFormatType = <span style="color:#A31515;">&#39;HTML&#39;</span>
+				,@profileName = <span style="color:#A31515;">&#39;FERPANotifications&#39;</span> ;
+                        
+		<span style="color:Blue;">END</span> ; <span style="color:Green;">-- End data to report</span>
+        
+<span style="color:Blue;">END</span> ;   <span style="color:Green;">-- End p_FERPA_EventLogReport</span>
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

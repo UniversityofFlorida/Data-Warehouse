@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="cf">
+        <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views" class="ajax" data-target="#right">Views</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_dv_cs_classes" class="ajax" data-target="#right">dbo.dv_cs_classes</a></div>
+        <div id="tools">
+          <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+        </div>
+      </div>
+      <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+      <h1><i class=" icon2x-view "></i>dbo.dv_cs_classes</h1>
+      <table class="table table-vertical">
+        <tbody>
+          <tr>
+            <td>Schema</td>
+            <td>dbo</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>dv_cs_classes</td>
+          </tr>
+          <tr>
+            <td>ExtendedProp</td>
+            <td>Classes (sections) - Campus Solutions data</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="collapsible" data-key="uses">
+        <div class="collapsible-link font-large font-bold">Uses</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+                <td>
+                  <div style="margin-left: 0px">
+                    <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-view" title="View"></i></div>
+                    <div style="margin-left: 44px">dbo.dv_cs_classes</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">BaseData.bd.bt_cs_D_CLASS</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="script">
+        <div class="collapsible-link font-large font-bold">Script</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">VIEW</span> [dbo].[dv_cs_classes] <span style="color:Blue;">AS</span>
+
+<span style="color:Green;">/*****************************************************************************************
+
+  Name:		    dv_cs_classes
+
+  Description:  Classes (sections) - Campus Solutions data
+
+				A type 1 (max effective change) dimension.
+
+				This dimension contains the section (class) information for the course for each term 
+				(very similar to the content in WH_SECTION) and including the section enrollments. 
+				The join between this dimension and the fact table should be with classSID.
+
+  Created:	    04/23/2018 by John Holmes
+
+  Modified:     
+                
+*****************************************************************************************/</span>
+
+<span style="color:Blue;">SELECT</span>
+	CLASS_SID <span style="color:Blue;">AS</span> classSID,
+	SBJCT_CD <span style="color:Blue;">AS</span> subjectCode,
+	SBJCT_SD <span style="color:Blue;">AS</span> subjectShortDesc,
+	SBJCT_LD <span style="color:Blue;">AS</span> subjectLongDesc,
+	DESCR <span style="color:Blue;">AS</span> description,
+	CATALOG_NUM <span style="color:Blue;">AS</span> catalogNum,
+	CLASS_NBR <span style="color:Blue;">AS</span> classNumber,
+	CLASS_SECTION <span style="color:Blue;">AS</span> <span style="color:Blue;">section</span>,
+	INSTRCTN_MODE_SID <span style="color:Blue;">AS</span> instructionModeSID,
+	<span style="color:Green;">--INSTRCTN_MODE_CD AS instructionModeCode,</span>
+	<span style="color:Green;">--INSTRCTN_MODE_SD AS instructionModeShortDesc,</span>
+	<span style="color:Green;">--INSTRCTN_MODE_LD AS instructionModeLongDesc,</span>
+	ENRL_STAT <span style="color:Blue;">AS</span> enrollmentStatus,
+	ENRL_STAT_SD <span style="color:Blue;">AS</span> enrollmentStatusShortDesc,
+	ENRL_STAT_LD <span style="color:Blue;">AS</span> enrollmentStatusLongDesc,
+	CLASS_STAT <span style="color:Blue;">AS</span> classStatus,
+	CLASS_STAT_SD <span style="color:Blue;">AS</span> classStatusShortDesc,
+	CLASS_STAT_LD <span style="color:Blue;">AS</span> classStatusLongDesc,
+	CLASS_TYPE <span style="color:Blue;">AS</span> classType,
+	CLASS_TYPE_SD <span style="color:Blue;">AS</span> classTypeShortDesc,
+	CLASS_TYPE_LD <span style="color:Blue;">AS</span> classTypeLongDesc,
+	ACAD_YEAR <span style="color:Blue;">AS</span>  academicYear,
+	SSR_COMP_SID <span style="color:Blue;">AS</span> componentTypeSID,
+	<span style="color:Green;">--SSR_COMP_CD AS componentTypeCode,</span>
+	<span style="color:Green;">--SSR_COMP_SD AS componentTypeShortDesc,</span>
+	<span style="color:Green;">--SSR_COMP_LD AS componentTypeLongDesc,</span>
+	CONSENT_CD <span style="color:Blue;">AS</span> consentCode,
+	CONSENT_SD <span style="color:Blue;">AS</span> consentShortDesc,
+	CONSENT_LD <span style="color:Blue;">AS</span> consentLongDesc,
+	<span style="color:Green;">--FEES_EXIST AS feeIndicator,</span>
+	ENRL_CAP <span style="color:Blue;">AS</span> enrollCapacity,
+	ENRL_CAP_PCT <span style="color:Blue;">AS</span> enrollPercent,
+	ROOM_CAP_REQUEST <span style="color:Blue;">AS</span> requestedRoomCapacity,
+	MIN_ROOM_CAPACITY <span style="color:Blue;">AS</span> roomCapacity,
+	<span style="color:Green;">--WAIT_CAP AS waitCapacity,</span>
+	RSRV_CAP <span style="color:Blue;">AS</span> reserveCapacity,
+	MIN_ENRL <span style="color:Blue;">AS</span> minEnrollment,
+	ENRL_TOT <span style="color:Blue;">AS</span> totalEnrollment,
+	<span style="color:Green;">--WAIT_TOT AS waitTotal,</span>
+	CLASS_START_DT <span style="color:Blue;">AS</span> startDate,
+	CLASS_END_DT <span style="color:Blue;">AS</span> endDate,
+	CANCEL_DATE <span style="color:Blue;">AS</span> cancelDate,
+	YDL_5YDL_FLG <span style="color:Blue;">AS</span> fiveYearDeletedFlag,
+	AP_AP_FLG <span style="color:Blue;">AS</span> advPlacementOnlyFlag,
+	CLIN_CLIN_FLG <span style="color:Blue;">AS</span> clinicalFlag,
+	EEP_YES_FLG <span style="color:Blue;">AS</span> eepFlag,
+	GEN_BIOSCI_FLG <span style="color:Blue;">AS</span> bioSciFlag,
+	GEN_COMP_FLG <span style="color:Blue;">AS</span> compositionFlag,
+	GEN_DIVERS_FLG <span style="color:Blue;">AS</span> diversityFlag,
+	GEN_HUM_FLG <span style="color:Blue;">AS</span> humanitiesFlag,
+	GEN_INTL_FLG <span style="color:Blue;">AS</span> intlFlag,
+	GEN_INTL_I_FLG <span style="color:Blue;">AS</span> intlObsoleteFlag,
+	GEN_LIT_FLG <span style="color:Blue;">AS</span> litObsoleteFlag,
+	GEN_MATH_FLG <span style="color:Blue;">AS</span> mathFlag,
+	GEN_PHYSSCI_FLG <span style="color:Blue;">AS</span> physSciFlag,
+	GEN_SOCSCI_FLG <span style="color:Blue;">AS</span> socSciFlag,
+	IAOK_IAOK_FLG <span style="color:Blue;">AS</span> innovAcadFlag,
+	MR_MR_FLG <span style="color:Blue;">AS</span> mathReqFlag,
+	OMIR_ONL_MIRROR_FLG <span style="color:Blue;">AS</span> onlineMirrorTVReplayFlag,
+	PROF_PROF_FLG <span style="color:Blue;">AS</span> profCourseFlag,
+	RTOP_ROTTOP_FLG <span style="color:Blue;">AS</span> rotatingTopicFlag,
+	SELF_FUND_FLG <span style="color:Blue;">AS</span> selfFundedFlag,
+	UFO_UFO_FLG <span style="color:Blue;">AS</span> ufOnlineFlag,
+	WR_2000_FLG <span style="color:Blue;">AS</span> twoKWordsFlag,
+	WR_4000_FLG <span style="color:Blue;">AS</span> fourKWordsFlag,
+	WR_6000_FLG <span style="color:Blue;">AS</span> sixKWordsFlag,
+	WR_WR_FLG <span style="color:Blue;">AS</span> writingReqFlag,
+	UF_ANTICIPATED_LOC <span style="color:Blue;">AS</span> anticipatedLocation,
+	UF_ANTICIPATED_LOC_LD <span style="color:Blue;">AS</span> anticipatedLocationLongDesc,
+	UF_MEET_TYPE_UTIL <span style="color:Blue;">AS</span> meetingTypeUtilized,
+	UF_MEET_TYPE_UTIL_LD <span style="color:Blue;">AS</span> meetingTypeUtilizedLongDesc,
+	UF_NO_SR_PRESENCE_REQ <span style="color:Blue;">AS</span> noPhysPresenceReqFlag,
+	UF_MAIN_CLASS_PRES <span style="color:Blue;">AS</span> mainCampusClasesFlag,
+	UF_MAIN_EXAM_PRES <span style="color:Blue;">AS</span> mainCampusExamFlag,
+	UF_MAIN_OTHER_PRES <span style="color:Blue;">AS</span> mainCampusOtherFlag,
+	UF_OFF_CLASS_PRES <span style="color:Blue;">AS</span> OffsiteClassFlag,
+	UF_OFF_EXAM_PRES <span style="color:Blue;">AS</span> OffsiteExamFlag,
+	UF_OFF_OTHER_PRES <span style="color:Blue;">AS</span> OffsiteOtherFlag,
+	UF_TPS_CLASS_PRES <span style="color:Blue;">AS</span> thirdPartyClassFlag,
+	UF_TPS_EXAM_PRES <span style="color:Blue;">AS</span> thirdPartyExamFlag,
+	UF_TPS_OTHER_PRES <span style="color:Blue;">AS</span> thirdPartyOtherFlag,
+	UF_LIVE_SESS_FLG <span style="color:Blue;">AS</span> onlineLiveSessionFlag,
+	UF_ONLINE_EXAM_FLG <span style="color:Blue;">AS</span> onlineExamFlag,
+	UF_DELIVERY_METHOD <span style="color:Blue;">AS</span> deliveryMethodCode,
+	UF_TECH_IND_STATUS <span style="color:Blue;">AS</span> techIndicatorStatus,
+	UF_TECH_IND_STATUS_LD <span style="color:Blue;">AS</span> techIndicatorStatusLongDesc,
+	UF_LEARN_DIST_PCT <span style="color:Blue;">AS</span> learningDistancePercentage,
+	UF_TECH_IND_PRM <span style="color:Blue;">AS</span> primaryTechnologyIndicator,
+	UF_TECH_IND_PRM_LD <span style="color:Blue;">AS</span> primaryTechnologyIndicatorLongDesc,
+	UF_TECH_IND_SEC <span style="color:Blue;">AS</span> secondaryTechnologyIndicator,
+	UF_TECH_IND_SEC_LD <span style="color:Blue;">AS</span> secondaryTechnologyIndicatorLongDesc,
+	UF_TECH_IND_TER <span style="color:Blue;">AS</span> teriaryTechnologyIndicator,
+	UF_TECH_IND_TER_LD <span style="color:Blue;">AS</span> teriaryTechnologyIndicatorLongDesc,
+	EXAM_TIME_CODE <span style="color:Blue;">AS</span> finalExampGroupCode,
+	CRSE_SID <span style="color:Blue;">AS</span> courseSID,
+	<span style="color:Green;">--CRSE_CD AS courseCode,</span>
+	<span style="color:Green;">--CRSE_LD AS courseLongDesc,</span>
+	CRSE_OFFER_NBR <span style="color:Blue;">AS</span> courseOfferNum,
+	UF_COURSE_NUMBER <span style="color:Blue;">AS</span> course,
+	TERM_SID <span style="color:Blue;">AS</span> termSID,
+	TERM_CD <span style="color:Blue;">AS</span> termCode,
+	TERM6 <span style="color:Blue;">AS</span> term6,
+	<span style="color:Green;">--TERM_SD AS termShortDesc,</span>
+	<span style="color:Green;">--TERM_LD AS termLongDesc,</span>
+	SESSION_SID <span style="color:Blue;">AS</span> sessionSID,
+	SESSION_CD <span style="color:Blue;">AS</span> sessionCode,
+	<span style="color:Green;">--SESSION_LD AS sessionLongDesc,</span>
+	SESSION_SD <span style="color:Blue;">AS</span> sessionShortDesc,
+	INSTITUTION_SID <span style="color:Blue;">AS</span> institutionSID,
+	<span style="color:Green;">--INSTITUTION_CD AS institutionCode,</span>
+	<span style="color:Green;">--INSTITUTION_SD AS institutionShortDesc,</span>
+	<span style="color:Green;">--INSTITUTION_LD AS institutionLongDesc,</span>
+	ACAD_GRP_SID <span style="color:Blue;">AS</span> groupSID,
+	<span style="color:Green;">--ACAD_GRP_CD AS groupCode,</span>
+	<span style="color:Green;">--ACAD_GRP_SD AS groupShortDesc,</span>
+	<span style="color:Green;">--ACAD_GRP_LD AS groupLongDesc,</span>
+	ACAD_CAR_SID <span style="color:Blue;">AS</span> careerSID,
+	<span style="color:Green;">--ACAD_CAR_CD AS careerCode,</span>
+	<span style="color:Green;">--ACAD_CAR_SD AS careerShortDesc,</span>
+	<span style="color:Green;">--ACAD_CAR_LD AS careerLongDesc,</span>
+	ACAD_ORG_SID <span style="color:Blue;">AS</span> organizationSID,
+	<span style="color:Green;">--ACAD_ORG_CD AS organizationCode,</span>
+	<span style="color:Green;">--ACAD_ORG_SD AS organizationShortDesc,</span>
+	<span style="color:Green;">--ACAD_ORG_LD AS organizationLongDesc,</span>
+	CAMPUS_SID <span style="color:Blue;">AS</span> campusSID,
+	<span style="color:Green;">--CAMPUS_CD AS campusCode,</span>
+	<span style="color:Green;">--CAMPUS_LD AS campusShortDesc,</span>
+	<span style="color:Green;">--CAMPUS_SD AS campusLongDesc,</span>
+	SRC_SYS_ID <span style="color:Blue;">AS</span> sourceSystemID,
+	CREATED_EW_DTTM <span style="color:Blue;">AS</span> createdTimestamp,
+	LASTUPD_EW_DTTM <span style="color:Blue;">AS</span> lastUpdatedTimestamp
+<span style="color:Blue;">FROM</span>
+	BaseData.bd.bt_cs_D_CLASS ;
+</pre></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></div>
+  </body>
+</html>

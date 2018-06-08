@@ -1,0 +1,878 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="cf">
+        <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/Dataedo_repository_1/home" class="ajax" data-target="#right">Dataedo repository</a> › <a href="#doc/Dataedo_repository_1/modules" class="ajax" data-target="#right">Modules</a> › <a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/module" class="ajax" data-target="#right">Schema and Metadata</a> › <a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables" class="ajax" data-target="#right">Tables</a> › <a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables/dbo_tables" class="ajax" data-target="#right">dbo.tables (Tables and Views)</a></div>
+        <div id="tools">
+          <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+        </div>
+      </div>
+      <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+      <h1><i class=" icon2x-table "></i>dbo.tables (Tables and Views)</h1>
+      <table class="table table-vertical">
+        <tbody>
+          <tr>
+            <td>Schema</td>
+            <td>dbo</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>tables</td>
+          </tr>
+          <tr>
+            <td>Title</td>
+            <td>Tables and Views</td>
+          </tr>
+          <tr>
+            <td>Module</td>
+            <td><a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/module" class="ajax" data-target="#right">Schema and Metadata</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="element description">
+        <div class="html"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+		</title>
+		<style type="text/css">
+			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+			.cs82292024{color:#000000;background-color:transparent;font-family:Segoe UI;font-size:10pt;font-weight:normal;font-style:normal;}
+			.csDD3DFFD5{color:#000000;background-color:transparent;font-family:Segoe UI;font-size:10pt;font-weight:normal;font-style:italic;}
+		</style>
+	</head>
+	<body>
+		<p class="cs2654AE3A"><span class="cs82292024">Database tables and views. </span></p><p class="cs2654AE3A"><span class="cs82292024">&nbsp;</span></p><p class="cs2654AE3A"><span class="cs82292024">Tables and views are distinguished by </span><span class="csDD3DFFD5">object_type</span><span class="cs82292024"> column with &#39;TABLE&#39; and &#39;VIEW&#39; values.</span></p></body>
+</html>
+</div>
+      </div>
+      <div class="collapsible" data-key="columns">
+        <div class="collapsible-link font-large font-bold">Columns</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th style="width: 40px !important"></th>
+                <th style="width: 40px !important">Key</th>
+                <th>Name</th>
+                <th style="width: 170px">Data type</th>
+                <th style="width: 15px !important">Null</th>
+                <th class="only-desktop">Attributes</th>
+                <th class="only-desktop">References</th>
+                <th class="only-desktop">Description</th>
+                <th class="only-desktop">ExtendedProp</th>
+                <th class="only-desktop">Values</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><i class="icon-key no-margin" title="Primary key"></i></td>
+                <td>table_id</td>
+                <td>int</td>
+                <td></td>
+                <td class="only-desktop">
+      Identity / Auto increment column
+      
+      </td>
+                <td class="only-desktop">dbo.tables
+      (Tables and Views)
+    </td>
+                <td class="only-desktop">Row ID.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">Row ID.<br>
+      Identity / Auto increment column
+      
+      <br>
+            References:
+            dbo.tables
+      (Tables and Views)
+    <br></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td></td>
+                <td>database_id</td>
+                <td>int</td>
+                <td></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop"><a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables/dbo_databases" class="ajax" data-target="#right">dbo.databases
+      (Documentations)
+    </a></td>
+                <td class="only-desktop">Documentation which object is part of. Ref: databases.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">Documentation which object is part of. Ref: databases.<br>
+            References:
+            <a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables/dbo_databases" class="ajax" data-target="#right">dbo.databases
+      (Documentations)
+    </a><br></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td></td>
+                <td>schema</td>
+                <td>nvarchar(250)</td>
+                <td><i class="icon-check no-margin" title="Nullable"></i></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop">DBMS schema name.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">DBMS schema name.<br></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td></td>
+                <td>name</td>
+                <td>nvarchar(250)</td>
+                <td></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop">Object DBMS name.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">Object DBMS name.<br></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td></td>
+                <td>title</td>
+                <td>nvarchar(250)</td>
+                <td><i class="icon-check no-margin" title="Nullable"></i></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop">Alternative object title defined with Dataedo.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">Alternative object title defined with Dataedo.<br></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td></td>
+                <td>description</td>
+                <td>nvarchar(MAX)</td>
+                <td><i class="icon-check no-margin" title="Nullable"></i></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop">Table/view description defined with Dataedo.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">Table/view description defined with Dataedo.<br></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td></td>
+                <td>object_type</td>
+                <td>nvarchar(100)</td>
+                <td></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop">Database object type. 'TABLE' for tables, 'VIEW' for views.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">Database object type. 'TABLE' for tables, 'VIEW' for views.<br></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td></td>
+                <td>definition</td>
+                <td>nvarchar(MAX)</td>
+                <td><i class="icon-check no-margin" title="Nullable"></i></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop">View script imported from DBMS. Empty for tables.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">View script imported from DBMS. Empty for tables.<br></td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td></td>
+                <td>status</td>
+                <td>char(1)</td>
+                <td></td>
+                <td class="only-desktop">
+      Default:
+      'A'</td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop">'D' if table/view was deleted from DBMS, 'A' otherwise</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">'D' if table/view was deleted from DBMS, 'A' otherwise<br>
+      Default:
+      'A'<br></td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td></td>
+                <td>dbms_creation_date</td>
+                <td>datetime</td>
+                <td><i class="icon-check no-margin" title="Nullable"></i></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop">Time table/view was created in DBMS.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">Time table/view was created in DBMS.<br></td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td></td>
+                <td>dbms_last_modification_date</td>
+                <td>datetime</td>
+                <td><i class="icon-check no-margin" title="Nullable"></i></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop">Time table/view was last updated in DBMS.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">Time table/view was last updated in DBMS.<br></td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td></td>
+                <td>synchronization_date</td>
+                <td>datetime</td>
+                <td><i class="icon-check no-margin" title="Nullable"></i></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop">Time of last object update/import from DBMS.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">Time of last object update/import from DBMS.<br></td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td></td>
+                <td>synchronized_by</td>
+                <td>nvarchar(100)</td>
+                <td><i class="icon-check no-margin" title="Nullable"></i></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop">Login of user that last updated/imported the object from DBMS.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">Login of user that last updated/imported the object from DBMS.<br></td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td></td>
+                <td>creation_date</td>
+                <td>datetime</td>
+                <td></td>
+                <td class="only-desktop">
+      Default:
+      getdate()</td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop">Standard row creation timestamp.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">Standard row creation timestamp.<br>
+      Default:
+      getdate()<br></td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td></td>
+                <td>created_by</td>
+                <td>nvarchar(100)</td>
+                <td><i class="icon-check no-margin" title="Nullable"></i></td>
+                <td class="only-desktop">
+      Default:
+      suser_sname()</td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop">Database/Dataedo username that created row.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">Database/Dataedo username that created row.<br>
+      Default:
+      suser_sname()<br></td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td></td>
+                <td>last_modification_date</td>
+                <td>datetime</td>
+                <td></td>
+                <td class="only-desktop">
+      Default:
+      getdate()</td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop">Standard row last update timestamp.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">Standard row last update timestamp.<br>
+      Default:
+      getdate()<br></td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td></td>
+                <td>modified_by</td>
+                <td>nvarchar(100)</td>
+                <td><i class="icon-check no-margin" title="Nullable"></i></td>
+                <td class="only-desktop">
+      Default:
+      suser_sname()</td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop">Database/Dataedo username that last updated row.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">Database/Dataedo username that last updated row.<br>
+      Default:
+      suser_sname()<br></td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td></td>
+                <td>exists_in_DBMS</td>
+                <td>bit</td>
+                <td><i class="icon-check no-margin" title="Nullable"></i></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop">A flag which denotes if an object exists in DBMS. Used during update.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">A flag which denotes if an object exists in DBMS. Used during update.<br></td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td></td>
+                <td>description_search</td>
+                <td>nvarchar(MAX)</td>
+                <td><i class="icon-check no-margin" title="Nullable"></i></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop"></td>
+                <td class="only-desktop">Column used for searching, holds description as plain text. Description column contains HTML tags and images that would interfere with searching. </td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="5">Column used for searching, holds description as plain text. Description column contains HTML tags and images that would interfere with searching. <br></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="relations">
+        <div class="collapsible-link font-large font-bold">Relations</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Foreign table</th>
+                <th style="width: 40px !important"></th>
+                <th>Primary table</th>
+                <th class="only-desktop">Join</th>
+                <th class="only-desktop">Title / Name / Description</th>
+                <th class="only-desktop">ExtendedProp</th>
+                <th class="only-desktop">Values</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>dbo.tables (Tables and Views)</td>
+                <td><i class="&#xA;            icon24-relation-mx-1x no-margin" title="Many to one relation"></i></td>
+                <td><a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables/dbo_databases" class="ajax" data-target="#right">dbo.databases
+      (Documentations)
+    </a></td>
+                <td class="only-desktop"><span style="font-weight: bold">dbo.tables</span>.database_id = dbo.databases.database_id</td>
+                <td class="only-desktop">FK_tables_database</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="3">
+                  <div><span style="font-weight: bold">dbo.tables</span>.database_id = dbo.databases.database_id</div>FK_tables_database<br><td class="only-desktop">
+                  </td>
+                  <td class="only-desktop">
+                  </td>
+                </td>
+              </tr>
+              <tr>
+                <td>dbo.tables (Tables and Views)</td>
+                <td><i class="&#xA;            icon24-relation-mx-1x no-margin" title="Many to one relation"></i></td>
+                <td>dbo.tables
+      (Tables and Views)
+    </td>
+                <td class="only-desktop"><span style="font-weight: bold">dbo.tables</span>.table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</td>
+                <td class="only-desktop">FK_tables_tables</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="3">
+                  <div><span style="font-weight: bold">dbo.tables</span>.table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</div>FK_tables_tables<br><td class="only-desktop">
+                  </td>
+                  <td class="only-desktop">
+                  </td>
+                </td>
+              </tr>
+              <tr>
+                <td>dbo.tables
+      (Tables and Views)
+    </td>
+                <td><i class="&#xA;            icon24-relation-mx-1x no-margin" title="Many to one relation"></i></td>
+                <td>dbo.tables (Tables and Views)</td>
+                <td class="only-desktop"><span style="font-weight: bold">dbo.tables</span>.table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</td>
+                <td class="only-desktop">FK_tables_tables</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="3">
+                  <div><span style="font-weight: bold">dbo.tables</span>.table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</div>FK_tables_tables<br></td>
+              </tr>
+              <tr>
+                <td><a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables/dbo_columns" class="ajax" data-target="#right">dbo.columns
+      (Columns)
+    </a></td>
+                <td><i class="&#xA;            icon24-relation-mx-1x no-margin" title="Many to one relation"></i></td>
+                <td>dbo.tables (Tables and Views)</td>
+                <td class="only-desktop">dbo.columns.table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</td>
+                <td class="only-desktop">FK_column_table</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="3">
+                  <div>dbo.columns.table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</div>FK_column_table<br></td>
+              </tr>
+              <tr>
+                <td><a href="#doc/Dataedo_repository_1/tables/dbo_erd_nodes" class="ajax" data-target="#right">dbo.erd_nodes
+      (ERD Nodes)
+    </a></td>
+                <td><i class="&#xA;            icon24-relation-mx-1x no-margin" title="Many to one relation"></i></td>
+                <td>dbo.tables (Tables and Views)</td>
+                <td class="only-desktop">dbo.erd_nodes.table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</td>
+                <td class="only-desktop">FK_erd_nodes_tables</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="3">
+                  <div>dbo.erd_nodes.table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</div>FK_erd_nodes_tables<br></td>
+              </tr>
+              <tr>
+                <td><a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables/dbo_tables_modules" class="ajax" data-target="#right">dbo.tables_modules
+      (Tables-modules)
+    </a></td>
+                <td><i class="&#xA;            icon24-relation-mx-1x no-margin" title="Many to one relation"></i></td>
+                <td>dbo.tables (Tables and Views)</td>
+                <td class="only-desktop">dbo.tables_modules.table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</td>
+                <td class="only-desktop">FK_tables_modules_tables</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="3">
+                  <div>dbo.tables_modules.table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</div>FK_tables_modules_tables<br></td>
+              </tr>
+              <tr>
+                <td><a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables/dbo_tables_relations" class="ajax" data-target="#right">dbo.tables_relations
+      (Tables relations)
+    </a></td>
+                <td><i class="&#xA;            icon24-relation-mx-1x no-margin" title="Many to one relation"></i></td>
+                <td>dbo.tables (Tables and Views)</td>
+                <td class="only-desktop">dbo.tables_relations.fk_table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</td>
+                <td class="only-desktop">Foreign table<br>FK_tables_relations_table_fk</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="3">
+                  <div>dbo.tables_relations.fk_table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</div>Foreign table<br>FK_tables_relations_table_fk<br></td>
+              </tr>
+              <tr>
+                <td><a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables/dbo_tables_relations" class="ajax" data-target="#right">dbo.tables_relations
+      (Tables relations)
+    </a></td>
+                <td><i class="&#xA;            icon24-relation-mx-1x no-margin" title="Many to one relation"></i></td>
+                <td>dbo.tables (Tables and Views)</td>
+                <td class="only-desktop">dbo.tables_relations.pk_table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</td>
+                <td class="only-desktop">Primary table<br>FK_tables_relations_table_pk</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="3">
+                  <div>dbo.tables_relations.pk_table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</div>Primary table<br>FK_tables_relations_table_pk<br></td>
+              </tr>
+              <tr>
+                <td><a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables/dbo_triggers" class="ajax" data-target="#right">dbo.triggers
+      (Triggers)
+    </a></td>
+                <td><i class="&#xA;            icon24-relation-mx-1x no-margin" title="Many to one relation"></i></td>
+                <td>dbo.tables (Tables and Views)</td>
+                <td class="only-desktop">dbo.triggers.table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</td>
+                <td class="only-desktop">FK_triggers_table</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="3">
+                  <div>dbo.triggers.table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</div>FK_triggers_table<br></td>
+              </tr>
+              <tr>
+                <td><a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables/dbo_unique_constraints" class="ajax" data-target="#right">dbo.unique_constraints
+      (Unique keys)
+    </a></td>
+                <td><i class="&#xA;            icon24-relation-mx-1x no-margin" title="Many to one relation"></i></td>
+                <td>dbo.tables (Tables and Views)</td>
+                <td class="only-desktop">dbo.unique_constraints.table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</td>
+                <td class="only-desktop">FK_unique_constraints_tables</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="3">
+                  <div>dbo.unique_constraints.table_id = <span style="font-weight: bold">dbo.tables</span>.table_id</div>FK_unique_constraints_tables<br></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="unique-keys">
+        <div class="collapsible-link font-large font-bold">Unique keys</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th style="width: 40px !important"></th>
+                <th style="width: 20%">Key name</th>
+                <th style="width: 20%">Columns</th>
+                <th class="only-desktop">Description</th>
+                <th class="only-desktop">ExtendedProp</th>
+                <th class="only-desktop">Values</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><i class="icon-key no-margin" title="Primary key"></i></td>
+                <td>PK_tables</td>
+                <td>table_id</td>
+                <td class="only-desktop">Table primary key.</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="3">Table primary key.<br></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="triggers">
+        <div class="collapsible-link font-large font-bold">Triggers</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th style="width: 40px !important"></th>
+                <th style="width: 15%">Key name</th>
+                <th style="width: 15%">When</th>
+                <th class="only-desktop">Description</th>
+                <th class="only-desktop">ExtendedProp</th>
+                <th class="only-desktop">Values</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" data-node-id="1">
+                <td style="white-space: nowrap;"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="icon-trigger-active no-margin" title="Active trigger"></i></td>
+                <td>trg_tables_Modify</td>
+                <td>After Insert, Update</td>
+                <td class="only-desktop">Standard insert/update trigger setting last_modification_date, modified by columns</td>
+                <td class="only-desktop">
+                </td>
+                <td class="only-desktop">
+                </td>
+              </tr>
+              <tr data-parent-node-id="1" style="display: none;" class="only-desktop">
+                <td colspan="6">
+                  <div class="sql-script"><div style="color:Black;background-color:White;"><pre>
+<span style="color:Green;">-- =============================================</span>
+<span style="color:Green;">-- Author:		Piotr Kononow</span>
+<span style="color:Green;">-- Create date: 2014-06-18</span>
+<span style="color:Green;">-- Description:	Updates last_modification_date, modified_by columns on insert or update</span>
+<span style="color:Green;">-- =============================================</span>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">TRIGGER</span> [trg_tables_Modify]
+   <span style="color:Blue;">ON</span>  [tables] 
+   <span style="color:Blue;">AFTER</span> <span style="color:Blue;">INSERT</span>, <span style="color:Blue;">UPDATE</span>
+<span style="color:Blue;">AS</span> 
+<span style="color:Blue;">BEGIN</span>
+	<span style="color:Blue;">UPDATE</span> [tables]
+	<span style="color:Blue;">SET</span> last_modification_date = <span style="color:Magenta;">GETDATE</span>(),
+		modified_by = <span style="color:Blue;">suser_sname</span>()
+	<span style="color:Blue;">WHERE</span> table_id <span style="color:Blue;">IN</span> (<span style="color:Blue;">SELECT</span> <span style="color:Blue;">DISTINCT</span> table_id <span style="color:Blue;">FROM</span> Inserted)
+<span style="color:Blue;">END</span>
+</pre></div></div>
+                </td>
+              </tr>
+              <tr class="only-mobile">
+                <td colspan="4">Standard insert/update trigger setting last_modification_date, modified by columns<br></td>
+              </tr>
+              <tr data-parent-node-id="1" style="display: none;" class="only-mobile">
+                <td colspan="4">
+                  <div class="sql-script"><div style="color:Black;background-color:White;"><pre>
+<span style="color:Green;">-- =============================================</span>
+<span style="color:Green;">-- Author:		Piotr Kononow</span>
+<span style="color:Green;">-- Create date: 2014-06-18</span>
+<span style="color:Green;">-- Description:	Updates last_modification_date, modified_by columns on insert or update</span>
+<span style="color:Green;">-- =============================================</span>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">TRIGGER</span> [trg_tables_Modify]
+   <span style="color:Blue;">ON</span>  [tables] 
+   <span style="color:Blue;">AFTER</span> <span style="color:Blue;">INSERT</span>, <span style="color:Blue;">UPDATE</span>
+<span style="color:Blue;">AS</span> 
+<span style="color:Blue;">BEGIN</span>
+	<span style="color:Blue;">UPDATE</span> [tables]
+	<span style="color:Blue;">SET</span> last_modification_date = <span style="color:Magenta;">GETDATE</span>(),
+		modified_by = <span style="color:Blue;">suser_sname</span>()
+	<span style="color:Blue;">WHERE</span> table_id <span style="color:Blue;">IN</span> (<span style="color:Blue;">SELECT</span> <span style="color:Blue;">DISTINCT</span> table_id <span style="color:Blue;">FROM</span> Inserted)
+<span style="color:Blue;">END</span>
+</pre></div></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="uses">
+        <div class="collapsible-link font-large font-bold">Uses</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+                <td>
+                  <div style="margin-left: 0px">
+                    <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-table" title="Table"></i></div>
+                    <div style="margin-left: 44px">dbo.tables (Tables and Views)</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon24-relation-mx-1x" title="Many to one relation"></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables/dbo_databases" class="ajax" data-target="#right">dbo.databases (Documentations)</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="3" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon24-relation-mx-1x" title="Many to one relation"></i></div>
+                    <div style="margin-left: 44px">dbo.tables (Tables and Views)</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="used-by">
+        <div class="collapsible-link font-large font-bold">Used by</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+                <td>
+                  <div style="margin-left: 0px">
+                    <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-table" title="Table"></i></div>
+                    <div style="margin-left: 44px">dbo.tables (Tables and Views)</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="7" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon24-relation-1x-mx" title="Many to one relation"></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables/dbo_columns" class="ajax" data-target="#right">dbo.columns (Columns)</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="8" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon24-relation-1x-mx" title="Many to one relation"></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/Dataedo_repository_1/tables/dbo_erd_nodes" class="ajax" data-target="#right">dbo.erd_nodes (ERD Nodes)</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="9" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon24-relation-1x-mx" title="Many to one relation"></i></div>
+                    <div style="margin-left: 44px">dbo.tables (Tables and Views)</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon24-relation-1x-mx" title="Many to one relation"></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables/dbo_tables_modules" class="ajax" data-target="#right">dbo.tables_modules (Tables-modules)</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="3" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon24-relation-1x-mx" title="Many to one relation"></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables/dbo_tables_relations" class="ajax" data-target="#right">dbo.tables_relations (Tables relations) (Foreign table)</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="4" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon24-relation-1x-mx" title="Many to one relation"></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables/dbo_tables_relations" class="ajax" data-target="#right">dbo.tables_relations (Tables relations) (Primary table)</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="5" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon24-relation-1x-mx" title="Many to one relation"></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables/dbo_triggers" class="ajax" data-target="#right">dbo.triggers (Triggers)</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="6" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon24-relation-1x-mx" title="Many to one relation"></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/Dataedo_repository_1/modules/module_1_Schema_and_Metadata/tables/dbo_unique_constraints" class="ajax" data-target="#right">dbo.unique_constraints (Unique keys)</a></div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 15:56</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></div>
+  </body>
+</html>

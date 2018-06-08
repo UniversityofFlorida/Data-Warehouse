@@ -1,0 +1,599 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions" class="ajax" data-target="#right">Functions</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_ConvertTerm" class="ajax" data-target="#right">dbo.fn_ConvertTerm</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-function "></i>dbo.fn_ConvertTerm</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>fn_ConvertTerm</td>
+        </tr>
+        <tr>
+          <td>ExtendedProp</td>
+          <td>Convert 3, 4, 5 or 6 char Term string into another format.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>OUT</td>
+              <td>Returns</td>
+              <td>varchar(6)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>IN</td>
+              <td>termIN</td>
+              <td>varchar(20)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">Character string representing the term. 2 &lt; LEN &lt; 7</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>IN</td>
+              <td>type</td>
+              <td>int</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">Integer representing output format (num char) [ 3 | 4 | 5 | 6 ]</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="uses">
+      <div class="collapsible-link font-large font-bold">Uses</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+              <td>
+                <div style="margin-left: 0px">
+                  <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-function" title="Function"></i></div>
+                  <div style="margin-left: 44px">dbo.fn_ConvertTerm</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_LRTrim" class="ajax" data-target="#right">dbo.fn_LRTrim</a></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="used-by">
+      <div class="collapsible-link font-large font-bold">Used by</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+              <td>
+                <div style="margin-left: 0px">
+                  <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-function" title="Function"></i></div>
+                  <div style="margin-left: 44px">dbo.fn_ConvertTerm</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_ClassRolls_GetClassRollData" class="ajax" data-target="#right">dbo.p_ClassRolls_GetClassRollData</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="8" data-parent-node-id="2">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_pp_ClassRolls_GetClassRollData" class="ajax" data-target="#right">dbo.pp_ClassRolls_GetClassRollData</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="3" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetAcademicYear" class="ajax" data-target="#right">dbo.fn_GetAcademicYear</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="4" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetActiveTerms_tbl" class="ajax" data-target="#right">dbo.fn_GetActiveTerms_tbl</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="9" data-parent-node-id="4">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetActiveTerms_List" class="ajax" data-target="#right">dbo.fn_GetActiveTerms_List</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="10" data-parent-node-id="4">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetActiveTerms_List_DoubleQuoted" class="ajax" data-target="#right">dbo.fn_GetActiveTerms_List_DoubleQuoted</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="5" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetFiscalYear" class="ajax" data-target="#right">dbo.fn_GetFiscalYear</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="6" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetTerm" class="ajax" data-target="#right">dbo.fn_GetTerm</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="11" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-uses-view" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_bv_StudentRegistration" class="ajax" data-target="#right">dbo.bv_StudentRegistration</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="30" data-parent-node-id="11">
+              <td>
+                <div style="margin-left: 66px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px">dbo.archive_04-10-2017_p_GetACStudentsForPrinterPriviledges</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="31" data-parent-node-id="11">
+              <td>
+                <div style="margin-left: 66px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px">dbo.archive_04-10-2017_p_GetStudentsRegisteredForGradLevelCourses</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="32" data-parent-node-id="11">
+              <td>
+                <div style="margin-left: 66px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_ClassRolls_GetClassRollData" class="ajax" data-target="#right">dbo.p_ClassRolls_GetClassRollData</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="37" data-parent-node-id="32">
+              <td>
+                <div style="margin-left: 88px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_pp_ClassRolls_GetClassRollData" class="ajax" data-target="#right">dbo.pp_ClassRolls_GetClassRollData</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="33" data-parent-node-id="11">
+              <td>
+                <div style="margin-left: 66px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_ClassRolls_StudentSearch" class="ajax" data-target="#right">dbo.p_ClassRolls_StudentSearch</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="38" data-parent-node-id="33">
+              <td>
+                <div style="margin-left: 88px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_pp_ClassRolls_StudentSearch" class="ajax" data-target="#right">dbo.pp_ClassRolls_StudentSearch</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="34" data-parent-node-id="11">
+              <td>
+                <div style="margin-left: 66px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_ClassRolls_StudentSearchByName" class="ajax" data-target="#right">dbo.p_ClassRolls_StudentSearchByName</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="35" data-parent-node-id="11">
+              <td>
+                <div style="margin-left: 66px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_snoopy_accStudentsForPrinterPriviledges_get" class="ajax" data-target="#right">dbo.p_snoopy_accStudentsForPrinterPriviledges_get</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="36" data-parent-node-id="11">
+              <td>
+                <div style="margin-left: 66px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_snoopy_studentsRegForGradCourses_get" class="ajax" data-target="#right">dbo.p_snoopy_studentsRegForGradCourses_get</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="12" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-uses-view" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_dv_SpecialPrograms" class="ajax" data-target="#right">dbo.dv_SpecialPrograms</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="39" data-parent-node-id="12">
+              <td>
+                <div style="margin-left: 66px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_sectionsWithInstructors" class="ajax" data-target="#right">dbo.p_sectionsWithInstructors</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="13" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px">dbo.archive_04-10-2017_p_GetACStudentsForPrinterPriviledges</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="14" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px">dbo.archive_04-10-2017_p_GetNonWCBAInstructors</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="15" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px">dbo.archive_04-10-2017_p_GetStudentsRegisteredForGradLevelCourses</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="16" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_ClassRolls_GetClassRollData" class="ajax" data-target="#right">dbo.p_ClassRolls_GetClassRollData</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="40" data-parent-node-id="16">
+              <td>
+                <div style="margin-left: 66px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_pp_ClassRolls_GetClassRollData" class="ajax" data-target="#right">dbo.pp_ClassRolls_GetClassRollData</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="17" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_ClassRolls_GetClassRollListing" class="ajax" data-target="#right">dbo.p_ClassRolls_GetClassRollListing</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="18" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_ClassRolls_StudentSearch" class="ajax" data-target="#right">dbo.p_ClassRolls_StudentSearch</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="41" data-parent-node-id="18">
+              <td>
+                <div style="margin-left: 66px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_pp_ClassRolls_StudentSearch" class="ajax" data-target="#right">dbo.pp_ClassRolls_StudentSearch</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="19" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_ClassRolls_StudentSearchByName" class="ajax" data-target="#right">dbo.p_ClassRolls_StudentSearchByName</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="20" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_sectionsWithInstructors" class="ajax" data-target="#right">dbo.p_sectionsWithInstructors</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="21" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_snoopy_accStudentsForPrinterPriviledges_get" class="ajax" data-target="#right">dbo.p_snoopy_accStudentsForPrinterPriviledges_get</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="22" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_snoopy_nonWCBInstructors_get" class="ajax" data-target="#right">dbo.p_snoopy_nonWCBInstructors_get</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="23" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_snoopy_studentsRegForGradCourses_get" class="ajax" data-target="#right">dbo.p_snoopy_studentsRegForGradCourses_get</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="24" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetEPSections_tbl" class="ajax" data-target="#right">dbo.fn_GetEPSections_tbl</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="25" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetOnlineUndergradSections_tbl" class="ajax" data-target="#right">dbo.fn_GetOnlineUndergradSections_tbl</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="26" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetTerm_cs" class="ajax" data-target="#right">dbo.fn_GetTerm_cs</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="27" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetTermsWithSummerB_tbl" class="ajax" data-target="#right">dbo.fn_GetTermsWithSummerB_tbl</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="42" data-parent-node-id="27">
+              <td>
+                <div style="margin-left: 66px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetTermWithSummerB" class="ajax" data-target="#right">dbo.fn_GetTermWithSummerB</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="28" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_IsEndSummerATerm" class="ajax" data-target="#right">dbo.fn_IsEndSummerATerm</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="29" data-parent-node-id="6">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_IsStartSummerBTerm" class="ajax" data-target="#right">dbo.fn_IsStartSummerBTerm</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="7" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-function" title="Used by "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetTermWithSummerB" class="ajax" data-target="#right">dbo.fn_GetTermWithSummerB</a></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">FUNCTION</span> [dbo].[fn_ConvertTerm] 
+(
+    @termIN <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(20),
+    @type <span style="color:Blue;">AS</span> <span style="color:Blue;">INT</span>
+)
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        fn_ConvertTerm
+
+  Description:	    BaseViews - Convert 3, 4, 5 or 6 char Term string into another format.
+  
+  Input:            @termIN:    Character string representing the term. 2 &lt; LEN &lt; 7
+                    @type:      Integer representing output format (num char) [ 3 | 4 | 5 | 6 ]
+  
+  Usage:            BaseViews.dbo.fn_ConvertTerm(&#39;Term_To_Convert&#39;, Type)
+  
+                    Example: SELECT BaseViews.dbo.fn_ConvertTerm(&#39;200608&#39;, 3)
+                    Returns: &#39;068&#39;
+
+  Created:	        09/25/2009 by John Holmes
+
+  Modified:
+  	
+**************************************************************************************************/</span>
+
+<span style="color:Blue;">RETURNS</span> <span style="color:Blue;">VARCHAR</span>(6)
+
+<span style="color:Blue;">AS</span>
+
+<span style="color:Blue;">BEGIN</span>
+    
+	<span style="color:Green;">-- Declare and initialize the return and working variables</span>
+	<span style="color:Blue;">DECLARE</span> @termOUT <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(6)
+	<span style="color:Blue;">DECLARE</span> @term6 <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(6)
+	<span style="color:Blue;">SET</span> @termOUT = <span style="color:#A31515;">&#39;&#39;</span>
+	<span style="color:Blue;">SET</span> @term6 = <span style="color:#A31515;">&#39;&#39;</span>
+	
+	
+	<span style="color:Green;">-- Clean up the input</span>
+	<span style="color:Blue;">SET</span> @termIN = BaseViews.dbo.fn_LRTrim(@termIN)
+	
+	
+	<span style="color:Green;">-- Error Checking: input length</span>
+    <span style="color:Blue;">IF</span> (<span style="color:Magenta;">LEN</span>(@termIN) &lt; 3 <span style="color:Blue;">OR</span> <span style="color:Magenta;">LEN</span>(@termIN) &gt; 6)
+    <span style="color:Blue;">BEGIN</span>
+        <span style="color:Blue;">IF</span>(<span style="color:Magenta;">LEN</span>(<span style="color:Magenta;">LTRIM</span>(<span style="color:Magenta;">RTRIM</span>(@termIN))) = 0)
+        <span style="color:Blue;">BEGIN</span>
+            <span style="color:Blue;">SET</span> @termOUT = <span style="color:#A31515;">&#39;&#39;</span>
+        <span style="color:Blue;">END</span>
+        <span style="color:Blue;">ELSE</span> <span style="color:Blue;">SET</span> @termOUT = <span style="color:#A31515;">&#39;INPERR&#39;</span>
+    <span style="color:Blue;">END</span>
+    
+    
+    <span style="color:Green;">-- Error Checking: type specification</span>
+    <span style="color:Blue;">ELSE</span> <span style="color:Blue;">IF</span> (@type &lt;3 <span style="color:Blue;">OR</span> @type &gt; 6)
+    <span style="color:Blue;">BEGIN</span>
+        <span style="color:Blue;">SET</span> @termOUT = <span style="color:#A31515;">&#39;TYPERR&#39;</span>
+    <span style="color:Blue;">END</span>
+    
+    
+    <span style="color:Green;">-- If no input errors, perform conversion</span>
+    <span style="color:Blue;">ELSE</span>
+    <span style="color:Blue;">BEGIN</span>
+        <span style="color:Green;">-- STEP 1: Convert to 6-char format</span>
+        <span style="color:Blue;">SET</span> @term6 = 
+	        <span style="color:Blue;">CASE</span>
+	            <span style="color:Green;">-- 3 char input</span>
+	            <span style="color:Blue;">WHEN</span> <span style="color:Magenta;">LEN</span>(@termIN) = 3 
+	            <span style="color:Blue;">THEN</span> (<span style="color:Blue;">CASE</span> <span style="color:Blue;">WHEN</span> <span style="color:Blue;">LEFT</span>(@termIN,2) &gt; 40 <span style="color:Blue;">THEN</span> <span style="color:#A31515;">&#39;19&#39;</span> <span style="color:Blue;">ELSE</span> <span style="color:#A31515;">&#39;20&#39;</span> <span style="color:Blue;">END</span>) + <span style="color:Blue;">LEFT</span>(@termIN,2) + <span style="color:#A31515;">&#39;0&#39;</span> + <span style="color:Blue;">RIGHT</span>(@termIN, 1)
+	            
+	            <span style="color:Green;">-- 4 char input</span>
+	            <span style="color:Blue;">WHEN</span> <span style="color:Magenta;">LEN</span>(@termIN) = 4 
+	            <span style="color:Blue;">THEN</span> (<span style="color:Blue;">CASE</span> <span style="color:Blue;">WHEN</span> <span style="color:Blue;">LEFT</span>(@termIN,2) &gt; 40 <span style="color:Blue;">THEN</span> <span style="color:#A31515;">&#39;19&#39;</span> <span style="color:Blue;">ELSE</span> <span style="color:#A31515;">&#39;20&#39;</span> <span style="color:Blue;">END</span>) + <span style="color:Blue;">LEFT</span>(@termIN,2) + <span style="color:Blue;">RIGHT</span>(@termIN, 2)
+	            
+	            <span style="color:Green;">-- 5 char input</span>
+	            <span style="color:Blue;">WHEN</span> <span style="color:Magenta;">LEN</span>(@termIN) = 5 
+	            <span style="color:Blue;">THEN</span> <span style="color:Blue;">LEFT</span>(@termIN,4) + <span style="color:#A31515;">&#39;0&#39;</span> + <span style="color:Blue;">RIGHT</span>(@termIN, 1)
+	            
+	            <span style="color:Green;">-- 6 char input</span>
+	            <span style="color:Blue;">ELSE</span> @termIN
+            <span style="color:Blue;">END</span>
+            
+        <span style="color:Green;">-- STEP 2: Convert to requested format</span>
+        <span style="color:Blue;">SET</span> @termOUT = 
+            <span style="color:Blue;">CASE</span>
+                <span style="color:Green;">-- 3 char output</span>
+                <span style="color:Blue;">WHEN</span> @type = 3
+                <span style="color:Blue;">THEN</span> <span style="color:Blue;">RIGHT</span>(<span style="color:Blue;">LEFT</span>(@term6, 4), 2) + <span style="color:Blue;">RIGHT</span>(@term6, 1)
+                
+                <span style="color:Green;">-- 4 char output</span>
+                <span style="color:Blue;">WHEN</span> @type = 4
+                <span style="color:Blue;">THEN</span> <span style="color:Blue;">RIGHT</span>(<span style="color:Blue;">LEFT</span>(@term6, 4), 2) + <span style="color:Blue;">RIGHT</span>(@term6, 2)
+                
+                <span style="color:Green;">-- 5 char output</span>
+                <span style="color:Blue;">WHEN</span> @type = 5
+                <span style="color:Blue;">THEN</span> <span style="color:Blue;">LEFT</span>(@term6, 4) + <span style="color:Blue;">RIGHT</span>(@term6, 1)
+                
+                <span style="color:Green;">-- 6 char output</span>
+                <span style="color:Blue;">ELSE</span> @term6 
+            <span style="color:Blue;">END</span>
+	<span style="color:Blue;">END</span>
+	
+	
+	<span style="color:Green;">-- Return the result</span>
+	<span style="color:Blue;">RETURN</span> @termOUT 
+	
+<span style="color:Blue;">END</span>
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

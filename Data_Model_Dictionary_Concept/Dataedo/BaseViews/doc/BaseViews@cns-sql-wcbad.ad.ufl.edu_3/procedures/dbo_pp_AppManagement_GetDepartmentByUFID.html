@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures" class="ajax" data-target="#right">Procedures</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_pp_AppManagement_GetDepartmentByUFID" class="ajax" data-target="#right">dbo.pp_AppManagement_GetDepartmentByUFID</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-procedure "></i>dbo.pp_AppManagement_GetDepartmentByUFID</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>pp_AppManagement_GetDepartmentByUFID</td>
+        </tr>
+        <tr>
+          <td>ExtendedProp</td>
+          <td>Stub for AppManagement.dbo.p_GetDepartmentByUFID. Return Department by UFID of WCBA staff member.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>IN</td>
+              <td>UFID</td>
+              <td>varchar(8)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">8-char UF Identifer.</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="uses">
+      <div class="collapsible-link font-large font-bold">Uses</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+              <td>
+                <div style="margin-left: 0px">
+                  <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-procedure" title="Procedure"></i></div>
+                  <div style="margin-left: 44px">dbo.pp_AppManagement_GetDepartmentByUFID</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">AppManagement.dbo.p_GetDepartmentByUFID</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">PROCEDURE</span> [dbo].[pp_AppManagement_GetDepartmentByUFID] 
+
+	@UFID <span style="color:Blue;">VARCHAR</span>(8)
+	
+<span style="color:Blue;">AS</span> 
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        pp_AppManagement_GetDepartmentByUFID
+
+  Description:	    Stub for AppManagement.dbo.p_GetDepartmentByUFID
+                    Return Department by UFID of WCBA staff member.
+  
+  Input:            UFID VARCHAR(8) - 8-char UF Identifer.
+  
+  Usage:            EXEC [BaseViews].[dbo].[p_GetDepartmentByUFID] UFID
+  
+  Created:	        07/16/2010 by John Holmes
+
+  Modified:
+  	
+**************************************************************************************************/</span>
+
+<span style="color:Blue;">BEGIN</span>
+	
+	<span style="color:Blue;">SET</span> <span style="color:Blue;">NOCOUNT</span> <span style="color:Blue;">ON</span>;
+
+    <span style="color:Blue;">EXEC</span> [AppManagement].[dbo].[p_GetDepartmentByUFID] @UFID
+    
+<span style="color:Blue;">END</span>
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

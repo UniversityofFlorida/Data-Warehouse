@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="cf">
+        <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views" class="ajax" data-target="#right">Views</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_hv_SIFCourses" class="ajax" data-target="#right">dbo.hv_SIFCourses</a></div>
+        <div id="tools">
+          <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+        </div>
+      </div>
+      <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+      <h1><i class=" icon2x-view "></i>dbo.hv_SIFCourses</h1>
+      <table class="table table-vertical">
+        <tbody>
+          <tr>
+            <td>Schema</td>
+            <td>dbo</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>hv_SIFCourses</td>
+          </tr>
+          <tr>
+            <td>ExtendedProp</td>
+            <td>Board of Governors (BOG) Student Instruction File (SIF) Courses Taken</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="collapsible" data-key="uses">
+        <div class="collapsible-link font-large font-bold">Uses</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+                <td>
+                  <div style="margin-left: 0px">
+                    <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-view" title="View"></i></div>
+                    <div style="margin-left: 44px">dbo.hv_SIFCourses</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">BaseDataHistory.dbo.ht_SIF_COURSES_TAKN</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="script">
+        <div class="collapsible-link font-large font-bold">Script</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">VIEW</span> [dbo].[hv_SIFCourses] <span style="color:Blue;">AS</span> 
+    
+<span style="color:Green;">/*****************************************************************************************
+  Name:		    hv_SIFCourses
+
+  Description:  Board of Governors (BoG) Student Instruction File (SIF) Courses Taken
+
+  Created:	    05/12/2010 by John Holmes
+
+  Modified:     09/06/2011 by John Holmes
+                v1.1.0 - Source object renaming in support of ERP (Oracle) Warehouse.
+                
+*****************************************************************************************/</span> 
+    
+<span style="color:Blue;">SELECT</span> 
+    [DEMO_TIME_FRAME] <span style="color:Blue;">AS</span> [Term6]                        <span style="color:Green;">-- Term (6 char) for which the data is reported</span>
+    ,[DEMO_DATA_SOURCE] <span style="color:Blue;">AS</span> [Dataset]                    <span style="color:Green;">-- Source of the data stored in the current record.</span>
+    ,[UNIV_ROW_ID] <span style="color:Blue;">AS</span> [UFID]                            <span style="color:Green;">-- UFID</span>
+    ,[WCBA_COURSE] <span style="color:Blue;">AS</span> [Course]                          <span style="color:Green;">-- Course Number (XYZ1234)</span>
+    ,[CRS_SECTN_NBR] <span style="color:Blue;">AS</span> [Section]                       <span style="color:Green;">-- Course Section Number</span>
+    ,[STU_SECTN_CRED] <span style="color:Blue;">AS</span> [Credit]                       <span style="color:Green;">-- Student Section Credit</span>
+    ,[GRADE_AWARDED] <span style="color:Blue;">AS</span> [Grade]                         <span style="color:Green;">-- Grade Awarded</span>
+    ,[CRS_LEVEL_CLASS] <span style="color:Blue;">AS</span> [CourseClassificationLevel]   <span style="color:Green;">-- Course Classification Level (L|U|1|2)</span>
+    ,[UF_OFFBOOK_FLG] <span style="color:Blue;">AS</span> [Offbook]                      <span style="color:Green;">-- Offbook Flag</span>
+    ,[ST_FUND_CRED_HRS] <span style="color:Blue;">AS</span> [FundableCreditHours]        <span style="color:Green;">-- State Fundable Credit Hours</span>
+    ,[DIFF_TUITION_FLG] <span style="color:Blue;">AS</span> [DifferentialTuition]        <span style="color:Green;">-- Differential Tuition Flag</span>
+    ,[CONT_COOP_ED_IND] <span style="color:Blue;">AS</span> [CoopEducationFlag]          <span style="color:Green;">-- Continuing and Cooperative Education Flag</span>
+    ,[FEE_CLASS_KIND] <span style="color:Blue;">AS</span> [FeeClassification]            <span style="color:Green;">-- Fee Classification - Kind</span>
+    ,[COLLEGE] <span style="color:Blue;">AS</span> [College]                             <span style="color:Green;">-- College (2-char abbrev.)</span>
+    ,[UF_CRS_COLLEGE] <span style="color:Blue;">AS</span> [CourseCollege]                <span style="color:Green;">-- Course College</span>
+    ,[DEPT_ID_CRS] <span style="color:Blue;">AS</span> [CourseDepartmentNumber]          <span style="color:Green;">-- Account/Department Number - Course</span>
+    ,[REPT_INST] <span style="color:Blue;">AS</span> [ReportingInstitution]              <span style="color:Green;">-- Reporting Institution (UF)</span>
+    ,[STU_SECTN_FUND_CD] <span style="color:Blue;">AS</span> [SectionFunding]            <span style="color:Green;">-- Student Section Funding Flag</span>
+    ,[SEGMENT_SEQ] <span style="color:Blue;">AS</span> [SegmentCounter]                  <span style="color:Green;">-- Segment Counter</span>
+    ,[CRS_IND] <span style="color:Blue;">AS</span> [CourseOutsideIndicator]              <span style="color:Green;">-- Course Outside Indicator</span>
+    ,[CIP_CRS] <span style="color:Blue;">AS</span> [ProgramCategory]                     <span style="color:Green;">-- Course Program Category</span>
+    ,[CAMPUS_CD] <span style="color:Blue;">AS</span> [CampusCode]                        <span style="color:Green;">-- Campus Code</span>
+    ,[SITE_NBR] <span style="color:Blue;">AS</span> [SiteNumber]                         <span style="color:Green;">-- Site Number</span>
+    ,[CRS_SECTN_LOC_CNTY] <span style="color:Blue;">AS</span> [County]                   <span style="color:Green;">-- Course Section Location - County</span>
+    ,[BE_CD] <span style="color:Blue;">AS</span> [BudgetEntityCode]                      <span style="color:Green;">-- Course Budget Entity Code</span>
+    ,[CRS_SECTN_TYP_PRI] <span style="color:Blue;">AS</span> [SectionType]               <span style="color:Green;">-- Primary Course Section Type</span>
+    ,[PRELIM_FILE_FLG] <span style="color:Blue;">AS</span> [PrelimFileFlag]              <span style="color:Green;">-- Preliminary File Flag</span>
+    ,[INST_OUTSIDE_IND] <span style="color:Blue;">AS</span> [InstitutionOutsideIndicator]<span style="color:Green;">-- Institutional Outside Indicator</span>
+    ,[CREATE_ID] <span style="color:Blue;">AS</span> [RecordCreatorID]                   <span style="color:Green;">-- Record creator ID</span>
+    ,[CREATE_TS] <span style="color:Blue;">AS</span> [RecordCreationTimestamp]           <span style="color:Green;">-- Record creation timestamp</span>
+    ,[UPDATE_ID] <span style="color:Blue;">AS</span> [LastRecordUpdaterID]               <span style="color:Green;">-- Record last update ID</span>
+    ,[UPDATE_TS] <span style="color:Blue;">AS</span> [LastRecordUpdateTimestamp]         <span style="color:Green;">-- Record last update timestamp</span>
+<span style="color:Blue;">FROM</span> 
+    [BaseDataHistory].[dbo].[ht_SIF_COURSES_TAKN]
+</pre></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></div>
+  </body>
+</html>

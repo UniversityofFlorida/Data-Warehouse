@@ -1,0 +1,446 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions" class="ajax" data-target="#right">Functions</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetAddressList" class="ajax" data-target="#right">dbo.fn_GetAddressList</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-function "></i>dbo.fn_GetAddressList</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>fn_GetAddressList</td>
+        </tr>
+        <tr>
+          <td>ExtendedProp</td>
+          <td>Given a list of UFIDs and a an address type, return a list of addresses</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>OUT</td>
+              <td>Returns</td>
+              <td>table type</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>IN</td>
+              <td>UFIDs</td>
+              <td>xml</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">8-char UF identifier (UFID) in XML format. Create with [SELECT UFID FROM &lt;table&gt; FOR XML RAW('Person'), ROOT('People')]</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>IN</td>
+              <td>AddressType</td>
+              <td>varchar(1)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">L = Local, P = Permanent</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="uses">
+      <div class="collapsible-link font-large font-bold">Uses</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+              <td>
+                <div style="margin-left: 0px">
+                  <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-function" title="Function"></i></div>
+                  <div style="margin-left: 44px">dbo.fn_GetAddressList</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-view" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_bv_UFDirPeopleAddress" class="ajax" data-target="#right">dbo.bv_UFDirPeopleAddress</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="6" data-parent-node-id="2">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.bt_UFDIR_ADDRESS</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="4" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_ProperCase" class="ajax" data-target="#right">dbo.fn_ProperCase</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="5" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_ProperCaseAddress" class="ajax" data-target="#right">dbo.fn_ProperCaseAddress</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="7" data-parent-node-id="5">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_LRTrim" class="ajax" data-target="#right">dbo.fn_LRTrim</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="8" data-parent-node-id="5">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_ProperCase" class="ajax" data-target="#right">dbo.fn_ProperCase</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="3" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">UFIDs.Person.value</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Green;">--IF OBJECT_ID(&#39;dbo.fn_GetAddressList&#39;, &#39;TF&#39;) IS NULL    -- Doesn’t exist</span>
+<span style="color:Green;">--    EXEC(&#39;CREATE FUNCTION dbo.fn_GetAddressList() RETURNS TABLE AS RETURN (SELECT @@VERSION AS [Version]);&#39;)   -- Create empty stub.</span>
+<span style="color:Green;">--GO</span>
+
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">FUNCTION</span> [dbo].[fn_GetAddressList]
+    (
+     @UFIDs <span style="color:Blue;">XML</span>
+    ,@AddressType <span style="color:Blue;">VARCHAR</span>(1) = <span style="color:#A31515;">&#39;L&#39;</span>
+    )
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        fn_GetAddressList
+
+  Description:	    Given a list of UFIDs and a an address type, return a list of addresses
+  
+  Input:            UFIDs in XML format
+							Create with SELECT UFID FROM &lt;table&gt; FOR XML RAW(&#39;Person&#39;), ROOT(&#39;People&#39;)
+					AddressType - &#39;L&#39; for Local, &#39;P&#39; for Permanent
+					
+  Output:            
+  
+  Usage:            SELECT * FROM [BaseViews].[dbo].[fn_GetAddressList](UFIDs, AddressType)
+                    
+  Created:	        04/22/2010 by William McCombie
+
+  Modified:         06/15/2010 by John Holmes
+                    Return ALL addresses (not just active).
+                    
+                    06/21/2010 by John Holmes
+                    Add Emergency Contact (Type 23) as a last resort to both Local and Permanent.
+  	
+**************************************************************************************************/</span>
+<span style="color:Blue;">RETURNS</span> @Addresses <span style="color:Blue;">TABLE</span>
+    (
+     [UFID] <span style="color:Blue;">VARCHAR</span>(8)
+    ,[Address] <span style="color:Blue;">VARCHAR</span>(44)
+    ,[City] <span style="color:Blue;">VARCHAR</span>(30)
+    ,[State] <span style="color:Blue;">VARCHAR</span>(2)
+    ,[Zip] <span style="color:Blue;">VARCHAR</span>(12)
+    )
+<span style="color:Blue;">AS</span> 
+    <span style="color:Blue;">BEGIN</span>
+    
+    <span style="color:Green;">/* Example code to create XML parameter using UF Directory data
+      DECLARE @UFIDs XML
+	  SET @UFIDs = (SELECT UFID FROM [BaseViews].[dbo].[bv_UFDIRPeopleActive] FOR XML RAW(&#39;Person&#39;), ROOT(&#39;People&#39;))
+	*/</span>
+    
+    
+    <span style="color:Green;">-- Insert Results into table</span>
+        <span style="color:Blue;">INSERT</span>  <span style="color:Blue;">INTO</span> @Addresses
+                (
+                 UFID
+                )
+                <span style="color:Blue;">SELECT</span>
+                    UFIDs.Person.value(<span style="color:#A31515;">&#39;@UFID[1]&#39;</span>, <span style="color:#A31515;">&#39;varchar(8)&#39;</span>) <span style="color:Blue;">AS</span> UFID
+                <span style="color:Blue;">FROM</span>
+                    @UFIDs.nodes(<span style="color:#A31515;">&#39;//People/Person&#39;</span>) <span style="color:Blue;">AS</span> UFIDs (Person)    
+        
+    <span style="color:Green;">/*
+    2 = UF Business Mailing, 
+    4 = Local Home Mailing, 
+    5 = Local Home Physical, 
+    6 = Permanent Home Mailing, 
+    22 = Parents Mailing, 
+    23 = Emergency Contact, 
+    94 = Housing
+	*/</span>
+	
+    <span style="color:Green;">----------------------------------------------------------------</span>
+	
+	
+        <span style="color:Blue;">IF</span> @AddressType = <span style="color:#A31515;">&#39;L&#39;</span>   <span style="color:Green;">-- Local Addresses</span>
+            <span style="color:Blue;">BEGIN</span>
+    	        <span style="color:Green;">-- Preferred address is Type 4 = Local Home Mailing</span>
+                <span style="color:Blue;">UPDATE</span>
+                    @Addresses
+                <span style="color:Blue;">SET</span> 
+                    [Address] = [BaseViews].[dbo].[fn_ProperCaseAddress]([addr].[Address])
+                   ,[City] = [BaseViews].[dbo].[fn_ProperCase]([addr].[City])
+                   ,[State] = [addr].[State]
+                   ,[Zip] = [addr].[Zip]
+                <span style="color:Blue;">FROM</span>
+                    @Addresses <span style="color:Blue;">AS</span> [r]
+                <span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> [BaseViews].[dbo].[bv_UFDirPeopleAddress] <span style="color:Blue;">AS</span> [addr]
+                    <span style="color:Blue;">ON</span> [r].[UFID] = [addr].[UFID]
+                <span style="color:Blue;">WHERE</span>
+                    [addr].[Type] = 4
+                
+                
+                <span style="color:Green;">-- Add type 5 addresses if address still blank</span>
+                <span style="color:Green;">-- Type 5 = Local home physical</span>
+                <span style="color:Blue;">UPDATE</span>
+                    @Addresses
+                <span style="color:Blue;">SET</span> 
+                    [Address] = [BaseViews].[dbo].[fn_ProperCaseAddress]([addr].[Address])
+                   ,[City] = [BaseViews].[dbo].[fn_ProperCase]([addr].[City])
+                   ,[State] = [addr].[State]
+                   ,[Zip] = [addr].[Zip]
+                <span style="color:Blue;">FROM</span>
+                    @Addresses <span style="color:Blue;">AS</span> [r]
+                <span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> [BaseViews].[dbo].[bv_UFDirPeopleAddress] <span style="color:Blue;">AS</span> [addr]
+                    <span style="color:Blue;">ON</span> [r].[UFID] = [addr].[UFID]
+                <span style="color:Blue;">WHERE</span>
+                    [addr].[Type] = 5
+                    <span style="color:Blue;">AND</span> <span style="color:Magenta;">COALESCE</span>([r].[Address], <span style="color:#A31515;">&#39;&#39;</span>) = <span style="color:#A31515;">&#39;&#39;</span>
+        
+        
+                <span style="color:Green;">-- Add type 2 addresses if address still blank</span>
+                <span style="color:Green;">-- Type 2 = UF Business Mailing</span>
+                <span style="color:Blue;">UPDATE</span>
+                    @Addresses
+                <span style="color:Blue;">SET</span> 
+                    [Address] = [BaseViews].[dbo].[fn_ProperCaseAddress]([addr].[Address])
+                   ,[City] = [BaseViews].[dbo].[fn_ProperCase]([addr].[City])
+                   ,[State] = [addr].[State]
+                   ,[Zip] = [addr].[Zip]
+                <span style="color:Blue;">FROM</span>
+                    @Addresses <span style="color:Blue;">AS</span> [r]
+                <span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> [BaseViews].[dbo].[bv_UFDirPeopleAddress] <span style="color:Blue;">AS</span> [addr]
+                    <span style="color:Blue;">ON</span> [r].[UFID] = [addr].[UFID]
+                <span style="color:Blue;">WHERE</span>
+                    [addr].[Type] = 2
+                    <span style="color:Blue;">AND</span> <span style="color:Magenta;">COALESCE</span>([r].[Address], <span style="color:#A31515;">&#39;&#39;</span>) = <span style="color:#A31515;">&#39;&#39;</span>
+        
+  
+                <span style="color:Green;">-- Add type 94 addresses  if address still blank</span>
+                <span style="color:Green;">-- Type 94 = UF Housing</span>
+                <span style="color:Blue;">UPDATE</span>
+                    @Addresses
+                <span style="color:Blue;">SET</span> 
+                    [Address] = [BaseViews].[dbo].[fn_ProperCaseAddress]([addr].[Address])
+                   ,[City] = [BaseViews].[dbo].[fn_ProperCase]([addr].[City])
+                   ,[State] = [addr].[State]
+                   ,[Zip] = [addr].[Zip]
+                <span style="color:Blue;">FROM</span>
+                    @Addresses <span style="color:Blue;">AS</span> [r]
+                <span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> [BaseViews].[dbo].[bv_UFDirPeopleAddress] <span style="color:Blue;">AS</span> [addr]
+                    <span style="color:Blue;">ON</span> [r].[UFID] = [addr].[UFID]
+                <span style="color:Blue;">WHERE</span>
+                    [addr].[Type] = 94
+                    <span style="color:Blue;">AND</span> <span style="color:Magenta;">COALESCE</span>([r].[Address], <span style="color:#A31515;">&#39;&#39;</span>) = <span style="color:#A31515;">&#39;&#39;</span>
+                    
+                <span style="color:Green;">-- Add type 6 addresses if address still blank</span>
+                <span style="color:Green;">-- Type 6 = Permanent Home Mailing</span>
+                <span style="color:Blue;">UPDATE</span>
+                    @Addresses
+                <span style="color:Blue;">SET</span> 
+                    [Address] = [BaseViews].[dbo].[fn_ProperCaseAddress]([addr].[Address])
+                   ,[City] = [BaseViews].[dbo].[fn_ProperCase]([addr].[City])
+                   ,[State] = [addr].[State]
+                   ,[Zip] = [addr].[Zip]
+                <span style="color:Blue;">FROM</span>
+                    @Addresses <span style="color:Blue;">AS</span> [r]
+                <span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> [BaseViews].[dbo].[bv_UFDirPeopleAddress] <span style="color:Blue;">AS</span> [addr]
+                    <span style="color:Blue;">ON</span> [r].[UFID] = [addr].[UFID]
+                <span style="color:Blue;">WHERE</span>
+                    [addr].[Type] = 6
+                    <span style="color:Blue;">AND</span> <span style="color:Magenta;">COALESCE</span>([r].[Address], <span style="color:#A31515;">&#39;&#39;</span>) = <span style="color:#A31515;">&#39;&#39;</span>
+                    
+                <span style="color:Green;">-- Add type 23 addresses if address still blank</span>
+                <span style="color:Green;">-- Type 23 = Emergency Contact</span>
+                <span style="color:Blue;">UPDATE</span>
+                    @Addresses
+                <span style="color:Blue;">SET</span> 
+                    [Address] = [BaseViews].[dbo].[fn_ProperCaseAddress]([addr].[Address])
+                   ,[City] = [BaseViews].[dbo].[fn_ProperCase]([addr].[City])
+                   ,[State] = [addr].[State]
+                   ,[Zip] = [addr].[Zip]
+                <span style="color:Blue;">FROM</span>
+                    @Addresses <span style="color:Blue;">AS</span> [r]
+                <span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> [BaseViews].[dbo].[bv_UFDirPeopleAddress] <span style="color:Blue;">AS</span> [addr]
+                    <span style="color:Blue;">ON</span> [r].[UFID] = [addr].[UFID]
+                <span style="color:Blue;">WHERE</span>
+                    [addr].[Type] = 23
+                    <span style="color:Blue;">AND</span> <span style="color:Magenta;">COALESCE</span>([r].[Address], <span style="color:#A31515;">&#39;&#39;</span>) = <span style="color:#A31515;">&#39;&#39;</span>
+            
+            <span style="color:Blue;">END</span> <span style="color:Green;">-- End Local Addresses</span>
+            
+        <span style="color:Blue;">ELSE</span> <span style="color:Blue;">IF</span> @AddressType = <span style="color:#A31515;">&#39;P&#39;</span>   <span style="color:Green;">-- Permanent Addresses</span>
+            <span style="color:Blue;">BEGIN</span>
+                
+                <span style="color:Green;">-- Preferred address is Type 6 = Permanent Home Mailing</span>
+                <span style="color:Blue;">UPDATE</span>
+                    @Addresses
+                <span style="color:Blue;">SET</span> 
+                    [Address] = [BaseViews].[dbo].[fn_ProperCaseAddress]([addr].[Address])
+                   ,[City] = [BaseViews].[dbo].[fn_ProperCase]([addr].[City])
+                   ,[State] = [addr].[State]
+                   ,[Zip] = [addr].[Zip]
+                <span style="color:Blue;">FROM</span>
+                    @Addresses <span style="color:Blue;">AS</span> [r]
+                <span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> [BaseViews].[dbo].[bv_UFDirPeopleAddress]
+                    <span style="color:Blue;">AS</span> [addr]
+                    <span style="color:Blue;">ON</span> [r].[UFID] = [addr].[UFID]
+                <span style="color:Blue;">WHERE</span>
+                    [addr].[Type] = 6
+    
+    
+                <span style="color:Green;">-- Add type 22 addresses if address still blank</span>
+                <span style="color:Green;">-- Type 22 = Parents</span>
+                <span style="color:Blue;">UPDATE</span>
+                    @Addresses
+                <span style="color:Blue;">SET</span> 
+                    [Address] = [BaseViews].[dbo].[fn_ProperCaseAddress]([addr].[Address])
+                   ,[City] = [BaseViews].[dbo].[fn_ProperCase]([addr].[City])
+                   ,[State] = [addr].[State]
+                   ,[Zip] = [addr].[Zip]
+                <span style="color:Blue;">FROM</span>
+                    @Addresses <span style="color:Blue;">AS</span> [r]
+                <span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> [BaseViews].[dbo].[bv_UFDirPeopleAddress]
+                    <span style="color:Blue;">AS</span> [addr]
+                    <span style="color:Blue;">ON</span> [r].[UFID] = [addr].[UFID]
+                <span style="color:Blue;">WHERE</span>
+                    [addr].[Type] = 22
+                    <span style="color:Blue;">AND</span> <span style="color:Magenta;">COALESCE</span>([r].[Address], <span style="color:#A31515;">&#39;&#39;</span>) = <span style="color:#A31515;">&#39;&#39;</span>
+    
+    
+                <span style="color:Green;">-- Add type 2 addresses if address still blank</span>
+                <span style="color:Green;">-- Type 2 = UF Business</span>
+                <span style="color:Blue;">UPDATE</span>
+                    @Addresses
+                <span style="color:Blue;">SET</span> 
+                    [Address] = [BaseViews].[dbo].[fn_ProperCaseAddress]([addr].[Address])
+                   ,[City] = [BaseViews].[dbo].[fn_ProperCase]([addr].[City])
+                   ,[State] = [addr].[State]
+                   ,[Zip] = [addr].[Zip]
+                <span style="color:Blue;">FROM</span>
+                    @Addresses <span style="color:Blue;">AS</span> [r]
+                <span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> [BaseViews].[dbo].[bv_UFDirPeopleAddress]
+                    <span style="color:Blue;">AS</span> [addr]
+                    <span style="color:Blue;">ON</span> [r].[UFID] = [addr].[UFID]
+                <span style="color:Blue;">WHERE</span>
+                    [addr].[Type] = 2
+                    <span style="color:Blue;">AND</span> <span style="color:Magenta;">COALESCE</span>([r].[Address], <span style="color:#A31515;">&#39;&#39;</span>) = <span style="color:#A31515;">&#39;&#39;</span>
+                
+                <span style="color:Green;">-- Add type 23 addresses if address still blank</span>
+                <span style="color:Green;">-- Type 23 = Emergency Contact</span>
+                <span style="color:Blue;">UPDATE</span>
+                    @Addresses
+                <span style="color:Blue;">SET</span> 
+                    [Address] = [BaseViews].[dbo].[fn_ProperCaseAddress]([addr].[Address])
+                   ,[City] = [BaseViews].[dbo].[fn_ProperCase]([addr].[City])
+                   ,[State] = [addr].[State]
+                   ,[Zip] = [addr].[Zip]
+                <span style="color:Blue;">FROM</span>
+                    @Addresses <span style="color:Blue;">AS</span> [r]
+                <span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> [BaseViews].[dbo].[bv_UFDirPeopleAddress] <span style="color:Blue;">AS</span> [addr]
+                    <span style="color:Blue;">ON</span> [r].[UFID] = [addr].[UFID]
+                <span style="color:Blue;">WHERE</span>
+                    [addr].[Type] = 23
+                    <span style="color:Blue;">AND</span> <span style="color:Magenta;">COALESCE</span>([r].[Address], <span style="color:#A31515;">&#39;&#39;</span>) = <span style="color:#A31515;">&#39;&#39;</span>
+            <span style="color:Blue;">END</span>
+       
+        <span style="color:Blue;">RETURN</span>
+    <span style="color:Blue;">END</span>
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

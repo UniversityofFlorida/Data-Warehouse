@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="cf">
+        <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views" class="ajax" data-target="#right">Views</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_bv_StudentAdmissions" class="ajax" data-target="#right">dbo.bv_StudentAdmissions</a></div>
+        <div id="tools">
+          <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+        </div>
+      </div>
+      <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+      <h1><i class=" icon2x-view "></i>dbo.bv_StudentAdmissions</h1>
+      <table class="table table-vertical">
+        <tbody>
+          <tr>
+            <td>Schema</td>
+            <td>dbo</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>bv_StudentAdmissions</td>
+          </tr>
+          <tr>
+            <td>ExtendedProp</td>
+            <td>Student Admissions Applications</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="collapsible" data-key="uses">
+        <div class="collapsible-link font-large font-bold">Uses</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+                <td>
+                  <div style="margin-left: 0px">
+                    <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-view" title="View"></i></div>
+                    <div style="margin-left: 44px">dbo.bv_StudentAdmissions</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">BaseData.bd.bt_STU_ADMISS</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="script">
+        <div class="collapsible-link font-large font-bold">Script</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">VIEW</span> [dbo].[bv_StudentAdmissions] <span style="color:Blue;">AS</span> 
+    
+<span style="color:Green;">/*****************************************************************************************
+  Name:		    bv_StudentAdmissions
+
+  Description:  Admissions Applications 
+
+  Created:	    09/25/2009 by John Holmes
+
+  Modified:     11/24/2009 by John Holmes
+                Removed all &#39;Term5&#39; columns
+                
+                02/28/2011 by John Holmes
+                Added CollegeReferredTo Extended property &#39;Description&#39;.
+                
+                08/02/2011 by William McCombie
+                Added Innovation Academy fields
+                
+                09/06/2011 by John Holmes
+                v1.1.0 - Source object renaming in support of ERP (Oracle) Warehouse.
+
+                01/22/2014 by John Holmes
+                Add IA and ECampus columns.
+
+                02/04/2014 by John Holmes
+                Add Ext properties to IA columns.
+                
+*****************************************************************************************/</span> 
+    
+<span style="color:Blue;">SELECT</span>  
+     [UF_UFID] <span style="color:Blue;">AS</span> [UFID]                              <span style="color:Green;">-- UFID </span>
+    ,[UF_PERSON_NAME] <span style="color:Blue;">AS</span> [StudentName]                <span style="color:Green;">-- Student Name</span>
+    ,[UF_REG_CD] <span style="color:Blue;">AS</span> [RegistrationCode]                <span style="color:Green;">-- Registration Code</span>
+    ,[WCBA_LAST_TERM6] <span style="color:Blue;">AS</span> [LastTerm6]                 <span style="color:Green;">-- Last Term Code (6 char)</span>
+    ,[WCBA_NEXT_TERM6] <span style="color:Blue;">AS</span> [AppliedTerm6]              <span style="color:Green;">-- Applied (Next) Term Code (6 char)</span>
+    ,[UF_NEXT_STAT] <span style="color:Blue;">AS</span> [AppliedStatus]                <span style="color:Green;">-- Applied Status</span>
+    ,[UF_ADM_STAT] <span style="color:Blue;">AS</span> [ApplicationStatus]             <span style="color:Green;">-- Application Status</span>
+    ,[UF_NEXT_CLASS] <span style="color:Blue;">AS</span> [AppliedClass]                <span style="color:Green;">-- Applied (Next Term) Student Class</span>
+    ,[UF_NEXT_COLLEGE] <span style="color:Blue;">AS</span> [AppliedCollege]            <span style="color:Green;">-- Applied (Next Term) Student College</span>
+    ,[UF_NEXT_MAJOR] <span style="color:Blue;">AS</span> [AppliedMajor]                <span style="color:Green;">-- Applied (Next Term) Student Major</span>
+    ,[UF_FINAL_ACTION] <span style="color:Blue;">AS</span> [FinalAction]               <span style="color:Green;">-- Final Action Code</span>
+    ,[UF_GPA] <span style="color:Blue;">AS</span> [AdmitGPA]                           <span style="color:Green;">-- Admit (HS or Grad) GPA</span>
+    ,[UF_GENDER] <span style="color:Blue;">AS</span> [Gender]                          <span style="color:Green;">-- Gender Code</span>
+    ,[UF_ETHNICITY] <span style="color:Blue;">AS</span> [Race]                         <span style="color:Green;">-- Race or Ethnicity</span>
+    ,[UF_PHONE] <span style="color:Blue;">AS</span> [Phone]                            <span style="color:Green;">-- Permanent Phone Number</span>
+    ,[UF_CTRK_FLG] <span style="color:Blue;">AS</span> [UniversalTrackingTerm]         <span style="color:Green;">-- Universal Tracking Term (CTRK) Flag</span>
+    ,[UF_DISABLED] <span style="color:Blue;">AS</span> [DisabledFlag]                  <span style="color:Green;">-- Disabled Flag</span>
+    ,[UF_SCORE_1_CD] <span style="color:Blue;">AS</span> [TestType1]                   <span style="color:Green;">-- Test Type 1</span>
+    ,[UF_VERB_SCR_1] <span style="color:Blue;">AS</span> [VerbalScore1]                <span style="color:Green;">-- Verbal Score 1</span>
+    ,[UF_QUAN_SCR_1] <span style="color:Blue;">AS</span> [QuantitativeScore1]          <span style="color:Green;">-- Quantitative Score 1</span>
+    ,[UF_ANA_SCR_1] <span style="color:Blue;">AS</span> [AnalyticalScore1]             <span style="color:Green;">-- Analytical Score 1</span>
+    ,[UF_SOCSCI_SCR_1] <span style="color:Blue;">AS</span> [SocialScienceScore1]       <span style="color:Green;">-- Social Science Score 1</span>
+    ,[UF_TOT_SCORE_1] <span style="color:Blue;">AS</span> [TotalScore1]                <span style="color:Green;">-- Total Score 1</span>
+    ,[UF_TEST_1_MMYY] <span style="color:Blue;">AS</span> [TestDate1]                  <span style="color:Green;">-- Test Date 1 (MMYY)</span>
+    ,[UF_SCORE_2_CD] <span style="color:Blue;">AS</span> [TestType2]                   <span style="color:Green;">-- Test Type 2</span>
+    ,[UF_VERB_SCR_2] <span style="color:Blue;">AS</span> [VerbalScore2]                <span style="color:Green;">-- Verbal Score 2</span>
+    ,[UF_QUAN_SCR_2] <span style="color:Blue;">AS</span> [QuantitativeScore2]          <span style="color:Green;">-- Quantitative Score 2</span>
+    ,[UF_ANA_SCR_2] <span style="color:Blue;">AS</span> [AnalyticalScore2]             <span style="color:Green;">-- Analytical Score 2</span>
+    ,[UF_SOCSCI_SCR_2] <span style="color:Blue;">AS</span> [SocialScienceScore2]       <span style="color:Green;">-- Social Science Score 2</span>
+    ,[UF_TOT_SCORE_2] <span style="color:Blue;">AS</span> [TotalScore2]                <span style="color:Green;">-- Total Score 2</span>
+    ,[UF_TEST_2_MMYY] <span style="color:Blue;">AS</span> [TestDate2]                  <span style="color:Green;">-- Test Date 2 (MMYY)</span>
+    ,[UF_CLAST_FLG] <span style="color:Blue;">AS</span> [CLAST]                        <span style="color:Green;">-- CLAST Flag</span>
+    ,[UF_LST_INS_FICE] <span style="color:Blue;">AS</span> [LastInstitutionFICE]       <span style="color:Green;">-- Last Institution FICE Code</span>
+    ,[UF_LST_INS_DEG] <span style="color:Blue;">AS</span> [LastInstitutionDegree]      <span style="color:Green;">-- Last Institution Degree</span>
+    ,[UF_BIRTH_DT] <span style="color:Blue;">AS</span> [BirthDate]                     <span style="color:Green;">-- Birthdate</span>
+    ,[UF_FEE_RES] <span style="color:Blue;">AS</span> [FeeResidency]                   <span style="color:Green;">-- Residency Code for Fees</span>
+    ,[UF_CITIZEN_CTRY] <span style="color:Blue;">AS</span> [NationCitizen]             <span style="color:Green;">-- Nation of Citizenship</span>
+    ,[UF_APPLIC_DT] <span style="color:Blue;">AS</span> [ApplicationDate]              <span style="color:Green;">-- Application Date</span>
+    ,[UF_MAJOR] <span style="color:Blue;">AS</span> [MajorTrack]                       <span style="color:Green;">-- Major Track</span>
+    ,[UF_PERM_ADDRESS] <span style="color:Blue;">AS</span> [StreetAddress]             <span style="color:Green;">-- Street (Permanent) Address</span>
+    ,[UF_CITY] <span style="color:Blue;">AS</span> [City]                              <span style="color:Green;">-- City</span>
+    ,[UF_STATE_CD] <span style="color:Blue;">AS</span> [State]                         <span style="color:Green;">-- State Code</span>
+    ,[UF_ZIP_CD] <span style="color:Blue;">AS</span> [ZipCode9]                        <span style="color:Green;">-- 9 Char Zip Code</span>
+    ,[UF_EMAIL] <span style="color:Blue;">AS</span> [EmailAddress]                     <span style="color:Green;">-- Email Address</span>
+    ,[UF_PVW_COLLEGE] <span style="color:Blue;">AS</span> [PreviewCollege]             <span style="color:Green;">-- Preview College</span>
+    ,[UF_PVW_MAJOR] <span style="color:Blue;">AS</span> [PreviewMajor]                 <span style="color:Green;">-- Preview Major</span>
+    ,[UF_CTLG_YR] <span style="color:Blue;">AS</span> [CatalogYear]                    <span style="color:Green;">-- Catalog Year</span>
+    ,[UF_CTLG_COLLEGE] <span style="color:Blue;">AS</span> [CatalogCollege]            <span style="color:Green;">-- Catalog College</span>
+    ,[UF_HS_FICE] <span style="color:Blue;">AS</span> [HSFICE]                         <span style="color:Green;">-- High School FICE Code</span>
+    ,[UF_HS_GRAD_MMYY] <span style="color:Blue;">AS</span> [HSGradDate]                <span style="color:Green;">-- High School Grad Date (MMYY)</span>
+    ,[UF_SELFRPRT_GPA] <span style="color:Blue;">AS</span> [SelfReportedGPA]           <span style="color:Green;">-- Self Reported GPA</span>
+    ,[UF_PRED_INDEX] <span style="color:Blue;">AS</span> [PredictiveIndex]             <span style="color:Green;">-- Predictive Index</span>
+
+<span style="color:Green;">-- End of old t_ADMF columns</span>
+
+    ,[UF_MODIFIED] <span style="color:Blue;">AS</span> [LastModifiedDate]              <span style="color:Green;">-- Last Modified Timestamp</span>
+    ,[LOAD_DTTM] <span style="color:Blue;">AS</span> [LoadDate]                        <span style="color:Green;">-- Load Timestamp</span>
+    ,[UF_FEE_NO] <span style="color:Blue;">AS</span> [FeePaymentNumber]                <span style="color:Green;">-- Fee Payment Number</span>
+    ,[UF_UCD1] <span style="color:Blue;">AS</span> [UserCode1]                         <span style="color:Green;">-- User Codes</span>
+    ,[UF_UCD2] <span style="color:Blue;">AS</span> [UserCode2]                         <span style="color:Green;">-- User Codes</span>
+    ,[UF_UCD3] <span style="color:Blue;">AS</span> [UserCode3]                         <span style="color:Green;">-- User Codes</span>
+    ,[UF_UCD4] <span style="color:Blue;">AS</span> [UserCode4]                         <span style="color:Green;">-- User Codes</span>
+    ,[UF_UCD5] <span style="color:Blue;">AS</span> [UserCode5]                         <span style="color:Green;">-- User Codes</span>
+    ,[UF_UCD6] <span style="color:Blue;">AS</span> [UserCode6]                         <span style="color:Green;">-- User Codes</span>
+    ,[UF_TENT_ACTION] <span style="color:Blue;">AS</span> [NextTentativeAction]        <span style="color:Green;">-- Next Tentative Action</span>
+    ,[UF_NX_PROB_STAT] <span style="color:Blue;">AS</span> [NextProbationStatus]       <span style="color:Green;">-- Next Probation Status</span>
+    ,[UF_Y_CNT] <span style="color:Blue;">AS</span> [NumberYesFlags]                   <span style="color:Green;">-- Number of Yes Flags</span>
+    ,[UF_MEET_BOR_MIN] <span style="color:Blue;">AS</span> [MeetBORMinimum]            <span style="color:Green;">-- Meet BOR Minimum Flag</span>
+    ,[UF_SAT_II_MIN] <span style="color:Blue;">AS</span> [MeetSATIIMinimum]            <span style="color:Green;">-- Meet SATII Minimum Flag</span>
+    ,[UF_HONORS] <span style="color:Blue;">AS</span> [Honors]                          <span style="color:Green;">-- Senior Honors X</span>
+    ,[UF_HONORS_NOTE] <span style="color:Blue;">AS</span> [HonorsNote]                 <span style="color:Green;">-- Senior Honors</span>
+    ,[UF_DEPOSIT_RCPT] <span style="color:Blue;">AS</span> [DepositReceipt]            <span style="color:Green;">-- Deposit Receipt</span>
+    ,[UF_XCURICLR_FLG] <span style="color:Blue;">AS</span> [ExtraCurricular]           <span style="color:Green;">-- Extracurricular Flag</span>
+    ,[UF_RECOMEND_FLG] <span style="color:Blue;">AS</span> [Recommendation]            <span style="color:Green;">-- Recommendation Flag</span>
+    ,[UF_DEP_FEE_AMT] <span style="color:Blue;">AS</span> [DepartmentFeeAmount]        <span style="color:Green;">-- Department Fee Amount</span>
+    ,[UF_SCHOLARSHIP] <span style="color:Blue;">AS</span> [ScholarshipRecipient]       <span style="color:Green;">-- Scholarship Recipient Flag</span>
+    ,[UF_GEOG_DESIG] <span style="color:Blue;">AS</span> [GeographicalDesignator]      <span style="color:Green;">-- Geographical Designator</span>
+    ,[UF_UNITS] <span style="color:Blue;">AS</span> [TotalUnits]                       <span style="color:Green;">-- Total Units</span>
+    ,[UF_FINAID_RECIP] <span style="color:Blue;">AS</span> [FinancialAidRecipient]     <span style="color:Green;">-- Financial Aid Recipient Flag</span>
+    ,[UF_FIRST_GEN] <span style="color:Blue;">AS</span> [FirstGenerationCollege]       <span style="color:Green;">-- First Generation College</span>
+    ,[UF_ADM_QUOTIENT] <span style="color:Blue;">AS</span> [AdmissionQuotient]         <span style="color:Green;">-- Admission Quotient</span>
+    ,[UF_ALUMNUS] <span style="color:Blue;">AS</span> [Alumnus]                        <span style="color:Green;">-- Alumnus Family Flag</span>
+    ,[UF_CRS_IN_PROG] <span style="color:Blue;">AS</span> [NeedCourseInProgram]        <span style="color:Green;">-- Need Course In Program</span>
+    ,[UF_CONDUCT] <span style="color:Blue;">AS</span> [NeedConductInfo]                <span style="color:Green;">-- Need Conduct Info Flag</span>
+    ,[UF_BEST_SCORE] <span style="color:Blue;">AS</span> [BestScore]                   <span style="color:Green;">-- Best Score Flag</span>
+    ,[UF_VERB_SCORE] <span style="color:Blue;">AS</span> [VerbalScore]                 <span style="color:Green;">-- Verbal Score</span>
+    ,[UF_QUAN_SCORE] <span style="color:Blue;">AS</span> [QuantScore]                  <span style="color:Green;">-- Quantitative Score</span>
+    ,[UF_TOT_SCORE] <span style="color:Blue;">AS</span> [TotalScore]                   <span style="color:Green;">-- Total Score</span>
+    ,[UF_GEO_STATE_CD] <span style="color:Blue;">AS</span> [StateCode]                 <span style="color:Green;">-- State Code</span>
+    ,[UF_GEO_COUNTY] <span style="color:Blue;">AS</span> [CountyCode]                  <span style="color:Green;">-- County Code</span>
+    ,[UF_USER] <span style="color:Blue;">AS</span> [UserFlag]                          <span style="color:Green;">-- User Flag</span>
+    ,[UF_NOTEPAD] <span style="color:Blue;">AS</span> [NotepadFlag]                    <span style="color:Green;">-- Notepad Flag</span>
+    ,[UF_EXCEPTION_CD] <span style="color:Blue;">AS</span> [ExceptionFlag]             <span style="color:Green;">-- Exception Flag</span>
+    ,[UF_LST_INS_MMYY] <span style="color:Blue;">AS</span> [LastInstitutionDate]       <span style="color:Green;">-- Last Institution Date (MMYY)</span>
+    ,[UF_RELIG_PREF] <span style="color:Blue;">AS</span> [ReligiousPreference]         <span style="color:Green;">-- Religious Preference</span>
+    ,[UF_COMPUTER_FLG] <span style="color:Blue;">AS</span> [ComputerInfo]              <span style="color:Green;">-- Computer Info</span>
+    ,[UF_ESOL] <span style="color:Blue;">AS</span> [ESOLHours]                         <span style="color:Green;">-- ESOL Hours for English Requirement</span>
+    ,[UF_TALENTED_20] <span style="color:Blue;">AS</span> [Talented20]                 <span style="color:Green;">-- Talented 20</span>
+    ,[UF_APPLY_WK] <span style="color:Blue;">AS</span> [ApplicationWeek]               <span style="color:Green;">-- Application Week</span>
+    ,[UF_ADM_STAT_WK] <span style="color:Blue;">AS</span> [ApplicationStausWeek]       <span style="color:Green;">-- Admission Status Week</span>
+    ,[UF_REVIEW_WK] <span style="color:Blue;">AS</span> [ReviewWeek]                   <span style="color:Green;">-- Review Week</span>
+    ,[UF_REVIEW_YR] <span style="color:Blue;">AS</span> [ReviewYear]                   <span style="color:Green;">-- Review Year</span>
+    ,[UF_HSE_STAT_FLG] <span style="color:Blue;">AS</span> [HousingStatus]             <span style="color:Green;">-- Housing Status</span>
+    ,[UF_HSE_STAT_WK] <span style="color:Blue;">AS</span> [HousingStatusWeek]          <span style="color:Green;">-- Housing Status Week</span>
+    ,[UF_HSE_STAT_YR] <span style="color:Blue;">AS</span> [HousingStatusYear]          <span style="color:Green;">-- Housing Status Year</span>
+    ,[UF_XFR_1_CD] <span style="color:Blue;">AS</span> [TransferEvaluationCode1]       <span style="color:Green;">-- Transfer Evaluation Code 1</span>
+    ,[UF_XFR_1_WK] <span style="color:Blue;">AS</span> [TransEvalWeek1]                <span style="color:Green;">-- Transfer Evaluation Week 1</span>
+    ,[UF_XFR_2_CD] <span style="color:Blue;">AS</span> [TransferEvaluationCode2]       <span style="color:Green;">-- Transfer Evaluation Code 2</span>
+    ,[UF_MEDICAL_FLG] <span style="color:Blue;">AS</span> [MedicalFlag]                <span style="color:Green;">-- Medical Flag</span>
+    ,[UF_MESSAGE_CD] <span style="color:Blue;">AS</span> [NoticeMessage]               <span style="color:Green;">-- Notice Message Code</span>
+    ,[UF_APPLY_FEE] <span style="color:Blue;">AS</span> [ApplicationFee]               <span style="color:Green;">-- Application Fee</span>
+    ,[UF_OUTCARD_FLG] <span style="color:Blue;">AS</span> [LabelFlag]                  <span style="color:Green;">-- Label Flag</span>
+    ,[UF_COL_REFERRAL] <span style="color:Blue;">AS</span> [CollegeReferredTo]         <span style="color:Green;">-- College Referred to</span>
+    ,[UF_U_O_FLG_1] <span style="color:Blue;">AS</span> [TestFlag1]                    <span style="color:Green;">-- Official/Unofficial Test Flag 1</span>
+    ,[UF_U_O_FLG_2] <span style="color:Blue;">AS</span> [TestFlag2]                    <span style="color:Green;">-- Official/Unofficial Test Flag 2</span>
+    ,[UF_ADM_LABEL] <span style="color:Blue;">AS</span> [AdmissionLabel]               <span style="color:Green;">-- Admission Label</span>
+    ,[UF_LAW_NOFEEPD] <span style="color:Blue;">AS</span> [LawAdmitNoFee]              <span style="color:Green;">-- Law Admit No Fee Paid</span>
+    ,[UF_SUSP_CD] <span style="color:Blue;">AS</span> [SuspenseCode]                   <span style="color:Green;">-- Suspense Code</span>
+    ,[UF_CARRIER_RTE] <span style="color:Blue;">AS</span> [CarrierRoute]               <span style="color:Green;">-- Carrier Route</span>
+    ,[UF_PVW_SESSION] <span style="color:Blue;">AS</span> [PreviewSession]             <span style="color:Green;">-- Preview Session</span>
+    ,[UF_PVW_TRACK] <span style="color:Blue;">AS</span> [PreviewSubMajor]              <span style="color:Green;">-- Preview Sub-Major</span>
+    ,[UF_CTLG_MAJOR] <span style="color:Blue;">AS</span> [CatalogMajor]                <span style="color:Green;">-- Catalog Major</span>
+    ,[UF_CTLG_AA_FLG] <span style="color:Blue;">AS</span> [CatalogAA]                  <span style="color:Green;">-- Catalog AA (Y or N)</span>
+    ,[UF_CTLG_TRACK] <span style="color:Blue;">AS</span> [CatalogSubMajor]             <span style="color:Green;">-- Catalog Sub-Major</span>
+    ,[UF_LST_INST_LVL] <span style="color:Blue;">AS</span> [LastInstitutionLevel]      <span style="color:Green;">-- Last Institution Level</span>
+    ,[UF_ENROLL_FLG] <span style="color:Blue;">AS</span> [EnrollFlag]                  <span style="color:Green;">-- Enroll Flag</span>
+    ,[UF_WEB_ENTRY] <span style="color:Blue;">AS</span> [WebApplication]               <span style="color:Green;">-- Web Application</span>
+    ,[UF_HSE_APPLY_WK] <span style="color:Blue;">AS</span> [HousingApplyWeek]          <span style="color:Green;">-- Housing Apply Week</span>
+    ,[UF_HSE_APPLY_YR] <span style="color:Blue;">AS</span> [HousingApplyYear]          <span style="color:Green;">-- Housing Apply Year</span>
+    ,[UF_NOTICE_WK] <span style="color:Blue;">AS</span> [NoticeWeek]                   <span style="color:Green;">-- Notice Week</span>
+    ,[UF_NOTICE_YR] <span style="color:Blue;">AS</span> [NoticeYear]                   <span style="color:Green;">-- Notice Year</span>
+    ,[UF_NOTICE_CD] <span style="color:Blue;">AS</span> [NoticeCode]                   <span style="color:Green;">-- Notice Code</span>
+    ,[UF_DATA_ENT_DT] <span style="color:Blue;">AS</span> [DataEntryDate]              <span style="color:Green;">-- Data Entry Date (MMDDYY)</span>
+    ,[UF_FEE_CD] <span style="color:Blue;">AS</span> [FeeCode]                         <span style="color:Green;">-- Fee Code</span>
+    ,[UF_ESSAY_FLG] <span style="color:Blue;">AS</span> [EssayFlag]                    <span style="color:Green;">-- Essay Flag</span>
+    ,[UF_READ_1_SCR] <span style="color:Blue;">AS</span> [ReadingScore1]               <span style="color:Green;">-- Reading Score 1</span>
+    ,[UF_READ_2_SCR] <span style="color:Blue;">AS</span> [ReadingScore2]               <span style="color:Green;">-- Reading Score 2</span>
+    ,[UF_READ_3_SCR] <span style="color:Blue;">AS</span> [ReadingScore3]               <span style="color:Green;">-- Reading Score 3</span>
+    ,[UF_AVG_SCORE] <span style="color:Blue;">AS</span> [ComputedAverageReadingScore]  <span style="color:Green;">-- Computed Average Reading Score</span>
+    ,[UF_LOWINCOM_SCL] <span style="color:Blue;">AS</span> [LowIncomeSchool]           <span style="color:Green;">-- Low Income School</span>
+    ,[UF_SNGLE_PARENT] <span style="color:Blue;">AS</span> [SingleParent]              <span style="color:Green;">-- Single Parent</span>
+    ,[UF_LOWINCOM_APP] <span style="color:Blue;">AS</span> [LowIncomeApplicant]        <span style="color:Green;">-- Low Income Applicant</span>
+    ,[UF_IN_1_DT] <span style="color:Blue;">AS</span> [ReaderInDate1]                  <span style="color:Green;">-- Reader In Date 1</span>
+    ,[UF_OUT_1_DT] <span style="color:Blue;">AS</span> [ReaderOutDate1]                <span style="color:Green;">-- Reader Out Date 1</span>
+    ,[UF_IN_2_DT] <span style="color:Blue;">AS</span> [ReaderInDate2]                  <span style="color:Green;">-- Reader In Date 2</span>
+    ,[UF_OUT_2_DT] <span style="color:Blue;">AS</span> [ReaderOutDate2]                <span style="color:Green;">-- Reader Out Date 2</span>
+    ,[UF_FLAG] <span style="color:Blue;">AS</span> [Flag]                              <span style="color:Green;">-- Flag</span>
+    ,[UF_READER_1] <span style="color:Blue;">AS</span> [ReaderID1]                     <span style="color:Green;">-- Reader ID 1</span>
+    ,[UF_READER_2] <span style="color:Blue;">AS</span> [ReaderID2]                     <span style="color:Green;">-- Reader ID 2</span>
+    ,[UF_CONFIRM_FLG] <span style="color:Blue;">AS</span> [ConfirmFlag]                <span style="color:Green;">-- Confirm Flag</span>
+    <span style="color:Green;">--,[UF_ONFILE_FLAG]</span>
+    <span style="color:Green;">--,[UF_SRC_TYPE_CODE]</span>
+    <span style="color:Green;">--,[UF_SOURCE_ORG]</span>
+    <span style="color:Green;">--,[UF_ETHN_HISP]</span>
+    <span style="color:Green;">--,[UF_RACE_AIAN]</span>
+    <span style="color:Green;">--,[UF_RACE_ASIAN]</span>
+    <span style="color:Green;">--,[UF_RACE_BLACK]</span>
+    <span style="color:Green;">--,[UF_RACE_NHPI]</span>
+    <span style="color:Green;">--,[UF_RACE_WHITE]</span>
+    <span style="color:Green;">--,[UF_2_OR_MORE_RACES]</span>
+    <span style="color:Green;">--,[UF_NON_RES_ALIEN]</span>
+    <span style="color:Green;">--,[UF_UNKNOWN]</span>
+    <span style="color:Green;">--,[UF_ETHN_FED_CODE]</span>
+    <span style="color:Green;">--,[UF_VETN]</span>
+    <span style="color:Green;">--,[UF_VETN_911]</span>
+    <span style="color:Green;">--,[UF_VETN_SPDP]</span>
+    <span style="color:Green;">--,[UF_BOG_MILITARY]</span>
+    <span style="color:Green;">--,[UF_REAL_ADAQ]</span>
+    <span style="color:Green;">--,[UF_ACADEMIC_ADAQ]</span>
+    <span style="color:Green;">--,[UF_HOLISTIC_ADAQ]</span>
+    <span style="color:Green;">--,[UF_PROG_LOC_CODE]</span>
+    <span style="color:Green;">--,[UF_DEGREE_CODE]</span>
+    <span style="color:Green;">--,[UF_ACADEMIC_YEAR]</span>
+    <span style="color:Green;">--,[UF_DEPOSIT_ACKN]</span>
+    <span style="color:Green;">--,[UF_ACTVTY_RVW]</span>
+    <span style="color:Green;">--,[UF_FOREIGN_LANG]            </span>
+    ,[UF_3RD_PRIVACY] <span style="color:Blue;">AS</span> [3rdPartyPrivacyFlag]
+    ,[UF_IA_APP_FLAG] <span style="color:Blue;">AS</span> [IAApplicationFlag]
+    ,[UF_IA_OFFERED] <span style="color:Blue;">AS</span> [IAOfferedFlag]
+    <span style="color:Green;">--,[UF_IA_TERM]</span>
+    ,[WCBA_UF_IA_TERM6] <span style="color:Blue;">AS</span> [IATerm6]
+    ,[UF_IA_COLLEGE] <span style="color:Blue;">AS</span> [IACollege]
+    ,[UF_IA_MAJOR] <span style="color:Blue;">AS</span> [IAMajor]
+    ,[UF_IA_TRACK] <span style="color:Blue;">AS</span> [IATrack]
+    <span style="color:Green;">--,[UF_IA_PROG_LOC] AS [IAProgramLocation]</span>
+    ,[UF_APP_KEY] <span style="color:Blue;">AS</span> [IAApplicationKey]
+    <span style="color:Green;">--,[UF_MOD_DTTM]</span>
+    ,[UF_ECAMPUS_FLG] <span style="color:Blue;">AS</span> [ECampusFlag]
+<span style="color:Blue;">FROM</span> 
+    [BaseData].[bd].[bt_STU_ADMISS]
+</pre></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></div>
+  </body>
+</html>

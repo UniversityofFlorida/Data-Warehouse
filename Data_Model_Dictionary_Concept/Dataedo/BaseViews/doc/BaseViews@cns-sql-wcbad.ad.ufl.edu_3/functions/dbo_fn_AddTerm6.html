@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions" class="ajax" data-target="#right">Functions</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_AddTerm6" class="ajax" data-target="#right">dbo.fn_AddTerm6</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-function "></i>dbo.fn_AddTerm6</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>fn_AddTerm6</td>
+        </tr>
+        <tr>
+          <td>ExtendedProp</td>
+          <td>BaseViews - Add (or subtract) a given number of terms to (or from) a Term6 value</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>OUT</td>
+              <td>Returns</td>
+              <td>varchar(6)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>IN</td>
+              <td>term6</td>
+              <td>varchar(6)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">Term code (YYYYMM) to convert</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>IN</td>
+              <td>toAdd</td>
+              <td>int</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">Number of terms to increment/decrement</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">FUNCTION</span> [dbo].[fn_AddTerm6] 
+(
+     @term6 <span style="color:Blue;">AS</span> [varchar](6)
+	,@toAdd <span style="color:Blue;">AS</span> [integer]
+)
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        fn_AddTerm6
+
+  Description:	    BaseViews - Add (or subtract) a given number of terms to (or from) a Term6 value
+					Summer is treated as a single term
+  
+					PARAM NAME      DATATYPE    REQUIRED    NOTES
+  Input:			@term6			varchar(6)	Yes			Term code (YYYYMM)
+                    
+					@toAdd:			integer		Yes			Number of terms to increment/decrement
+  
+  Usage:            SELECT [BaseViews].[dbo].[fn_AddTerm6](@term6, @toAdd) ;
+					Examples:
+						SELECT [BaseViews].[dbo].[fn_AddTerm6](&#39;201401&#39;, 3) ;
+						Returns &#39;201501&#39;
+
+						SELECT [BaseViews].[dbo].[fn_AddTerm6](&#39;201401&#39;, -2) ;
+						Returns &#39;201305&#39;
+
+						SELECT [BaseViews].[dbo].[fn_AddTerm6](&#39;201408&#39;, -5) ;
+						Returns &#39;201301&#39;
+  
+
+  Created:	        01/15/2015 by William McCombie
+
+  Modified:			12/21/2016 by William McCombie
+					Added support for Summer B
+  	
+**************************************************************************************************/</span>
+
+<span style="color:Blue;">RETURNS</span> [varchar](6)
+
+<span style="color:Blue;">AS</span>
+
+<span style="color:Blue;">BEGIN</span>
+
+	<span style="color:Blue;">DECLARE</span> 
+		 @Year [integer]		= <span style="color:Blue;">LEFT</span>(@term6, 4)
+		,@Term [varchar](2)		= <span style="color:Blue;">RIGHT</span>(@term6, 2)
+		,@TermOut [varchar](6)	= <span style="color:Blue;">NULL</span>
+	;
+	<span style="color:Blue;">DECLARE</span> @TermDifference [integer] = @toAdd % 3 ;
+	<span style="color:Blue;">DECLARE</span> @YearDifference [integer] = (@toAdd - @TermDifference) / 3 ;
+
+	<span style="color:Blue;">SET</span> @TermOut = 
+		<span style="color:Blue;">CASE</span> 
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;01&#39;</span> <span style="color:Blue;">AND</span> @TermDifference =  0 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;01&#39;</span>
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;01&#39;</span> <span style="color:Blue;">AND</span> @TermDifference =  1 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;05&#39;</span>
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;01&#39;</span> <span style="color:Blue;">AND</span> @TermDifference =  2 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;08&#39;</span>
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;01&#39;</span> <span style="color:Blue;">AND</span> @TermDifference = -1 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference - 1 <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;08&#39;</span>
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;01&#39;</span> <span style="color:Blue;">AND</span> @TermDifference = -2 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference - 1 <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;05&#39;</span>
+
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;05&#39;</span> <span style="color:Blue;">AND</span> @TermDifference =  0 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;05&#39;</span>
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;05&#39;</span> <span style="color:Blue;">AND</span> @TermDifference =  1 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;08&#39;</span>
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;05&#39;</span> <span style="color:Blue;">AND</span> @TermDifference =  2 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference + 1 <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;01&#39;</span>
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;05&#39;</span> <span style="color:Blue;">AND</span> @TermDifference = -1 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;01&#39;</span>
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;05&#39;</span> <span style="color:Blue;">AND</span> @TermDifference = -2 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference - 1 <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;08&#39;</span>
+
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;06&#39;</span> <span style="color:Blue;">AND</span> @TermDifference =  0 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;06&#39;</span>
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;06&#39;</span> <span style="color:Blue;">AND</span> @TermDifference =  1 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;08&#39;</span>
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;06&#39;</span> <span style="color:Blue;">AND</span> @TermDifference =  2 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference + 1 <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;01&#39;</span>
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;06&#39;</span> <span style="color:Blue;">AND</span> @TermDifference = -1 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;01&#39;</span>
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;06&#39;</span> <span style="color:Blue;">AND</span> @TermDifference = -2 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference - 1 <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;08&#39;</span>
+
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;08&#39;</span> <span style="color:Blue;">AND</span> @TermDifference =  0 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;08&#39;</span>
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;08&#39;</span> <span style="color:Blue;">AND</span> @TermDifference =  1 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference + 1 <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;01&#39;</span>
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;08&#39;</span> <span style="color:Blue;">AND</span> @TermDifference =  2 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference + 1 <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;05&#39;</span>
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;08&#39;</span> <span style="color:Blue;">AND</span> @TermDifference = -1 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;05&#39;</span>
+			<span style="color:Blue;">WHEN</span> @Term = <span style="color:#A31515;">&#39;08&#39;</span> <span style="color:Blue;">AND</span> @TermDifference = -2 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(@Year + @YearDifference <span style="color:Blue;">AS</span> [varchar]) + <span style="color:#A31515;">&#39;01&#39;</span>
+			
+			<span style="color:Blue;">ELSE</span> <span style="color:Blue;">NULL</span> 
+		<span style="color:Blue;">END</span> ;
+
+	<span style="color:Green;">-- Return the result</span>
+	<span style="color:Blue;">RETURN</span> @TermOut ;
+	
+<span style="color:Blue;">END</span> ;
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

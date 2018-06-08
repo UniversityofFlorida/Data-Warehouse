@@ -1,0 +1,546 @@
+/**
+ * Description: Elements and collections of elements which can be reused.
+ * Version: 1.1.0
+ * Last update: 2016/08/18
+ * Author: Wojciech Mleczek
+ *
+ * Summary:
+ *
+ *    1. Clearfix
+ *    2. Icons
+ *        - 2.1. Small (16px)
+ *        - 2.2. Medium (24px)
+ *        - 2.3. Large (32px)
+ *    3. Grids
+ *        - 3.1. Grid row
+ *        - 3.2. Row column
+ *    4. Buttons
+ *    5. Tables
+ *        - 5.1. Collapsible
+ *        - 5.2. Vertical layout
+ *    6. Tree menu
+ *    7. Responsive
+ *    8. Typography
+ *    9. Common
+ */
+
+/* ==========================================================================
+   1. Clearfix
+      @see http://nicolasgallagher.com/micro-clearfix-hack/
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+
+/* ==========================================================================
+   2. Icons
+   ========================================================================== */
+
+/* 2.1. Small (16px)
+   ========================================================================== */
+
+i[class*='icon-'],
+i[class^='icon-'] {
+    display: inline-block;
+    vertical-align: top;
+    width: 16px;
+    height: 16px;
+    background: url('../img/icons/sprite.png');
+    margin-right: 6px;
+    margin-top: 2px;
+}
+
+i.no-margin  { margin: 0px; }
+
+/* Row 1 */
+i.icon-folder           { background-position: -0px 0px; }
+i.icon-database         { background-position: -20px 0px; }
+i.icon-module           { background-position: -40px 0px; }
+i.icon-arrow-asc        { background-position: -60px 0px; }
+i.icon-relation         { background-position: -80px 0px; }
+i.icon-trigger-disabled { background-position: -100px 0px; }
+
+/* Row 2 */
+i.icon-table           { background-position: -0px -20px; }
+i.icon-view            { background-position: -20px -20px; }
+i.icon-key             { background-position: -40px -20px; }
+i.icon-arrow-desc      { background-position: -60px -20px; }
+i.icon-unique-key      { background-position: -80px -20px; }
+i.icon-user-unique-key { background-position: -100px -20px; }
+
+/* Row 3 */
+i.icon-function       { background-position: -0px -40px; }
+i.icon-procedure      { background-position: -20px -40px; }
+i.icon-chapter        { background-position: -40px -40px; }
+i.icon-error          { background-position: -60px -40px; }
+i.icon-trigger-active { background-position: -80px -40px; }
+i.icon-user-relation  { background-position: -100px -40px; }
+
+/* Row 4 */
+i.icon-user-key   { background-position: -0px -60px; }
+i.icon-unresolved { background-position: -20px -60px; }
+i.icon-expand     { background-position: -40px -60px; }
+i.icon-collapse   { background-position: -60px -60px; }
+i.icon-check      { background-position: -80px -60px; }
+i.icon-nullable   { background-position: -100px -60px; }
+
+/* Row 5 */
+i.icon-primary-key-disabled    { background-position: -0px -80px; }
+i.icon-unique-key-disabled     { background-position: -20px -80px; }
+i.icon-user-pk-relation        { background-position: -40px -80px; }
+i.icon-pk-relation             { background-position: -60px -80px; }
+i.icon-used-by-unresolved      { background-position: -80px -80px; }
+i.icon-used-by-user-unresolved { background-position: -100px -80px; }
+
+/* Row 6 */
+i.icon-used-by-table          { background-position: -0px -100px; }
+i.icon-used-by-user-table     { background-position: -20px -100px; }
+i.icon-used-by-view           { background-position: -40px -100px; }
+i.icon-used-by-user-view      { background-position: -60px -100px; }
+i.icon-used-by-procedure      { background-position: -80px -100px; }
+i.icon-used-by-user-procedure { background-position: -100px -100px; }
+
+/* Row 7 */
+i.icon-used-by-function              { background-position: -0px -120px; }
+i.icon-used-by-user-function         { background-position: -20px -120px; }
+i.icon-used-by-trigger-active        { background-position: -40px -120px; }
+i.icon-used-by-user-trigger-active   { background-position: -60px -120px; }
+i.icon-used-by-trigger-disabled      { background-position: -80px -120px; }
+i.icon-used-by-user-trigger-disabled { background-position: -100px -120px; }
+
+/* Row 8 */
+i.icon-uses-table          { background-position: -0px -140px; }
+i.icon-uses-user-table     { background-position: -20px -140px; }
+i.icon-uses-view           { background-position: -40px -140px; }
+i.icon-uses-user-view      { background-position: -60px -140px; }
+i.icon-uses-procedure      { background-position: -80px -140px; }
+i.icon-uses-user-procedure { background-position: -100px -140px; }
+
+/* Row 9 */
+i.icon-uses-function              { background-position: -0px -160px; }
+i.icon-uses-user-function         { background-position: -20px -160px; }
+i.icon-uses-trigger-active        { background-position: -40px -160px; }
+i.icon-uses-user-trigger-active   { background-position: -60px -160px; }
+i.icon-uses-trigger-disabled      { background-position: -80px -160px; }
+i.icon-uses-user-trigger-disabled { background-position: -100px -160px; }
+
+/* Row 10 */
+i.icon-uses-unresolved      { background-position: -0px -180px; }
+i.icon-uses-user-unresolved { background-position: -20px -180px; }
+
+/* Other */
+i.icon-loader { background: url('../img/icons/loader.gif'); }
+i.icon-none   { background: none; }
+
+/* 2.2. Medium (24px)
+   ========================================================================== */
+
+i[class*='icon24-'],
+i[class^='icon24-'] {
+    display: inline-block;
+    vertical-align: top;
+    width: 24px;
+    height: 24px;
+    background: url('../img/icons/sprite.24.png');
+    margin-right: 6px;
+    margin-top: 2px;
+}
+
+i.no-margin  { margin: 0px; }
+
+/* Row 1 */
+i.icon24-relation-1x-1x      { background-position: -0px -0px; }
+i.icon24-relation-1x-1x-user { background-position: -25px -0px; }
+
+/* Row 2 */
+i.icon24-relation-1x-mx      { background-position: -0px -25px; }
+i.icon24-relation-1x-mx-user { background-position: -25px -25px; }
+
+/* Row 3 */
+i.icon24-relation-mx-1x      { background-position: -0px -50px; }
+i.icon24-relation-mx-1x-user { background-position: -25px -50px; }
+
+/* 2.3. Large (32px)
+   ========================================================================== */
+
+i[class*='icon2x-'],
+i[class^='icon2x-'] {
+    display: inline-block;
+    vertical-align: top;
+    width: 32px;
+    height: 32px;
+    background: url('../img/icons/sprite2x.png');
+    margin-right: 6px;
+    margin-top: 2px;
+}
+
+i.no-margin  { margin: 0px; }
+
+/* Row 1 */
+/*i.icon2x-folder           { background-position: -0px 0px; }*/
+i.icon2x-database         { background-position: -40px 0px; }
+i.icon2x-module           { background-position: -80px 0px; }
+/*i.icon2x-arrow-asc        { background-position: -120px 0px; }*/
+i.icon2x-relation         { background-position: -160px 0px; }
+i.icon2x-trigger-disabled { background-position: -200px 0px; }
+
+/* Row 2 */
+i.icon2x-table           { background-position: -0px -40px; }
+i.icon2x-view            { background-position: -40px -40px; }
+i.icon2x-key             { background-position: -80px -40px; }
+/*i.icon2x-arrow-desc      { background-position: -120px -40px; }*/
+i.icon2x-unique-key      { background-position: -160px -40px; }
+i.icon2x-user-unique-key { background-position: -200px -40px; }
+
+/* Row 3 */
+i.icon2x-function       { background-position: -0px -80px; }
+i.icon2x-procedure      { background-position: -40px -80px; }
+/*i.icon2x-chapter        { background-position: -80px -80px; }*/
+i.icon2x-error          { background-position: -120px -80px; }
+i.icon2x-trigger-active { background-position: -160px -80px; }
+i.icon2x-user-relation  { background-position: -200px -80px; }
+
+/* Row 4 */
+i.icon2x-user-key          { background-position: -0px -120px; }
+i.icon2x-unresolved-entity { background-position: -40px -120px; }
+/*i.icon2x-expand            { background-position: -80px -120px; }*/
+/*i.icon2x-collapse          { background-position: -120px -120px; }*/
+i.icon2x-check             { background-position: -160px -120px; }
+/*i.icon2x-nullable          { background-position: -200px -120px; }*/
+
+/* ==========================================================================
+   3. Grids
+   ========================================================================== */
+
+.grid:before,
+.grid:after {
+    content: " ";
+    display: table;
+}
+
+.grid:after {
+    clear: both;
+}
+
+/* 3.1. Grid row
+   ========================================================================== */
+.grid {
+    display: block;
+    width: 100%;
+}
+
+/* 3.2. Row column
+   ========================================================================== */
+.grid [class*='span'],
+.grid [class^='span'] {
+    display: block;
+    float: left;
+    overflow: hidden;
+}
+
+.grid .span0 { width: 0%; }
+.grid .span1 { width: 8.333333333333333%; }
+.grid .span2 { width: 16.66666666666667%; }
+.grid .span3 { width: 25%; }
+.grid .span4 { width: 33.33333333333333%; }
+.grid .span5 { width: 41.66666666666667%; }
+.grid .span6 { width: 50%; }
+.grid .span7 { width: 58.33333333333333%; }
+.grid .span8 { width: 66.66666666666667%; }
+.grid .span9 { width: 75%; }
+.grid .span10 { width: 83.33333333333333%; }
+.grid .span11 { width: 91.66666666666667%; }
+.grid .span12 { width: 100%; }
+
+@media (max-width: 900px) {
+    .grid [class*='span'],
+    .grid [class^='span'] {
+        display: block;
+        overflow: auto;
+        float: none;
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   4. Buttons
+   ========================================================================== */
+
+.btn {
+    display: inline-block;
+    border: 1px solid transparent;
+    background: transparent;
+    color: rgba(0, 0, 0, 0.85);
+    text-decoration: none;
+    padding: 10px 16px;
+}
+
+.btn:hover {
+    border-color: #aed3f3;
+    background: #dcf1f9;
+}
+
+/* ==========================================================================
+   5. Tables
+   ========================================================================== */
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    table-layout: auto;
+    border-collapse:collapse;
+    border-spacing: 0;
+    border: 1px solid #dbe3f3;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .table { table-layout: fixed; }
+}
+
+.table.collapsed caption:before,
+.collapsed .table-caption:before {
+    background-position: -40px -60px;
+}
+
+.table th {
+    background: #dbe3f3;
+}
+
+.table th,
+.table td,
+.table-td {
+    padding: 6px 20px 6px 0;
+    border-top: 1px solid #dbe3f3;
+    border-bottom: 1px solid #dbe3f3;
+    overflow: hidden;
+    min-width: 20px;
+    vertical-align: top;
+}
+
+.table th:first-child,
+.table td:first-child,
+.table-td:first-child {
+    padding-left: 20px;
+}
+
+@media all and (max-width: 1000px) {
+    .table { table-layout: auto; }
+
+    .table th,
+    .table td { width: auto !important; }
+}
+
+/* 5.1. Collapsible
+   ========================================================================== */
+
+.collapsible {
+    transition: margin 0.2s;
+    margin-top: 30px;
+}
+
+.collapsible.collapsed + .collapsible {
+    margin-top: 0px;
+}
+
+.collapsible-link {
+    text-align: left;
+    padding: 5px 20px 5px;
+    font-weight: normal;
+    position: relative;
+    cursor: pointer;
+    color: #4679c6;
+    margin: 0;
+}
+
+.collapsible-link:before {
+    content: " ";
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    background: url('../img/icons/sprite.png');
+    background-position: -60px -60px;
+    position: absolute;
+    left: 0px;
+}
+
+.collapsible-area {
+    overflow-x: auto;
+}
+
+/* 5.2. Vertical layout
+   ========================================================================== */
+
+.table-vertical {
+    width: auto;
+    border: none;
+}
+
+.table-vertical td {
+    padding: 3px 0;
+    width: auto !important;
+    background: transparent !important;
+    border: none;
+}
+
+.table-vertical td:first-child {
+    padding-left: 0px;
+}
+
+.table-vertical td + td {
+    padding-left: 20px;
+}
+
+.table-vertical td:first-child {
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   6. Tree menu
+   ========================================================================== */
+
+.tree {
+    display: block;
+    background: #fff;
+}
+
+.tree i[class*='icon-'],
+.tree i[class^='icon-'] {
+    margin-left: 2px;
+    vertical-align: text-top;
+}
+
+.tree,
+.tree ul {
+    list-style-type: none;
+}
+    
+.tree li {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 4px 0;
+}
+
+.tree li:last-child,
+.tree ul li:last-child {
+    padding-bottom: 0;
+}
+
+.tree ul li { padding-left: 20px; }
+
+.tree ul { background: url('../img/tree/nono.png') top left repeat-y; }
+.tree ul li { background: url('../img/tree/nnno.png') top left no-repeat; }
+.tree ul li.expand { background: url('../img/tree/nnno-p.png') top left no-repeat; }
+.tree ul li.narrow { background: url('../img/tree/nnno-m.png') top left no-repeat; }
+.tree ul li:last-child { background: #fff url('../img/tree/nnoo.png') top left no-repeat; }
+.tree ul li.expand:last-child { background: #fff url('../img/tree/nnoo-p.png') top left no-repeat; }
+.tree ul li.narrow:last-child { background: #fff url('../img/tree/nnoo-m.png') top left no-repeat; }
+
+@media all and (max-width: 1000px) {
+    .tree li {
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 9px 0;
+    }
+    
+    .tree ul { padding-top: 5px; }
+    .tree ul li { padding-left: 20px; }
+    
+    .tree ul { background: url('../img/tree/mobile/nono.png') top left repeat-y; }
+    .tree ul li { background: url('../img/tree/mobile/nnno.png') top left no-repeat; }
+    .tree ul li.expand { background: url('../img/tree/mobile/nnno-p.png') top left no-repeat; }
+    .tree ul li.narrow { background: url('../img/tree/mobile/nnno-m.png') top left no-repeat; }
+    .tree ul li:last-child { background: #fff url('../img/tree/mobile/nnoo.png') top left no-repeat; }
+    .tree ul li.expand:last-child { background: #fff url('../img/tree/mobile/nnoo-p.png') top left no-repeat; }
+    .tree ul li.narrow:last-child { background: #fff url('../img/tree/mobile/nnoo-m.png') top left no-repeat; }
+}
+
+/* ==========================================================================
+   7. Responsive
+   ========================================================================== */
+
+.scroll-x {
+    overflow-x: auto;
+}
+
+@media all and (max-width: 1000px) {
+    tr.only-mobile { display: table-row; }
+    th.only-mobile,
+    td.only-mobile { display: table-cell; }
+
+    tr.only-desktop {
+        display: none !important;
+    }
+
+    th.only-desktop,
+    td.only-desktop {
+        display: none !important;
+    }
+}
+
+@media all and (min-width: 1001px) {
+    tr.only-mobile {
+        display: none !important;
+    }
+
+    th.only-mobile,
+    td.only-mobile {
+        display: none !important;
+    }
+
+    tr.only-desktop { display: table-row; }
+    th.only-desktop,
+    td.only-desktop { display: table-cell; }
+}
+
+/* ==========================================================================
+   8. Typography
+   ========================================================================== */
+
+body.font-size-small table  { font-size: 12px; }
+body.font-size-medium table  { font-size: 13px; }
+body.font-size-large table  { font-size: 14px; }
+
+body.font-size-small .font-small  { font-size: 12px; }
+body.font-size-small .font-medium { font-size: 13px; }
+body.font-size-small .font-large  { font-size: 14px; }
+
+body.font-size-medium .font-small  { font-size: 13px; }
+body.font-size-medium .font-medium { font-size: 14px; }
+body.font-size-medium .font-large  { font-size: 15px; }
+
+body.font-size-large .font-small  { font-size: 14px; }
+body.font-size-large .font-medium { font-size: 15px; }
+body.font-size-large .font-large  { font-size: 16px; }
+
+.font-regular { font-weight: normal; }
+.font-bold    { font-weight: bold; }
+
+.font-gray { color: #999999; }
+.font-blue { color: #4679C6; }
+
+/* ==========================================================================
+   9. Common
+   ========================================================================== */
+
+.trial { color: rgba(0,0,0,0.5) !important; }
+.trial-header { margin-left: 10px; }
+
+.trial-content {
+    margin-bottom: 15px; 
+    font-size: 16px;
+}

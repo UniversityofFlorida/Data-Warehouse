@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="cf">
+        <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views" class="ajax" data-target="#right">Views</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_pv_CRMAccounts" class="ajax" data-target="#right">dbo.pv_CRMAccounts</a></div>
+        <div id="tools">
+          <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+        </div>
+      </div>
+      <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+      <h1><i class=" icon2x-view "></i>dbo.pv_CRMAccounts</h1>
+      <table class="table table-vertical">
+        <tbody>
+          <tr>
+            <td>Schema</td>
+            <td>dbo</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>pv_CRMAccounts</td>
+          </tr>
+          <tr>
+            <td>ExtendedProp</td>
+            <td>List of job topic associations from SB Cap Management application</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="collapsible" data-key="uses">
+        <div class="collapsible-link font-large font-bold">Uses</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+                <td>
+                  <div style="margin-left: 0px">
+                    <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-view" title="View"></i></div>
+                    <div style="margin-left: 44px">dbo.pv_CRMAccounts</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">SalesForceImport.dbo.bt_Account</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="3" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">SalesForceImport.dbo.bt_Cohort__c</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="4" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">SalesForceImport.dbo.bt_RecordType</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="script">
+        <div class="collapsible-link font-large font-bold">Script</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">VIEW</span> [dbo].[pv_CRMAccounts] <span style="color:Blue;">AS</span> 
+    
+<span style="color:Green;">/*****************************************************************************************
+  Name:		    pv_CRMAccounts
+
+  Description:  List of accounts exported from SalesForce CRM
+
+  Created:	    04/04/2013 by William McCombie
+
+  Modified:     
+                
+*****************************************************************************************/</span> 
+    
+
+<span style="color:Blue;">SELECT</span> [Account].[Id]
+      <span style="color:Green;">--,[IsDeleted]</span>
+      <span style="color:Green;">--,[MasterRecordId]</span>
+      ,[Account].[Name]
+      ,[Account].[LastName]
+      ,[Account].[FirstName]
+      ,[Account].[Salutation]
+      <span style="color:Green;">--,[Account].[Type]</span>
+      <span style="color:Green;">--,[RecordTypeId]</span>
+	  ,[RecordType].[Name] <span style="color:Blue;">AS</span> [RecordType]
+      <span style="color:Green;">--,[Account].[ParentId]</span>
+      <span style="color:Green;">--,[Account].[BillingStreet]</span>
+      <span style="color:Green;">--,[Account].[BillingCity]</span>
+      <span style="color:Green;">--,[Account].[BillingState]</span>
+      <span style="color:Green;">--,[Account].[BillingPostalCode]</span>
+      <span style="color:Green;">--,[Account].[BillingCountry]</span>
+      ,[ShippingStreet]
+      ,[ShippingCity]
+      ,[ShippingState]
+      ,[ShippingPostalCode]
+      ,[ShippingCountry]
+      <span style="color:Green;">--,[Phone]</span>
+      <span style="color:Green;">--,[Fax]</span>
+      <span style="color:Green;">--,[Website]</span>
+      <span style="color:Green;">--,[Industry]</span>
+      <span style="color:Green;">--,[AnnualRevenue]</span>
+      <span style="color:Green;">--,[NumberOfEmployees]</span>
+      <span style="color:Green;">--,[Account].[Description]</span>
+      <span style="color:Green;">--,[Account].[OwnerId]</span>
+      ,[Account].[CreatedDate]
+      <span style="color:Green;">--,[Account].[CreatedById]</span>
+      <span style="color:Green;">--,[Account].[LastModifiedDate]</span>
+      <span style="color:Green;">--,[Account].[LastModifiedById]</span>
+      <span style="color:Green;">--,[Account].[SystemModstamp]</span>
+      ,[Account].[LastActivityDate]
+      <span style="color:Green;">--,[Account].[PersonContactId]</span>
+      ,[Account].[IsPersonAccount]
+      ,[Account].[PersonMailingStreet]
+      ,[Account].[PersonMailingCity]
+      ,[Account].[PersonMailingState]
+      ,[Account].[PersonMailingPostalCode]
+      ,[Account].[PersonMailingCountry]
+      ,[Account].[PersonOtherStreet]
+      ,[Account].[PersonOtherCity]
+      ,[Account].[PersonOtherState]
+      ,[Account].[PersonOtherPostalCode]
+      ,[Account].[PersonOtherCountry]
+      ,[Account].[PersonMobilePhone]
+      ,[Account].[PersonHomePhone]
+      ,[Account].[PersonOtherPhone]
+      ,[Account].[PersonAssistantPhone]
+      ,[Account].[PersonEmail]
+      <span style="color:Green;">--,[Account].[PersonTitle]</span>
+      <span style="color:Green;">--,[Account].[PersonDepartment]</span>
+      <span style="color:Green;">--,[Account].[PersonAssistantName]</span>
+      ,[Account].[PersonLeadSource]
+      <span style="color:Green;">--,[Account].[PersonBirthdate]</span>
+      <span style="color:Green;">--,[Account].[PersonHasOptedOutOfEmail]</span>
+      <span style="color:Green;">--,[Account].[PersonDoNotCall]</span>
+      <span style="color:Green;">--,[Account].[PersonLastCURequestDate]</span>
+      <span style="color:Green;">--,[Account].[PersonLastCUUpdateDate]</span>
+      <span style="color:Green;">--,[Account].[PersonEmailBouncedReason]</span>
+      <span style="color:Green;">--,[Account].[PersonEmailBouncedDate]</span>
+      <span style="color:Green;">--,[Account].[JigsawCompanyId]</span>
+      <span style="color:Green;">--,[Account].[Country_of_Citizenship__c]</span>
+      <span style="color:Green;">--,[Account].[Person_Contact__c]</span>
+      <span style="color:Green;">--,[Account].[Preferred_Method_of_Contact__c]</span>
+      ,[Account].[Nickname__c] <span style="color:Blue;">AS</span> [Nickname]
+      ,[Account].[Suffix__c] <span style="color:Blue;">AS</span> [Suffix]
+      ,[Account].[FICE_Code__c] <span style="color:Blue;">AS</span> [InstitutionFICECode]
+      <span style="color:Green;">--,[Account].[Hide_From_Online_Facebook__c]</span>
+      <span style="color:Green;">--,[Account].[Is_Current_UF_Employee__c]</span>
+      <span style="color:Green;">--,[Account].[Is_on_Academic_Probation__c]</span>
+      <span style="color:Green;">--,[Account].[Import_Exception__c]</span>
+      ,[Account].[Expected_Graduation_Term__c] <span style="color:Blue;">AS</span> [ExpectedGraduationTerm6]
+      <span style="color:Green;">--,[Account].[GatorLink__c]</span>
+      ,[Account].[Has_Applied_to_Graduate__c] <span style="color:Blue;">AS</span> [HasAppliedToGraduate]
+      <span style="color:Green;">--,[Account].[Hotel_Choice__c]</span>
+      <span style="color:Green;">--,[Account].[Hotel_Stay_Length__c]</span>
+      ,[Account].[Is_a_Joint_Degree_Student__c] <span style="color:Blue;">AS</span> [IsJointDegree]
+      ,[Account].[MBA_Graduation_Date__c] <span style="color:Blue;">AS</span> [MBAGraduationDate]
+      ,[Account].[Joint_Degree__c] <span style="color:Blue;">AS</span> [JointDegree]
+      <span style="color:Green;">--,[Account].[Cohort__c]</span>
+	  ,[Cohort].[Name] <span style="color:Blue;">AS</span> [Cohort]
+      <span style="color:Green;">--,[Account].[Import_Had_Errors__c]</span>
+      <span style="color:Green;">--,[Account].[Is_Within_45miles_72km_of_Gainesville__c]</span>
+      <span style="color:Green;">--,[Account].[Student_Image__c]</span>
+      <span style="color:Green;">--,[Account].[Birth_Day__c]</span>
+      <span style="color:Green;">--,[Account].[Birth_Month__c]</span>
+      ,[Account].[Enrollment_Status__c] <span style="color:Blue;">AS</span> [EnrollmentStatus]
+      <span style="color:Green;">--,[Account].[Info_Session_Date__c]</span>
+      <span style="color:Green;">--,[Account].[Info_Session_Location__c]</span>
+      ,[Account].[UFID__c] <span style="color:Blue;">AS</span> [UFID]
+      ,[Account].[Pre_enrollment_email__c] <span style="color:Blue;">AS</span> [PreEnrollmentEmail]
+      ,[Account].[Enrollment_Status_Effective_Date__c] <span style="color:Blue;">AS</span> [EnrollmentStatusEffectiveDate]
+      ,[Account].[Is_FL_Resident__c]  <span style="color:Blue;">AS</span> [IsFloridaResident]
+      ,[Account].[Application_Matriculation_Term__c] <span style="color:Blue;">AS</span> [MatriculationTerm6]
+      ,[Account].[Application_Program__c] <span style="color:Blue;">AS</span> [ApplicationProgram]
+      <span style="color:Green;">--,[Account].[Cohort_Start_Date__c]</span>
+      <span style="color:Green;">--,[Account].[Needs_Folder_Label__c]</span>
+      ,[Account].[Is_Admitted__c] <span style="color:Blue;">AS</span> [IsAdmitted]
+      <span style="color:Green;">--,[Account].[Is_OEM__c]</span>
+      <span style="color:Green;">--,[Account].[Web2Lead_Form__c]</span>
+      <span style="color:Green;">--,[Account].[Web2Lead_Referrer__c]</span>
+      <span style="color:Green;">--,[Account].[Lead_Referral_Source__c]</span>
+      <span style="color:Green;">--,[Account].[e_Learning_is_Active__c]</span>
+      ,[Account].[Initial_Lead_Inquiry_Date__c] <span style="color:Blue;">AS</span> [LeadInquiryDate]
+      <span style="color:Green;">--,[Account].[Program_Start_Date__c]</span>
+      <span style="color:Green;">--,[Account].[Binder_Sent__c]</span>
+      <span style="color:Green;">--,[Account].[LastUpdate]</span>
+  <span style="color:Blue;">FROM</span> [SalesForceImport].[dbo].[bt_Account] <span style="color:Blue;">AS</span> [Account]
+  <span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> [SalesForceImport].[dbo].[bt_RecordType] <span style="color:Blue;">AS</span> [RecordType]
+  <span style="color:Blue;">ON</span> [RecordType].[Id] = [Account].[RecordTypeId]
+  <span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> [SalesForceImport].[dbo].[bt_Cohort__c] <span style="color:Blue;">AS</span> [Cohort]
+  <span style="color:Blue;">ON</span> [Account].[Cohort__c] = [Cohort].[Id]
+  <span style="color:Blue;">WHERE</span> [Account].[IsDeleted] &lt;&gt; 1
+</pre></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></div>
+  </body>
+</html>

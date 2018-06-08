@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures" class="ajax" data-target="#right">Procedures</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_pp_AppManagement_WebAppExceptionInsert" class="ajax" data-target="#right">dbo.pp_AppManagement_WebAppExceptionInsert</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-procedure "></i>dbo.pp_AppManagement_WebAppExceptionInsert</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>pp_AppManagement_WebAppExceptionInsert</td>
+        </tr>
+        <tr>
+          <td>ExtendedProp</td>
+          <td>Stub for AppManagement.dbo.p_WebAppExceptionInsert. Insert an exception into the logging tables.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>IN</td>
+              <td>AppID</td>
+              <td>smallint</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">Integer application identifier.</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>IN</td>
+              <td>Source</td>
+              <td>varchar(100)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">String.</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>IN</td>
+              <td>LogDateTime</td>
+              <td>datetime</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">DateTime of event.</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>IN</td>
+              <td>Message</td>
+              <td>varchar(1000)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">String.</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>IN</td>
+              <td>Form</td>
+              <td>varchar(4000)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">String.</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>IN</td>
+              <td>QueryString</td>
+              <td>varchar(2000)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">String.</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>IN</td>
+              <td>TargetSite</td>
+              <td>varchar(300)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">String.</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>IN</td>
+              <td>StackTrace</td>
+              <td>varchar(4000)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">String.</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>IN</td>
+              <td>Referer</td>
+              <td>varchar(250)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">String.</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>IN</td>
+              <td>ParentExceptionID</td>
+              <td>int</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">Integer</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>INOUT</td>
+              <td>ExceptionID</td>
+              <td>int</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">Integer</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="uses">
+      <div class="collapsible-link font-large font-bold">Uses</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+              <td>
+                <div style="margin-left: 0px">
+                  <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-procedure" title="Procedure"></i></div>
+                  <div style="margin-left: 44px">dbo.pp_AppManagement_WebAppExceptionInsert</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">AppManagement.dbo.usp_WebAppExceptionInsert</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">PROCEDURE</span> [dbo].[pp_AppManagement_WebAppExceptionInsert] 
+
+	@AppID <span style="color:Blue;">SMALLINT</span>
+	,@Source <span style="color:Blue;">VARCHAR</span>(100)
+	,@LogDateTime <span style="color:Blue;">DATETIME</span>
+	,@Message <span style="color:Blue;">VARCHAR</span>(1000)
+	,@Form  <span style="color:Blue;">VARCHAR</span>(4000)
+	,@QueryString <span style="color:Blue;">VARCHAR</span>(2000)
+	,@TargetSite <span style="color:Blue;">VARCHAR</span>(300)
+	,@StackTrace <span style="color:Blue;">VARCHAR</span>(4000)
+	,@Referer <span style="color:Blue;">VARCHAR</span>(250)
+	,@ParentExceptionID <span style="color:Blue;">INT</span>
+	,@ExceptionID <span style="color:Blue;">INT</span> <span style="color:Blue;">OUTPUT</span>
+	
+<span style="color:Blue;">AS</span> 
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        pp_AppManagement_WebAppExceptionInsert
+
+  Description:	    Stub for AppManagement.dbo.p_WebAppExceptionInsert
+                    Inster an exception int the logging tables.
+  
+  Input:            AppID SMALLINT - Integer application identifier.
+                    Source VARCHAR(100) - String.
+                    LogDateTime DATETIME - DateTime of event.
+                    Message VARCHAR(1000) - String.
+                    Form VARCHAR(4000) - String.
+                    @QueryString VARCHAR(2000) - String
+                    @TargetSite VARCHAR(300) - String
+                    @StackTrace VARCHAR(4000) - String
+                    @Referer VARCHAR(250) - String
+                    @ParentExceptionID INT
+                    @ExceptionID INT
+  
+  Usage:            EXEC [BaseViews].[dbo].[p_WebAppExceptionInsert] AppID, Source, LogDateTime, Message, Form, QueryString, TargetSite, StackTrace, Referer, ParentExceptionID, ExceptionID
+  
+  Created:	        07/19/2010 by John Holmes
+
+  Modified:			02/21/2014 by William McCombie
+					Changed @ExceptionID to output (this appeared to be the original intention)
+  	
+**************************************************************************************************/</span>
+
+<span style="color:Blue;">BEGIN</span>
+	
+	<span style="color:Blue;">SET</span> <span style="color:Blue;">NOCOUNT</span> <span style="color:Blue;">ON</span>;
+
+    <span style="color:Blue;">EXEC</span> [AppManagement].[dbo].[usp_WebAppExceptionInsert] @AppID, @Source, @LogDateTime, @Message, @Form, @QueryString, @TargetSite, @StackTrace, @Referer, @ParentExceptionID, @ExceptionID
+    
+<span style="color:Blue;">END</span>
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

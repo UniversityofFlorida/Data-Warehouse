@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="cf">
+        <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views" class="ajax" data-target="#right">Views</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_dv_cs_courses" class="ajax" data-target="#right">dbo.dv_cs_courses</a></div>
+        <div id="tools">
+          <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+        </div>
+      </div>
+      <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+      <h1><i class=" icon2x-view "></i>dbo.dv_cs_courses</h1>
+      <table class="table table-vertical">
+        <tbody>
+          <tr>
+            <td>Schema</td>
+            <td>dbo</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>dv_cs_courses</td>
+          </tr>
+          <tr>
+            <td>ExtendedProp</td>
+            <td>Courses - Campus Solutions data</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="collapsible" data-key="uses">
+        <div class="collapsible-link font-large font-bold">Uses</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+                <td>
+                  <div style="margin-left: 0px">
+                    <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-view" title="View"></i></div>
+                    <div style="margin-left: 44px">dbo.dv_cs_courses</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">BaseData.bd.bt_cs_D_CRSE</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="script">
+        <div class="collapsible-link font-large font-bold">Script</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">VIEW</span> [dbo].[dv_cs_courses] <span style="color:Blue;">AS</span>
+
+<span style="color:Green;">/*****************************************************************************************
+
+  Name:		    dv_cs_courses
+
+  Description:  Courses - Campus Solutions data
+
+				A type 1 (max effective change) dimension. 
+
+				This dimension contains classification level attributes that a student will 
+				contain in a term. 
+				The join between this dimension and the fact table should be with levelSID.
+
+  Created:	    04/23/2018 by John Holmes
+
+  Modified:     
+                
+*****************************************************************************************/</span>
+
+<span style="color:Blue;">SELECT</span>
+	CRSE_SID <span style="color:Blue;">AS</span> courseSID,
+	CRSE_ID <span style="color:Blue;">AS</span> courseCode,
+	CRSE_LD <span style="color:Blue;">AS</span> courseLongDesc,
+	CRSE_TTL_LD <span style="color:Blue;">AS</span> courseTitleLongDesc,
+	CRSE_OFFER_NUM <span style="color:Blue;">AS</span> courseOfferingNumber,
+	CATALOG_NUM <span style="color:Blue;">AS</span> catalogNumber,
+	CRSE_APPRV_CD <span style="color:Blue;">AS</span> courseApprovalCode,
+	CRSE_APPRV_SD <span style="color:Blue;">AS</span> courseApprovalShortDesc,
+	CRSE_APPRV_LD <span style="color:Blue;">AS</span> courseApprovalLongDesc,
+	EFFDT <span style="color:Blue;">AS</span> effectiveDate,
+	SBJCT_CD <span style="color:Blue;">AS</span> subjectCode,
+	SBJCT_SD <span style="color:Blue;">AS</span> subjectShortDesc,
+	SBJCT_LD <span style="color:Blue;">AS</span> subjectLongDesc,
+	SBJCT_FD <span style="color:Blue;">AS</span> subjectFullDesc,
+	RQMNT_DESIGNTN <span style="color:Blue;">AS</span> requirements,
+	CIP_CD <span style="color:Blue;">AS</span> cipCode,
+	CIP_LD <span style="color:Blue;">AS</span> cipLongDesc,
+	HEGIS_CD <span style="color:Blue;">AS</span> hegisCode,
+	HEGIS_LD <span style="color:Blue;">AS</span> hegisLongDesc,
+	CRSE_REPEAT_FLG <span style="color:Blue;">AS</span> courseRepeatFlag,
+	CRSE_REPEAT_LIMIT <span style="color:Blue;">AS</span> courseRepeatLimit,
+	UNITS_REPEAT_LIMIT <span style="color:Blue;">AS</span> creditRepeatLimit,
+	MIN_UNITS <span style="color:Blue;">AS</span> minimumUnits,
+	MAX_UNITS <span style="color:Blue;">AS</span> maximumUnits,
+	ACAD_PRGRS_UNITS <span style="color:Blue;">AS</span> academicProgressUnits,
+	INSTITUTION_SID <span style="color:Blue;">AS</span> institutionSID,
+	<span style="color:Green;">--INSTITUTION_CD AS institutionCode,</span>
+	<span style="color:Green;">--INSTITUTION_SD AS institutionShortDesc,</span>
+	<span style="color:Green;">--INSTITUTION_LD AS institutionLongDesc,</span>
+	CAMPUS_CD <span style="color:Blue;">AS</span> campusCode,
+	CAMPUS_SD <span style="color:Blue;">AS</span> campusShortDesc,
+	CAMPUS_LD <span style="color:Blue;">AS</span> campusLongDesc,
+	ACAD_ORG_SID <span style="color:Blue;">AS</span> organizationSID,
+	<span style="color:Green;">--ACAD_ORG_CD AS organizationCode,</span>
+	<span style="color:Green;">--ACAD_ORG_SD AS organizationShortDesc,</span>
+	<span style="color:Green;">--ACAD_ORG_LD AS organizationLongDesc,</span>
+	ACAD_GRP_SID <span style="color:Blue;">AS</span> groupSID,
+	<span style="color:Green;">--ACAD_GRP_CD AS groupCode,</span>
+	<span style="color:Green;">--ACAD_GRP_SD AS groupShortDesc,</span>
+	<span style="color:Green;">--ACAD_GRP_LD AS groupLongDesc,</span>
+	ACAD_CAR_SID <span style="color:Blue;">AS</span> careerSID,
+	<span style="color:Green;">--ACAD_CAR_CD AS careerCode,</span>
+	<span style="color:Green;">--ACAD_CAR_SD AS careerShortDesc,</span>
+	<span style="color:Green;">--ACAD_CAR_LD AS careerLongDesc,</span>
+	SSR_COMP_SID <span style="color:Blue;">AS</span> componentTypeSID,
+	<span style="color:Green;">--SSR_COMP_CD AS componentTypeCode,</span>
+	<span style="color:Green;">--SSR_COMP_SD AS componentTypeShortDesc,</span>
+	<span style="color:Green;">--SSR_COMP_LD AS componentTypeLongDesc,</span>
+	SRC_SYS_ID <span style="color:Blue;">AS</span> sourceSystemID,
+	CREATED_EW_DTTM <span style="color:Blue;">AS</span> createdTimestamp,
+	LASTUPD_EW_DTTM <span style="color:Blue;">AS</span> lastUpdatedTimestamp
+<span style="color:Blue;">FROM</span>
+	BaseData.bd.bt_cs_D_CRSE ;
+</pre></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></div>
+  </body>
+</html>

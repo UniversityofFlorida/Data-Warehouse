@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions" class="ajax" data-target="#right">Functions</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_TermDiff" class="ajax" data-target="#right">dbo.fn_TermDiff</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-function "></i>dbo.fn_TermDiff</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>fn_TermDiff</td>
+        </tr>
+        <tr>
+          <td>ExtendedProp</td>
+          <td>BaseViews - Add (or subtract) a given number of terms to (or from) a Term6 value</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>OUT</td>
+              <td>Returns</td>
+              <td>varchar(6)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>IN</td>
+              <td>startTerm6</td>
+              <td>varchar(6)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">Lower bound term</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>IN</td>
+              <td>endTerm6</td>
+              <td>varchar(6)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">Upper bound term</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span>  <span style="color:Blue;">FUNCTION</span> [dbo].[fn_TermDiff] 
+(
+     @startTerm6 <span style="color:Blue;">AS</span> [VARCHAR](6)
+	,@endTerm6 <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(6)
+)
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        fn_TermDiff
+
+  Description:	    BaseViews - Given two terms, determine the number of terms between them.
+					Summer is considered a single term
+  
+					PARAM NAME      DATATYPE    REQUIRED    NOTES
+  Input:			@startTerm6			varchar(6)	Yes			First term code (YYYYMM)
+                    @endTerm6			varchar(6)  Yes			Second term code (YYYYMM)
+  
+  Usage:            SELECT [BaseViews].[dbo].[fn_TermDiff](@term6, @toAdd) ;
+					Examples:
+						SELECT [BaseViews].[dbo].[fn_TermDiff](&#39;201401&#39;, &#39;201401&#39;) ;
+						Returns 0
+
+						SELECT [BaseViews].[dbo].[fn_TermDiff](&#39;201401&#39;, &#39;201308&#39;) ;
+						Returns -1
+
+						SELECT [BaseViews].[dbo].[fn_TermDiff](&#39;201401&#39;, &#39;201508&#39;) ;
+						Returns 5
+  
+
+  Created:	        09/13/2016 by William McCombie
+
+  Modified:			11/30/2016 by William McCombie
+					Added Summer B terms
+  	
+**************************************************************************************************/</span>
+
+<span style="color:Blue;">RETURNS</span> [VARCHAR](6)
+
+<span style="color:Blue;">AS</span>
+
+<span style="color:Blue;">BEGIN</span>
+
+	<span style="color:Blue;">DECLARE</span> @lowerYear <span style="color:Blue;">INT</span> = <span style="color:Blue;">LEFT</span>(@startTerm6, 4);
+	<span style="color:Blue;">DECLARE</span> @upperYear <span style="color:Blue;">INT</span> = <span style="color:Blue;">LEFT</span>(@endTerm6, 4);
+	
+	<span style="color:Blue;">DECLARE</span> @lowerTerm <span style="color:Blue;">INT</span> = <span style="color:Blue;">RIGHT</span>(@startTerm6, 2);
+	<span style="color:Blue;">DECLARE</span> @upperTerm <span style="color:Blue;">INT</span> = <span style="color:Blue;">RIGHT</span>(@endTerm6, 2);
+
+	<span style="color:Blue;">DECLARE</span> @yearDiff <span style="color:Blue;">INT</span> = @upperYear - @lowerYear;
+
+	<span style="color:Blue;">DECLARE</span> @termDiff <span style="color:Blue;">INT</span>;
+
+	<span style="color:Blue;">SET</span> @termDiff = 
+		<span style="color:Blue;">CASE</span> <span style="color:Blue;">WHEN</span> @lowerTerm = 1 <span style="color:Blue;">AND</span> @upperTerm = 1 <span style="color:Blue;">THEN</span> 0
+			 <span style="color:Blue;">WHEN</span> @lowerTerm = 1 <span style="color:Blue;">AND</span> @upperTerm <span style="color:Blue;">IN</span> ( 5, 6) <span style="color:Blue;">THEN</span> 1
+			 <span style="color:Blue;">WHEN</span> @lowerTerm = 1 <span style="color:Blue;">AND</span> @upperTerm = 8 <span style="color:Blue;">THEN</span> 2
+			 <span style="color:Blue;">WHEN</span> @lowerTerm <span style="color:Blue;">IN</span> ( 5, 6) <span style="color:Blue;">AND</span> @upperTerm = 1 <span style="color:Blue;">THEN</span> -1
+			 <span style="color:Blue;">WHEN</span> @lowerTerm <span style="color:Blue;">IN</span> ( 5, 6) <span style="color:Blue;">AND</span> @upperTerm <span style="color:Blue;">IN</span> ( 5, 6) <span style="color:Blue;">THEN</span> 0
+			 <span style="color:Blue;">WHEN</span> @lowerTerm <span style="color:Blue;">IN</span> ( 5, 6) <span style="color:Blue;">AND</span> @upperTerm = 8 <span style="color:Blue;">THEN</span> 1
+			 <span style="color:Blue;">WHEN</span> @lowerTerm = 8 <span style="color:Blue;">AND</span> @upperTerm = 1 <span style="color:Blue;">THEN</span> -2
+			 <span style="color:Blue;">WHEN</span> @lowerTerm = 8 <span style="color:Blue;">AND</span> @upperTerm <span style="color:Blue;">IN</span> ( 5, 6) <span style="color:Blue;">THEN</span> -1
+			 <span style="color:Blue;">WHEN</span> @lowerTerm = 8 <span style="color:Blue;">AND</span> @upperTerm = 8 <span style="color:Blue;">THEN</span> 0
+			 <span style="color:Blue;">ELSE</span> <span style="color:Blue;">NULL</span> <span style="color:Blue;">END</span>
+
+	<span style="color:Blue;">RETURN</span> @yearDiff * 3 + @termDiff ;
+	
+<span style="color:Blue;">END</span> ;
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

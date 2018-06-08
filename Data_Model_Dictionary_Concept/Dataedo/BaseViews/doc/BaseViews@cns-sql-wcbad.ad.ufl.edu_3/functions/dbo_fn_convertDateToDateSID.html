@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions" class="ajax" data-target="#right">Functions</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_convertDateToDateSID" class="ajax" data-target="#right">dbo.fn_convertDateToDateSID</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-function "></i>dbo.fn_convertDateToDateSID</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>fn_convertDateToDateSID</td>
+        </tr>
+        <tr>
+          <td>ExtendedProp</td>
+          <td>Convert Date into CS Date SID format (YYYYMMDD)</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>OUT</td>
+              <td>Returns</td>
+              <td>varchar(8)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>IN</td>
+              <td>dateIN</td>
+              <td>datetime2(0)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">datetime(2) Date object</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">FUNCTION</span> [dbo].[fn_convertDateToDateSID] 
+(
+    @dateIN <span style="color:Blue;">AS</span> datetime2(0)
+
+)
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        fn_convertDateToDateSID
+
+  Description:	    BaseViews - Convert Date into CS Date SID format (YYYYMMDD)
+  
+  Input:            @dateIN:    datetime2(0) Date object
+
+  Output:			A string
+  
+  Usage:            BaseViews.dbo.fn_convertDateToDateSID(datetime2(0)) ;
+  
+                    Example: 
+						DECLARE @dt datetime2(0) = CURRENT_TIMESTAMP ;
+						SELECT BaseViews.dbo.fn_convertDateToDateSID(@dt) ;
+
+  Created:	        04/9/2018 by John Holmes
+
+  Modified:
+  	
+**************************************************************************************************/</span>
+
+<span style="color:Blue;">RETURNS</span> <span style="color:Blue;">varchar</span>(8)
+
+<span style="color:Blue;">AS</span>
+
+<span style="color:Blue;">BEGIN</span>
+    
+	<span style="color:Green;">-- Declare and initialize the return and working variables</span>
+	<span style="color:Blue;">DECLARE</span> @dateOUT <span style="color:Blue;">AS</span> <span style="color:Blue;">varchar</span>(8) = <span style="color:Blue;">NULL</span> ;
+	
+	<span style="color:Green;">-- Parse input and perform conversions</span>
+	<span style="color:Blue;">DECLARE</span> 
+	@year <span style="color:Blue;">varchar</span>(4) = <span style="color:Magenta;">CAST</span>(<span style="color:Magenta;">YEAR</span>(<span style="color:Magenta;">CURRENT_TIMESTAMP</span>) <span style="color:Blue;">AS</span> <span style="color:Blue;">varchar</span>),
+	@month <span style="color:Blue;">varchar</span>(2) = <span style="color:Magenta;">CAST</span>(<span style="color:Magenta;">MONTH</span>(<span style="color:Magenta;">CURRENT_TIMESTAMP</span>) <span style="color:Blue;">AS</span> <span style="color:Blue;">varchar</span>),
+	@day <span style="color:Blue;">varchar</span>(2) = <span style="color:Magenta;">CAST</span>(<span style="color:Magenta;">DAY</span>(<span style="color:Magenta;">CURRENT_TIMESTAMP</span>) <span style="color:Blue;">AS</span> <span style="color:Blue;">varchar</span>),
+	@sql <span style="color:Blue;">varchar</span>(<span style="color:Magenta;">MAX</span>)
+	;
+	<span style="color:Blue;">SET</span> @month = <span style="color:Blue;">CASE</span> <span style="color:Blue;">WHEN</span> <span style="color:Magenta;">LEN</span>(@month) &lt; 2 <span style="color:Blue;">THEN</span> <span style="color:#A31515;">&#39;0&#39;</span> + @month <span style="color:Blue;">ELSE</span> @month <span style="color:Blue;">END</span> ;
+	<span style="color:Blue;">SET</span> @day = <span style="color:Blue;">CASE</span> <span style="color:Blue;">WHEN</span> <span style="color:Magenta;">LEN</span>(@day) &lt; 2 <span style="color:Blue;">THEN</span> <span style="color:#A31515;">&#39;0&#39;</span> + @day <span style="color:Blue;">ELSE</span> @day <span style="color:Blue;">END</span> ;
+	
+	<span style="color:Green;">-- Assemble output</span>
+	<span style="color:Blue;">SET</span> @dateOUT = @year + @month + @day ;
+	
+
+	<span style="color:Green;">-- Return the result</span>
+	<span style="color:Blue;">RETURN</span> @dateOUT 
+	
+<span style="color:Blue;">END</span>
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

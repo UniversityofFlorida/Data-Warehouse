@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions" class="ajax" data-target="#right">Functions</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_ReplaceMultipleSpaces" class="ajax" data-target="#right">dbo.fn_ReplaceMultipleSpaces</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-function "></i>dbo.fn_ReplaceMultipleSpaces</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>fn_ReplaceMultipleSpaces</td>
+        </tr>
+        <tr>
+          <td>ExtendedProp</td>
+          <td>In a string, REPLACE an arbitrary number of consecutive spaces with a single space</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>OUT</td>
+              <td>Returns</td>
+              <td>varchar(8000)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>IN</td>
+              <td>Input</td>
+              <td>varchar(8000)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">The string in which to REPLACE multiple consecutive spaces.</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">FUNCTION</span> [dbo].[fn_ReplaceMultipleSpaces] 
+(
+	@Input <span style="color:Blue;">VARCHAR</span>(8000) = <span style="color:#A31515;">&#39;&#39;</span>
+)
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        fn_ReplaceMultipleSpaces
+
+  Description:	    In a string, REPLACE an arbitrary number of consecutive spaces with a single space
+                    
+                    Lifted from http://www.sqlservercentral.com/Forums/FindPost821209.aspx
+                    and http://www.sqlservercentral.com/Forums/FindPost821565.aspx
+  
+  Input:            @Input VARCHAR(8000) - The string in which to REPLACE multiple consecutive spaces.
+  
+  Usage:            [BaseViews].[dbo].[fn_ReplaceMultipleSpaces](@Input)
+  
+                    Example: SELECT [BaseViews].[dbo].[fn_ReplaceMultipleSpaces](&#39;This sentance     has    extra spaces.&#39;)
+                    Returns: &#39;This sentance has extra spaces.&#39;
+
+  Created:	        03/18/2011 by John Holmes
+
+  Modified:
+  	
+**************************************************************************************************/</span>
+
+<span style="color:Blue;">RETURNS</span> <span style="color:Blue;">VARCHAR</span>(8000)
+
+<span style="color:Blue;">AS</span>
+
+<span style="color:Blue;">BEGIN</span>
+    
+    <span style="color:Blue;">RETURN</span>  <span style="color:Magenta;">REPLACE</span>(
+                <span style="color:Magenta;">REPLACE</span>(
+                    <span style="color:Magenta;">REPLACE</span>(
+                        <span style="color:Magenta;">REPLACE</span>(
+                            <span style="color:Magenta;">REPLACE</span>(
+                                <span style="color:Magenta;">REPLACE</span>(
+                                    <span style="color:Magenta;">REPLACE</span>(
+                                        <span style="color:Magenta;">ltrim</span>(<span style="color:Magenta;">rtrim</span>(@Input)), 
+                                        <span style="color:#A31515;">&#39;                                 &#39;</span>,<span style="color:#A31515;">&#39; &#39;</span>
+                                    ),
+                                    <span style="color:#A31515;">&#39;                 &#39;</span>,<span style="color:#A31515;">&#39; &#39;</span>
+                                ),
+                                <span style="color:#A31515;">&#39;         &#39;</span>,<span style="color:#A31515;">&#39; &#39;</span>
+                            ),
+                            <span style="color:#A31515;">&#39;     &#39;</span>,<span style="color:#A31515;">&#39; &#39;</span>
+                        ),
+                        <span style="color:#A31515;">&#39;   &#39;</span>,<span style="color:#A31515;">&#39; &#39;</span>
+                    ),
+                    <span style="color:#A31515;">&#39;  &#39;</span>,<span style="color:#A31515;">&#39; &#39;</span>
+                ),
+                <span style="color:#A31515;">&#39;  &#39;</span>,<span style="color:#A31515;">&#39; &#39;</span>
+            ) 
+	
+<span style="color:Blue;">END</span>
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

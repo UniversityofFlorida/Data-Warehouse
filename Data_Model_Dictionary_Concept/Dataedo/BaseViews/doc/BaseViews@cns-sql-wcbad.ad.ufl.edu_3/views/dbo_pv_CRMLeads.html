@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="cf">
+        <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views" class="ajax" data-target="#right">Views</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_pv_CRMLeads" class="ajax" data-target="#right">dbo.pv_CRMLeads</a></div>
+        <div id="tools">
+          <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+        </div>
+      </div>
+      <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+      <h1><i class=" icon2x-view "></i>dbo.pv_CRMLeads</h1>
+      <table class="table table-vertical">
+        <tbody>
+          <tr>
+            <td>Schema</td>
+            <td>dbo</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>pv_CRMLeads</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="collapsible" data-key="uses">
+        <div class="collapsible-link font-large font-bold">Uses</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+                <td>
+                  <div style="margin-left: 0px">
+                    <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-view" title="View"></i></div>
+                    <div style="margin-left: 44px">dbo.pv_CRMLeads</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">SalesForceImport.dbo.bt_Lead</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="3" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">SalesForceImport.dbo.bt_RecordType</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="script">
+        <div class="collapsible-link font-large font-bold">Script</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">VIEW</span> [dbo].pv_CRMLeads <span style="color:Blue;">AS</span> 
+    
+<span style="color:Green;">/*****************************************************************************************
+  Name:		    pv_CRMLeads
+
+  Description:  List of leads exported from SalesForce CRM
+
+  Created:	    04/04/2013 by William McCombie
+
+  Modified:     
+                
+*****************************************************************************************/</span> 
+    
+<span style="color:Blue;">SELECT</span> [Lead].[Id]
+      <span style="color:Green;">--,[IsDeleted]</span>
+      <span style="color:Green;">--,[MasterRecordId]</span>
+      ,[Lead].[LastName]
+      ,[Lead].[FirstName]
+      ,[Lead].[Salutation]
+      ,[Lead].[Name]
+      <span style="color:Green;">--,[RecordTypeId]</span>
+	  ,[RecordType].[Name] <span style="color:Blue;">AS</span> [RecordType]
+      ,[Title]
+      ,[Company]
+      ,[Street]
+      ,[City]
+      ,[State]
+      ,[PostalCode]
+      ,[Country]
+      ,[Phone]
+      ,[Email]
+      <span style="color:Green;">--,[Website]</span>
+      <span style="color:Green;">--,[Description]</span>
+      ,[LeadSource]
+      ,[Status]
+      ,[Industry]
+      ,[Rating]
+      ,[AnnualRevenue]
+      ,[NumberOfEmployees]
+      ,[OwnerId]
+      ,[IsConverted]
+      ,[ConvertedDate]
+      ,[ConvertedAccountId]
+      ,[ConvertedContactId]
+      ,[ConvertedOpportunityId]
+      ,[IsUnreadByOwner]
+      ,[Lead].[CreatedDate]
+      <span style="color:Green;">--,[CreatedById]</span>
+      ,[Lead].[LastModifiedDate]
+      <span style="color:Green;">--,[LastModifiedById]</span>
+      <span style="color:Green;">--,[SystemModstamp]</span>
+      ,[Lead].[LastActivityDate]
+      <span style="color:Green;">--,[JigsawContactId]</span>
+      <span style="color:Green;">--,[EmailBouncedReason]</span>
+      <span style="color:Green;">--,[EmailBouncedDate]</span>
+      ,[Current_Employer__c] <span style="color:Blue;">AS</span> [CurrentEmployer]
+      ,[Current_Job_Title__c] <span style="color:Blue;">AS</span> [CurrentJobTitle]
+      <span style="color:Green;">--,[Current_salary__c] AS [CurrentSalary]</span>
+      ,[Grad_GPA__c] <span style="color:Blue;">AS</span> [GraduateGPA]
+      ,[Grad_Graduation_Month__c] <span style="color:Blue;">AS</span> [GraduateGraduationMonth]
+      ,[Grad_Graduation_Year__c] <span style="color:Blue;">AS</span> [GraduateGraduationYear]
+      ,[Suffix__c] <span style="color:Blue;">AS</span> [Suffix]
+      ,[Grad_Major__c] <span style="color:Blue;">AS</span> [GraduateMajor]
+      ,[Months_of_work_experience__c] <span style="color:Blue;">AS</span> [MonthsOfWorkExperience]
+      ,[Nickname__c] <span style="color:Blue;">AS</span> [NickName]
+      ,[Program_of_interest__c] <span style="color:Blue;">AS</span> [ProgramOfInterest]
+      ,[Self_reported_GMAT__c] <span style="color:Blue;">AS</span> [SelfReportedGMAT]
+      ,[Self_reported_GPA__c] <span style="color:Blue;">AS</span> [SelfReportedGPA]
+      ,[Self_reported_TOEFL__c] <span style="color:Blue;">AS</span> [SelfReportedTOEFL]
+      ,[Target_start_year__c] <span style="color:Blue;">AS</span> [TargetStartYear]
+      ,[Undergrad_GPA__c] <span style="color:Blue;">AS</span> [UndergradGPA]
+      ,[Undergrad_Graduation_Month__c] <span style="color:Blue;">AS</span> [UndergradGraduationMonth]
+      ,[Undergrad_Graduation_Year__c] <span style="color:Blue;">AS</span> [UndergradGraduationYear]
+      <span style="color:Green;">--,[Target_start_year_saved__c] </span>
+      ,[Undergrad_Major__c] <span style="color:Blue;">AS</span> [UndergradMajor]
+      ,[Years_of_work_experience__c] <span style="color:Blue;">AS</span> [YearsOfWorkExperience]
+      ,[Grad_School__c] <span style="color:Blue;">AS</span> [GraduateSchool]
+      ,[Undergrad_Institution__c] <span style="color:Blue;">AS</span> [UndergradInstitutionAccountID]
+      ,[Grad_Institution__c] <span style="color:Blue;">AS</span> [GraduateInstitutionAccountID]
+      <span style="color:Green;">--,[Import_Had_Errors__c]</span>
+      <span style="color:Green;">--,[Info_Session_Date__c]</span>
+      <span style="color:Green;">--,[Info_Session_Location__c]</span>
+      ,[Referral_Source__c] <span style="color:Blue;">AS</span> [ReferralSource]
+      <span style="color:Green;">--,[Web2Lead_Form__c]</span>
+      <span style="color:Green;">--,[Web2Lead_Referrer__c]</span>
+      <span style="color:Green;">--,[LastUpdate]</span>
+  <span style="color:Blue;">FROM</span> [SalesForceImport].[dbo].[bt_Lead] <span style="color:Blue;">AS</span> [Lead]
+  <span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> [SalesForceImport].[dbo].[bt_RecordType] <span style="color:Blue;">AS</span> [RecordType]
+  <span style="color:Blue;">ON</span> [RecordType].[Id] = [Lead].[RecordTypeId]
+  <span style="color:Blue;">WHERE</span> [Lead].[IsDeleted] &lt;&gt; 1
+</pre></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></div>
+  </body>
+</html>

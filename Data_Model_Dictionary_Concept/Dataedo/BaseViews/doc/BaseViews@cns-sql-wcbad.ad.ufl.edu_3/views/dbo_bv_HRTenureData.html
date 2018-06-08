@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="cf">
+        <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views" class="ajax" data-target="#right">Views</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_bv_HRTenureData" class="ajax" data-target="#right">dbo.bv_HRTenureData</a></div>
+        <div id="tools">
+          <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+        </div>
+      </div>
+      <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+      <h1><i class=" icon2x-view "></i>dbo.bv_HRTenureData</h1>
+      <table class="table table-vertical">
+        <tbody>
+          <tr>
+            <td>Schema</td>
+            <td>dbo</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>bv_HRTenureData</td>
+          </tr>
+          <tr>
+            <td>ExtendedProp</td>
+            <td>HR Tenure Data</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="collapsible" data-key="uses">
+        <div class="collapsible-link font-large font-bold">Uses</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+                <td>
+                  <div style="margin-left: 0px">
+                    <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-view" title="View"></i></div>
+                    <div style="margin-left: 44px">dbo.bv_HRTenureData</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="3" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-view" title="Uses "></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_dv_HRTenureStatusCodes" class="ajax" data-target="#right">dbo.dv_HRTenureStatusCodes</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="display: none" data-node-id="4" data-parent-node-id="3">
+                <td>
+                  <div style="margin-left: 44px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">BaseData.bd.dt_HRTenureStatusCodes</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">BaseData.bd.bt_EG_TENURE_DATA</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="script">
+        <div class="collapsible-link font-large font-bold">Script</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">VIEW</span> [dbo].[bv_HRTenureData] <span style="color:Blue;">AS</span> 
+    
+<span style="color:Green;">/*****************************************************************************************
+  Name:		    bv_HRTenureData
+
+  Description:  HR Tenure Data
+
+  Created:	    10/31/2013 by John Holmes
+
+  Modified:     
+                
+*****************************************************************************************/</span> 
+    
+<span style="color:Blue;">SELECT</span> 
+     [td].[EMPLID] <span style="color:Blue;">AS</span> [UFID]
+    ,<span style="color:Magenta;">CAST</span>([td].[EG_TRACK_HIRE_DT] <span style="color:Blue;">AS</span> <span style="color:Blue;">DATE</span>) <span style="color:Blue;">AS</span> [TrackHireDate]
+    <span style="color:Green;">--,[td].[EG_ACADEMIC_RANK]</span>
+    ,[td].[TENURE_STATUS] <span style="color:Blue;">AS</span> [Status]
+    ,[hr].[Description] <span style="color:Blue;">AS</span> [StatusDescription]
+    ,[td].[EG_RNK_CHG_DT] <span style="color:Blue;">AS</span> [RankChangeDate]
+    <span style="color:Green;">--,[td].[EG_ADJ_RSN1]</span>
+    ,[td].[EG_ORIG_TRACK_DT] <span style="color:Blue;">AS</span> [OriginalTrackDate]
+    ,[td].[EG_TENURE_HOME] <span style="color:Blue;">AS</span> [TenureHomeDeptCode]
+    <span style="color:Green;">--,[td].[SETID]</span>
+    <span style="color:Green;">--,[td].[EG_GROUP]</span>
+    ,[td].[EG_MAND_REVW_DT] <span style="color:Blue;">AS</span> [MandatoryReviewDate]
+    ,[td].[EG_GRANTED_DT] <span style="color:Blue;">AS</span> [GrantedDate]
+    <span style="color:Green;">--,[td].[FTE]</span>
+    <span style="color:Green;">--,[td].[EG_TL_REQ_SVC]</span>
+    <span style="color:Green;">--,[td].[EG_ACCR_SVC]</span>
+    <span style="color:Green;">--,[td].[EG_ADD_REQ_SVC]</span>
+    <span style="color:Green;">--,[td].[EG_TL_EXT_SVC]</span>
+    <span style="color:Green;">--,[td].[OPRID]</span>
+    <span style="color:Green;">--,[td].[DTTM_STAMP_SEC]</span>
+    <span style="color:Green;">--,[td].[LAST_PROC_DT]</span>
+    <span style="color:Green;">--,[td].[EG_OVERRIDE_FLAG]</span>
+    <span style="color:Green;">--,[td].[EG_TERM_YR_FLAG]</span>
+    <span style="color:Green;">--,[td].[UF_CIP_CODE]</span>
+    <span style="color:Green;">--,[td].[COMMENTS]</span>
+<span style="color:Blue;">FROM</span> 
+    [BaseData].[bd].[bt_EG_TENURE_DATA] <span style="color:Blue;">AS</span> [td]
+<span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> 
+    [BaseViews].[dbo].[dv_HRTenureStatusCodes] <span style="color:Blue;">AS</span> [hr]
+    <span style="color:Blue;">ON</span> [td].[TENURE_STATUS] = [hr].[Code] ;
+</pre></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></div>
+  </body>
+</html>

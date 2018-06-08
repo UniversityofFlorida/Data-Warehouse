@@ -1,0 +1,645 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="cf">
+        <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views" class="ajax" data-target="#right">Views</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_pv_WcbaPeople" class="ajax" data-target="#right">dbo.pv_WcbaPeople</a></div>
+        <div id="tools">
+          <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+        </div>
+      </div>
+      <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+      <h1><i class=" icon2x-view "></i>dbo.pv_WcbaPeople</h1>
+      <table class="table table-vertical">
+        <tbody>
+          <tr>
+            <td>Schema</td>
+            <td>dbo</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>pv_WcbaPeople</td>
+          </tr>
+          <tr>
+            <td>ExtendedProp</td>
+            <td>Published View of WCBA Directory - People </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="collapsible" data-key="uses">
+        <div class="collapsible-link font-large font-bold">Uses</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+                <td>
+                  <div style="margin-left: 0px">
+                    <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-view" title="View"></i></div>
+                    <div style="margin-left: 44px">dbo.pv_WcbaPeople</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="8" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetUFBusinessNamePart" class="ajax" data-target="#right">dbo.fn_GetUFBusinessNamePart</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="display: none" data-node-id="10" data-parent-node-id="8">
+                <td>
+                  <div style="margin-left: 44px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_LRTrim" class="ajax" data-target="#right">dbo.fn_LRTrim</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="9" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_ProperCase" class="ajax" data-target="#right">dbo.fn_ProperCase</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">warringtonDirectory.dbo.v_email</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="3" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">warringtonDirectory.dbo.v_legacy</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="4" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">warringtonDirectory.dbo.v_locations</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="5" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">warringtonDirectory.dbo.v_people</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="6" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">warringtonDirectory.dbo.v_positionAssignments</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="7" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">warringtonDirectory.dbo.v_telephone</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="used-by">
+        <div class="collapsible-link font-large font-bold">Used by</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+                <td>
+                  <div style="margin-left: 0px">
+                    <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-view" title="View"></i></div>
+                    <div style="margin-left: 44px">dbo.pv_WcbaPeople</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-view" title="Used by "></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_bv_FERPACertifications" class="ajax" data-target="#right">dbo.bv_FERPACertifications</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="3" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-view" title="Used by "></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_bv_FERPACertificationsYesterday" class="ajax" data-target="#right">dbo.bv_FERPACertificationsYesterday</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="4" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-view" title="Used by "></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_pv_roomsFacStaffGLIDs" class="ajax" data-target="#right">dbo.pv_roomsFacStaffGLIDs</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="5" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-view" title="Used by "></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_pv_WcbaPeople_WHDUpdate" class="ajax" data-target="#right">dbo.pv_WcbaPeople_WHDUpdate</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="6" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                    <div style="margin-left: 44px">dbo.archive_01-05-2017_p_GetAllActiveEmployees</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="7" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                    <div style="margin-left: 44px">dbo.archive_01-05-2017_p_GetFacultyList</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="8" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                    <div style="margin-left: 44px">dbo.archive_04-10-2017_p_GetFacultyList</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="9" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                    <div style="margin-left: 44px">dbo.archive_04-10-2017_p_GetNonWCBAInstructors</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="10" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_FERPA_CertUpdateNotice" class="ajax" data-target="#right">dbo.p_FERPA_CertUpdateNotice</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="11" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_FERPA_ExpirationFinalNotice" class="ajax" data-target="#right">dbo.p_FERPA_ExpirationFinalNotice</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="12" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_FERPA_ExpirationFirstNotice" class="ajax" data-target="#right">dbo.p_FERPA_ExpirationFirstNotice</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="13" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_FERPA_ExpirationSecondNotice" class="ajax" data-target="#right">dbo.p_FERPA_ExpirationSecondNotice</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="14" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_FERPA_FullAuditReport" class="ajax" data-target="#right">dbo.p_FERPA_FullAuditReport</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="15" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_GetEmployeeList" class="ajax" data-target="#right">dbo.p_GetEmployeeList</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="16" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_PersonInfo_Get" class="ajax" data-target="#right">dbo.p_PersonInfo_Get</a></div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="script">
+        <div class="collapsible-link font-large font-bold">Script</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">VIEW</span> [dbo].[pv_WcbaPeople] <span style="color:Blue;">AS</span> 
+    
+<span style="color:Green;">/*****************************************************************************************
+  Name:		    pv_WcbaPeople
+
+  Description:  Published View of Warrington Directory - People 
+
+  Note:			Based on a survey of existing usage, un-used columns have been commented out
+				in order to enhance performance. Uncomment as needed.
+
+  Created:	    04/27/2016 by John Holmes
+
+  Modified:     12/13/2016 by John Holmes
+				Add Department calculation based on legacy data
+
+				01/05/2017 by John Holmes
+				Include Suffix
+
+				11/22/2017 by John Holmes
+				Display Warrington Email when UF Business Email is blank
+*****************************************************************************************/</span> 
+
+<span style="color:Blue;">WITH</span> 
+	[ufEmail](
+		 [UFID]
+		,[typeID]
+		,[typeDescription]
+		,[email]
+		 )
+		<span style="color:Blue;">AS</span> (
+			<span style="color:Blue;">SELECT</span>
+				 [UFID]
+				,[typeID]
+				,[typeDescription]
+				,[email]
+			<span style="color:Blue;">FROM</span>
+				[warringtonDirectory].[dbo].[v_email]
+			<span style="color:Blue;">WHERE</span> 
+				[typeID] = 1	<span style="color:Green;">-- UF Business Email</span>
+		)
+	,[warEmail](
+		 [UFID]
+		,[typeID]
+		,[typeDescription]
+		,[email]
+		 )
+		<span style="color:Blue;">AS</span> (
+			<span style="color:Blue;">SELECT</span>
+				 [UFID]
+				,[typeID]
+				,[typeDescription]
+				,[email]
+			<span style="color:Blue;">FROM</span>
+				[warringtonDirectory].[dbo].[v_email]
+			<span style="color:Blue;">WHERE</span> 
+				[typeID] = -2001	<span style="color:Green;">-- Warrington Email</span>
+		)
+	,[position](
+		 [UFID]
+		,[typeID]
+		,[positionTypeCode]
+		,[positionCategoryName]
+		<span style="color:Green;">--,[positionName]</span>
+		<span style="color:Green;">--,[positionTypeName]</span>
+		)
+		<span style="color:Blue;">AS</span> (
+			<span style="color:Blue;">SELECT</span>
+				 [UFID]
+				,[typeID]
+				,[positionTypeCode]
+				,[positionCategoryName]
+				<span style="color:Green;">--,[positionName]</span>
+				<span style="color:Green;">--,[positionTypeName]</span>
+			<span style="color:Blue;">FROM</span>
+				[warringtonDirectory].[dbo].[v_positionAssignments]
+		)
+	,[office](
+		 [UFID]
+		,[typeID]
+		,[room]
+		,[buildingCode]
+		,[buildingName]
+		)
+		<span style="color:Blue;">AS</span> (
+			<span style="color:Blue;">SELECT</span>
+				 [UFID]
+				,[typeID]
+				,[room]
+				,[buildingCode]
+				,[buildingName]
+			<span style="color:Blue;">FROM</span>
+				[warringtonDirectory].[dbo].[v_locations]
+		)
+	,[telephone](
+		 [UFID]
+		,[typeID]
+		,[areaCode]
+		,[phone]
+		,[ext]
+		)
+		<span style="color:Blue;">AS</span> (
+			<span style="color:Blue;">SELECT</span>
+				 [UFID]
+				,[typeID]
+				,[areaCode]
+				,[phone]
+				,[ext]
+			<span style="color:Blue;">FROM</span>
+				[warringtonDirectory].[dbo].[v_telephone]
+			<span style="color:Blue;">WHERE</span> 
+				[typeID] <span style="color:Blue;">IN</span> (10,12)
+		)
+	,[legacy](
+		 [UFID]
+		,[DEPT]
+		)
+		<span style="color:Blue;">AS</span> (
+			<span style="color:Blue;">SELECT</span>
+				 [UFID]
+				,[DEPT]
+			<span style="color:Blue;">FROM</span>
+				[warringtonDirectory].[dbo].[v_legacy]
+		)
+	<span style="color:Green;">--,[namedPosition](</span>
+	<span style="color:Green;">--	 [UFID]</span>
+	<span style="color:Green;">--	,[namedPosition]</span>
+	<span style="color:Green;">--	--,[positionName]</span>
+	<span style="color:Green;">--	--,[positionTypeName]</span>
+	<span style="color:Green;">--	)</span>
+	<span style="color:Green;">--	AS (</span>
+	<span style="color:Green;">--		SELECT</span>
+	<span style="color:Green;">--			 [UFID]</span>
+	<span style="color:Green;">--			,[namedPosition]</span>
+	<span style="color:Green;">--		FROM</span>
+	<span style="color:Green;">--			[warringtonDirectory].[dbo].[v_namedPositionAssignments]</span>
+	<span style="color:Green;">--	)</span>
+	<span style="color:Green;">--,[department](</span>
+	<span style="color:Green;">--	 [UFID]</span>
+	<span style="color:Green;">--	,[typeID]</span>
+	<span style="color:Green;">--	,[affiliatedOUCode]</span>
+	<span style="color:Green;">--	,[officePOBox]</span>
+	<span style="color:Green;">--	)</span>
+	<span style="color:Green;">--	AS (</span>
+	<span style="color:Green;">--		SELECT</span>
+	<span style="color:Green;">--			 [a].[UFID]</span>
+	<span style="color:Green;">--			,[a].[typeID]</span>
+	<span style="color:Green;">--			,[a].[affiliatedOUCode]</span>
+	<span style="color:Green;">--			,REPLACE([ad].[address],&#39;PO Box &#39;,&#39;&#39;) AS [officePOBox]</span>
+	<span style="color:Green;">--		FROM</span>
+	<span style="color:Green;">--			[warringtonDirectory].[dbo].[v_affiliations] AS [a]</span>
+	<span style="color:Green;">--		JOIN </span>
+	<span style="color:Green;">--			[warringtonDirectory].[dbo].[dv_organizationalUnits] AS [ou]</span>
+	<span style="color:Green;">--			ON [a].[affiliatedOuID] = [ou].[ouID]</span>
+	<span style="color:Green;">--		JOIN</span>
+	<span style="color:Green;">--			[warringtonDirectory].[dbo].[v_addresses] AS [ad]</span>
+	<span style="color:Green;">--			ON [ou].[ouID] = [ad].[ouID]</span>
+	<span style="color:Green;">--		WHERE</span>
+	<span style="color:Green;">--			[a].[typeID] = -7017		-- Home Department</span>
+	<span style="color:Green;">--			AND [ad].[typeID] = -3000	-- Office Mailing Address</span>
+	<span style="color:Green;">--	)</span>
+	<span style="color:Green;">--,[demographic](</span>
+	<span style="color:Green;">--	 [UFID]</span>
+	<span style="color:Green;">--	,[typeID]</span>
+	<span style="color:Green;">--	,[demographicTypeCode]</span>
+	<span style="color:Green;">--	,[demographicTypeName]</span>
+	<span style="color:Green;">--	)</span>
+	<span style="color:Green;">--	AS (</span>
+	<span style="color:Green;">--		SELECT</span>
+	<span style="color:Green;">--			 [UFID]</span>
+	<span style="color:Green;">--			,[typeID]</span>
+	<span style="color:Green;">--			,[demographicTypeCode]</span>
+	<span style="color:Green;">--			,[demographicTypeName]</span>
+	<span style="color:Green;">--		FROM</span>
+	<span style="color:Green;">--			[warringtonDirectory].[dbo].[v_demographics]</span>
+	<span style="color:Green;">--	)</span>
+	<span style="color:Green;">--,[date](</span>
+	<span style="color:Green;">--	 [UFID]</span>
+	<span style="color:Green;">--	,[typeID]</span>
+	<span style="color:Green;">--	,[date]</span>
+	<span style="color:Green;">--	)</span>
+	<span style="color:Green;">--	AS (</span>
+	<span style="color:Green;">--		SELECT</span>
+	<span style="color:Green;">--			 [UFID]</span>
+	<span style="color:Green;">--			,[typeID]</span>
+	<span style="color:Green;">--			,[date]</span>
+	<span style="color:Green;">--		FROM</span>
+	<span style="color:Green;">--			[warringtonDirectory].[dbo].[v_dates]</span>
+	<span style="color:Green;">--	)</span>
+	<span style="color:Green;">--,[address](</span>
+	<span style="color:Green;">--	 [UFID]</span>
+	<span style="color:Green;">--	,[typeID]</span>
+	<span style="color:Green;">--	,[address]</span>
+	<span style="color:Green;">--	,[city]</span>
+	<span style="color:Green;">--	,[state]</span>
+	<span style="color:Green;">--	,[zip]</span>
+	<span style="color:Green;">--	)</span>
+	<span style="color:Green;">--	AS (</span>
+	<span style="color:Green;">--		SELECT</span>
+	<span style="color:Green;">--			 [UFID]</span>
+	<span style="color:Green;">--			,[typeID]</span>
+	<span style="color:Green;">--			,[address]</span>
+	<span style="color:Green;">--			,[city]</span>
+	<span style="color:Green;">--			,[state]</span>
+	<span style="color:Green;">--			,[zip]</span>
+	<span style="color:Green;">--		FROM</span>
+	<span style="color:Green;">--			[warringtonDirectory].[dbo].[v_addresses]</span>
+	<span style="color:Green;">--	)</span>
+	<span style="color:Green;">--,[url](</span>
+	<span style="color:Green;">--	 [UFID]</span>
+	<span style="color:Green;">--	,[typeID]</span>
+	<span style="color:Green;">--	,[url]</span>
+	<span style="color:Green;">--	)</span>
+	<span style="color:Green;">--	AS (</span>
+	<span style="color:Green;">--		SELECT</span>
+	<span style="color:Green;">--			 [UFID]</span>
+	<span style="color:Green;">--			,[typeID]</span>
+	<span style="color:Green;">--			,[url]</span>
+	<span style="color:Green;">--		FROM</span>
+	<span style="color:Green;">--			[warringtonDirectory].[dbo].[v_urls]</span>
+	<span style="color:Green;">--	)</span>
+<span style="color:Blue;">SELECT</span> 
+	 [people].[UFID]
+	,[people].[GLID] <span style="color:Blue;">AS</span> [GatorLinkID]
+	<span style="color:Green;">--,[ufpeople].[GatorLinkID]</span>
+	,<span style="color:Blue;">CASE</span> 
+		<span style="color:Blue;">WHEN</span> [people].[webID] <span style="color:Blue;">IS</span> <span style="color:Blue;">NOT</span> <span style="color:Blue;">NULL</span> <span style="color:Blue;">THEN</span> [people].[webID]
+		<span style="color:Blue;">ELSE</span> [people].[personID]
+	 <span style="color:Blue;">END</span> <span style="color:Blue;">AS</span> [WebID]
+	,[BaseViews].[dbo].[fn_GetUFBusinessNamePart]([people].[ufBusinessName], <span style="color:#A31515;">&#39;L&#39;</span>) <span style="color:Blue;">AS</span> [LastName]
+    ,[BaseViews].[dbo].[fn_GetUFBusinessNamePart]([people].[ufBusinessName], <span style="color:#A31515;">&#39;F&#39;</span>) <span style="color:Blue;">AS</span> [FirstName]
+    ,<span style="color:Blue;">LEFT</span>([BaseViews].[dbo].[fn_GetUFBusinessNamePart]([people].[ufBusinessName], <span style="color:#A31515;">&#39;M&#39;</span>),1) <span style="color:Blue;">AS</span> [MiddleInitial]
+	,[BaseViews].[dbo].[fn_ProperCase]([BaseViews].[dbo].[fn_GetUFBusinessNamePart]([people].[ufDisplayName],<span style="color:#A31515;">&#39;F&#39;</span>)) <span style="color:Blue;">AS</span> [Nickname]
+	,[position].[positionCategoryName] <span style="color:Blue;">AS</span> [UFPositionCategory]
+	,[position].[positionTypeCode] <span style="color:Blue;">AS</span> [UFPositionType]
+	,[people].[ufWorkingTitle] <span style="color:Blue;">AS</span> [WcbaPositionTitle]
+    ,<span style="color:Blue;">CASE</span> <span style="color:Blue;">WHEN</span> [people].[active] = 1 <span style="color:Blue;">THEN</span> <span style="color:#A31515;">&#39;Y&#39;</span> <span style="color:Blue;">ELSE</span> <span style="color:#A31515;">&#39;N&#39;</span> <span style="color:Blue;">END</span> <span style="color:Blue;">AS</span> [ActiveFlag]
+    ,[people].[active] <span style="color:Blue;">AS</span> [Active]
+	,<span style="color:Blue;">CASE</span> 
+		<span style="color:Blue;">WHEN</span> <span style="color:Magenta;">LEN</span>(<span style="color:Magenta;">COALESCE</span>([ufEmail].[email], <span style="color:#A31515;">&#39;&#39;</span>)) = 0 <span style="color:Blue;">THEN</span> warEmail.email
+		<span style="color:Blue;">ELSE</span> ufEmail.email
+	 <span style="color:Blue;">END</span> <span style="color:Blue;">AS</span> [Email]
+	,<span style="color:Blue;">CASE</span>
+		<span style="color:Blue;">WHEN</span> legacy.DEPT <span style="color:Blue;">IS</span> <span style="color:Blue;">NOT</span> <span style="color:Blue;">NULL</span> <span style="color:Blue;">THEN</span> legacy.DEPT
+		<span style="color:Blue;">ELSE</span> [people].[primaryAffiliationCode]
+	 <span style="color:Blue;">END</span> <span style="color:Blue;">AS</span> [Department]
+	<span style="color:Green;">--,[people].[primaryAffiliationCode] AS [Department2]</span>
+	<span style="color:Green;">--,[legacy].DEPT AS [LegacyDepartment]</span>
+	,[office].[room] <span style="color:Blue;">AS</span> [OfficeRoom]
+	,[office].[buildingCode] <span style="color:Blue;">AS</span> [OfficeBuilding]
+	,[office].[buildingName] <span style="color:Blue;">AS</span> [OfficeBuildingName]
+	,<span style="color:Blue;">LEFT</span>([officeTelephone].[phone],3) + <span style="color:#A31515;">&#39;-&#39;</span> + <span style="color:Blue;">RIGHT</span>([officeTelephone].[phone],4) <span style="color:Blue;">AS</span> [OfficePhone]
+	,[homeTelephone].[areaCode] <span style="color:Blue;">AS</span> [HomeAreaCode]
+	,<span style="color:Blue;">LEFT</span>([homeTelephone].[phone],3) + <span style="color:#A31515;">&#39;-&#39;</span> + <span style="color:Blue;">RIGHT</span>([homeTelephone].[phone],4) <span style="color:Blue;">AS</span> [HomePhone]
+    ,[people].[PublicDisplay]
+	<span style="color:Green;">--,[namedPosition].[namedPosition] AS [WcbaNamedPositionTitle]</span>
+	<span style="color:Green;">--,COALESCE([people].[salutation], &#39;&#39;) AS [PREFIX]</span>
+	,[BaseViews].[dbo].[fn_GetUFBusinessNamePart]([people].[ufBusinessName], <span style="color:#A31515;">&#39;S&#39;</span>) <span style="color:Blue;">AS</span> [Suffix]
+	<span style="color:Green;">--,[gender].[demographicTypeCode] AS [Gender]</span>
+	<span style="color:Green;">--,[gender].[demographicTypeName] AS [GenderDescription]</span>
+	<span style="color:Green;">--,[ethnicity].[demographicTypeCode] AS [Race]</span>
+	<span style="color:Green;">--,[ethnicity].[demographicTypeName] AS [RaceDescription]</span>
+	<span style="color:Green;">--,[citizenship].[demographicTypeCode] AS [Citizenship]</span>
+	<span style="color:Green;">--,[position].[positionName] AS [UFPositionTitle]</span>
+	<span style="color:Green;">--,[position].[positionTypeName] AS [UFPositionTypeDescription]</span>
+	<span style="color:Green;">--,[namedPosition].[positionName] AS [WcbaNamedPositionTitle]</span>
+	<span style="color:Green;">--,[employment].[date] AS [StartDate]</span>
+	<span style="color:Green;">--,[termination].[date] AS [TerminationDate]</span>
+	<span style="color:Green;">--,NULL AS [GraduateFacultyFlag]</span>
+	<span style="color:Green;">--,[department].[officePOBox] AS [OfficePOBox]</span>
+	<span style="color:Green;">--,[officeTelephone].[ext] AS [OfficeExt]</span>
+	<span style="color:Green;">--,[address].[address] AS [HomeStreet]</span>
+	<span style="color:Green;">--,[address].[city] AS [HomeCity]</span>
+	<span style="color:Green;">--,[address].[state] AS [HomeState]</span>
+	<span style="color:Green;">--,[address].[zip] AS [HomeZip]</span>
+	<span style="color:Green;">--,[homeURL].[url] AS [HomeURL]</span>
+	<span style="color:Green;">--,[photoURL].[url] AS [PhotoURL]</span>
+<span style="color:Blue;">FROM</span> 
+    [warringtonDirectory].[dbo].[v_people] <span style="color:Blue;">AS</span> [people]
+<span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span>  
+	[ufEmail]
+	<span style="color:Blue;">ON</span> [people].[UFID] = [ufEmail].[UFID]
+<span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span>  
+	[warEmail]
+	<span style="color:Blue;">ON</span> [people].[UFID] = [warEmail].[UFID]
+<span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> 
+	[position]
+	<span style="color:Blue;">ON</span> [people].[UFID] = [position].[UFID]
+	<span style="color:Blue;">AND</span> [position].[typeID] = -8000
+<span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> 
+	[office]
+	<span style="color:Blue;">ON</span> [people].[UFID] = [office].[UFID]
+	<span style="color:Blue;">AND</span> [office].[typeID] = -5000
+<span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> 
+	[telephone] <span style="color:Blue;">AS</span> [officeTelephone]
+	<span style="color:Blue;">ON</span> [people].[UFID] = [officeTelephone].[UFID]
+	<span style="color:Blue;">AND</span> [officeTelephone].[typeID] = 10
+<span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> 
+	[telephone] <span style="color:Blue;">AS</span> [homeTelephone]
+	<span style="color:Blue;">ON</span> [people].[UFID] = [homeTelephone].[UFID]
+	<span style="color:Blue;">AND</span> [homeTelephone].[typeID] = 12
+<span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> 
+	legacy 
+	<span style="color:Blue;">ON</span> legacy.UFID = people.UFID
+<span style="color:Green;">--LEFT JOIN </span>
+<span style="color:Green;">--	[namedPosition]</span>
+<span style="color:Green;">--	ON [people].[UFID] = [namedPosition].[UFID]</span>
+<span style="color:Green;">--LEFT JOIN </span>
+<span style="color:Green;">--	[department]</span>
+<span style="color:Green;">--	ON [people].[UFID] = [department].[UFID]</span>
+<span style="color:Green;">--	AND [department].[typeID] = -7017</span>
+<span style="color:Green;">--LEFT JOIN </span>
+<span style="color:Green;">--	[demographic] AS [gender]</span>
+<span style="color:Green;">--	ON [people].[UFID] = [gender].[UFID]</span>
+<span style="color:Green;">--	AND [gender].[typeID] = -9001</span>
+<span style="color:Green;">--LEFT JOIN </span>
+<span style="color:Green;">--	[demographic] AS [ethnicity]</span>
+<span style="color:Green;">--	ON [people].[UFID] = [ethnicity].[UFID]</span>
+<span style="color:Green;">--	AND [ethnicity].[typeID] = -9002</span>
+<span style="color:Green;">--LEFT JOIN </span>
+<span style="color:Green;">--	[demographic] AS [citizenship]</span>
+<span style="color:Green;">--	ON [people].[UFID] = [citizenship].[UFID]</span>
+<span style="color:Green;">--	AND [citizenship].[typeID] = -9000</span>
+<span style="color:Green;">--LEFT JOIN </span>
+<span style="color:Green;">--	[position] AS [namedPosition]</span>
+<span style="color:Green;">--	ON [people].[UFID] = [namedPosition].[UFID]</span>
+<span style="color:Green;">--	AND [namedPosition].[typeID] = -8001</span>
+<span style="color:Green;">--LEFT JOIN</span>
+<span style="color:Green;">--	[date] AS [employment]</span>
+<span style="color:Green;">--	ON [people].[UFID] = [employment].[UFID]</span>
+<span style="color:Green;">--	AND [employment].[typeID] = -6000</span>
+<span style="color:Green;">--LEFT JOIN</span>
+<span style="color:Green;">--	[date] AS [termination]</span>
+<span style="color:Green;">--	ON [people].[UFID] = [termination].[UFID]</span>
+<span style="color:Green;">--	AND [termination].[typeID] = -6001</span>
+<span style="color:Green;">--LEFT JOIN</span>
+<span style="color:Green;">--	[address]</span>
+<span style="color:Green;">--	ON [people].[UFID] = [address].[UFID]</span>
+<span style="color:Green;">--	AND [address].[typeID] = -3001</span>
+<span style="color:Green;">--LEFT JOIN</span>
+<span style="color:Green;">--	[url] AS [homeURL]</span>
+<span style="color:Green;">--	ON [people].[UFID] = [homeURL].[UFID]</span>
+<span style="color:Green;">--	AND [homeURL].[typeID] = -10000</span>
+<span style="color:Green;">--LEFT JOIN</span>
+<span style="color:Green;">--	[url] AS [photoURL]</span>
+<span style="color:Green;">--	ON [people].[UFID] = [photoURL].[UFID]</span>
+<span style="color:Green;">--	AND [photoURL].[typeID] = -10001</span>
+<span style="color:Blue;">WHERE</span> 
+	[people].[GLID] <span style="color:Blue;">IS</span> <span style="color:Blue;">NOT</span> <span style="color:Blue;">NULL</span>
+	<span style="color:Blue;">AND</span> [people].[primaryAffiliationOUID] &gt; 0	<span style="color:Green;">-- Exclude people who are not properly entered into the directory</span>
+;
+</pre></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></div>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="cf">
+        <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views" class="ajax" data-target="#right">Views</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_hv_StudentCurrentRecord" class="ajax" data-target="#right">dbo.hv_StudentCurrentRecord</a></div>
+        <div id="tools">
+          <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+        </div>
+      </div>
+      <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+      <h1><i class=" icon2x-view "></i>dbo.hv_StudentCurrentRecord</h1>
+      <table class="table table-vertical">
+        <tbody>
+          <tr>
+            <td>Schema</td>
+            <td>dbo</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>hv_StudentCurrentRecord</td>
+          </tr>
+          <tr>
+            <td>ExtendedProp</td>
+            <td>Historical Student Current Record by term.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="collapsible" data-key="uses">
+        <div class="collapsible-link font-large font-bold">Uses</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+                <td>
+                  <div style="margin-left: 0px">
+                    <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-view" title="View"></i></div>
+                    <div style="margin-left: 44px">dbo.hv_StudentCurrentRecord</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">BaseDataHistory.dbo.ht_StudentCurrentRecord</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="used-by">
+        <div class="collapsible-link font-large font-bold">Used by</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+                <td>
+                  <div style="margin-left: 0px">
+                    <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-view" title="View"></i></div>
+                    <div style="margin-left: 44px">dbo.hv_StudentCurrentRecord</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_ClassRolls_GetClassRollData" class="ajax" data-target="#right">dbo.p_ClassRolls_GetClassRollData</a></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="display: none" data-node-id="3" data-parent-node-id="2">
+                <td>
+                  <div style="margin-left: 44px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-uses-procedure" title="Used by "></i></div>
+                    <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_pp_ClassRolls_GetClassRollData" class="ajax" data-target="#right">dbo.pp_ClassRolls_GetClassRollData</a></div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="script">
+        <div class="collapsible-link font-large font-bold">Script</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">VIEW</span> [dbo].[hv_StudentCurrentRecord] <span style="color:Blue;">AS</span> 
+    
+<span style="color:Green;">/*****************************************************************************************
+  Name:		    hv_StudentCurrentRecord
+
+  Description:  Historical Student Current Record by term.
+
+  Created:	    09/29/2009 by John Holmes
+
+  Modified:     03/15/2010 by John Holmes
+                Add CurrentCollege, CurrentMajor, CurrentDegreeTrack &amp; CurrentDegree 2 through 5
+                
+                05/10/2010 by John Holmes
+                Added IsSummerA column and restricted view to those records where IsSummerA = 0
+                i.e. the view contains records from end of Fall, Spring, SummerC terms.
+                
+                04/19/2011 by John Holmes
+                Added Minor2, Minor3, Minor4, Minor5.
+
+                02/04/2014 by John Holmes
+                Add CombinedDegreeIndicator column.
+                
+*****************************************************************************************/</span> 
+    
+<span style="color:Blue;">SELECT</span> 
+    [Term6] <span style="color:Blue;">AS</span> [Term6]									<span style="color:Green;">-- Term (6 char)</span>
+    ,[UFID] <span style="color:Blue;">AS</span> [UFID]									<span style="color:Green;">-- UFID</span>
+    ,[RegistrationCode] <span style="color:Blue;">AS</span> [RegistrationCode]			<span style="color:Green;">-- Registration Code</span>
+    ,[ClassificationLevel] <span style="color:Blue;">AS</span> [ClassificationLevel]		<span style="color:Green;">-- Student Classification Level</span>
+    ,[ProbationStatus] <span style="color:Blue;">AS</span> [ProbationStatus]				<span style="color:Green;">-- Probation Status</span>
+    ,[UFGPA] <span style="color:Blue;">AS</span> [UFGPA]									<span style="color:Green;">-- UF GPA</span>
+    ,[TransferHoursAccepted] <span style="color:Blue;">AS</span> [TransferHoursAccepted] <span style="color:Green;">-- Transfer Hours Accepted</span>
+    ,[TotalHoursEarned] <span style="color:Blue;">AS</span> [TotalHoursEarned]			<span style="color:Green;">-- Total Hours Earned</span>
+    ,[UFGradePoints] <span style="color:Blue;">AS</span> [UFGradePoints]					<span style="color:Green;">-- UF Grade Points</span>
+    ,[UFHoursCarried] <span style="color:Blue;">AS</span> [UFHoursCarried]				<span style="color:Green;">-- UF Hours Carried</span>
+    ,[CurrentCatalogYear] <span style="color:Blue;">AS</span> [CurrentCatalogYear]		<span style="color:Green;">-- Current Term Catalog Year</span>
+    ,[CurrentTerm6] <span style="color:Blue;">AS</span> [CurrentTerm6]					<span style="color:Green;">-- Current Term Code (6 char)</span>
+    ,[CurrentStatus] <span style="color:Blue;">AS</span> [CurrentStatus]					<span style="color:Green;">-- Current Term Student Status</span>
+    ,[CurrentClass] <span style="color:Blue;">AS</span> [CurrentClass]					<span style="color:Green;">-- Current Term Student Class</span>
+    ,[CurrentCollege] <span style="color:Blue;">AS</span> [CurrentCollege]				<span style="color:Green;">-- Current Term Student College</span>
+    ,[CurrentMajor] <span style="color:Blue;">AS</span> [CurrentMajor]					<span style="color:Green;">-- Current Term Major</span>
+    ,[CurrentLoad] <span style="color:Blue;">AS</span> [CurrentLoad]						<span style="color:Green;">-- Current Term Load</span>
+    ,[CurrentDTA] <span style="color:Blue;">AS</span> [CurrentDTA]						<span style="color:Green;">-- Current Term During Term Action</span>
+    ,[CurrentDegreeTrack] <span style="color:Blue;">AS</span> [CurrentDegreeTrack]		<span style="color:Green;">-- Current Term Degree Track (Sub-Major)</span>
+    ,[CurrentDegreeTerm6] <span style="color:Blue;">AS</span> [CurrentDegreeTerm6]		<span style="color:Green;">-- Current (Highest) Degree Term (6 char)</span>
+    ,[LastTerm6] <span style="color:Blue;">AS</span> [LastTerm6]							<span style="color:Green;">-- Last Term Code (6 char)</span>
+    ,[LastStatus] <span style="color:Blue;">AS</span> [LastStatus]						<span style="color:Green;">-- Last Term Status</span>
+    ,[LastClass] <span style="color:Blue;">AS</span> [LastClass]							<span style="color:Green;">-- Last Term Class</span>
+    ,[LastCollege] <span style="color:Blue;">AS</span> [LastCollege]						<span style="color:Green;">-- Last Term College</span>
+    ,[LastMajor] <span style="color:Blue;">AS</span> [LastMajor]							<span style="color:Green;">-- Last Term Major</span>
+    ,[LastLoad] <span style="color:Blue;">AS</span> [LastLoad]							<span style="color:Green;">-- Last Term Load</span>
+    ,[LastHoursEarned] <span style="color:Blue;">AS</span> [LastHoursEarned]				<span style="color:Green;">-- Last Term Hours Earned</span>
+    ,[LastGPA] <span style="color:Blue;">AS</span> [LastGPA]								<span style="color:Green;">-- Last Term GPA</span>
+    ,[LastGradePoints] <span style="color:Blue;">AS</span> [LastGradePoints]				<span style="color:Green;">-- Last Term Grade Points</span>
+    ,[LastDTA] <span style="color:Blue;">AS</span> [LastDTA]								<span style="color:Green;">-- Last Term During Term Action</span>
+    ,[LastETA] <span style="color:Blue;">AS</span> [LastETA]								<span style="color:Green;">-- Last Term End of Term Action</span>
+    ,[NextCatalogYear] <span style="color:Blue;">AS</span> [NextCatalogYear]				<span style="color:Green;">-- Next Catalog Year</span>
+    ,[NextTerm6] <span style="color:Blue;">AS</span> [NextTerm6]							<span style="color:Green;">-- Next Term Code (6 char)</span>
+    ,[NextStatus] <span style="color:Blue;">AS</span> [NextStatus]						<span style="color:Green;">-- Next Term Status</span>
+    ,[NextClass] <span style="color:Blue;">AS</span> [NextClass]							<span style="color:Green;">-- Next Term Class</span>
+    ,[NextCollege] <span style="color:Blue;">AS</span> [NextCollege]						<span style="color:Green;">-- Next Term College</span>
+    ,[NextMajor] <span style="color:Blue;">AS</span> [NextMajor]							<span style="color:Green;">-- Next Term Major</span>
+    ,[NextTrack] <span style="color:Blue;">AS</span> [NextTrack]							<span style="color:Green;">-- Next Term Track (Sub-Major or Sub-Program)</span>
+    ,[NextDegree] <span style="color:Blue;">AS</span> [NextDegree]						<span style="color:Green;">-- Next Degree</span>
+    ,[CollegeAppliedTo] <span style="color:Blue;">AS</span> [CollegeAppliedTo]			<span style="color:Green;">-- College Applied To</span>
+    ,[CollegeAppliedToMajor] <span style="color:Blue;">AS</span> [CollegeAppliedToMajor]	<span style="color:Green;">-- College Applied to Major</span>
+    ,[Minor] <span style="color:Blue;">AS</span> [Minor]									<span style="color:Green;">-- Minor</span>
+    ,[HighDegree] <span style="color:Blue;">AS</span> [HighDegree]						<span style="color:Green;">-- High Degree</span>
+    ,[HighDegreeFICE] <span style="color:Blue;">AS</span> [HighDegreeFICE]				<span style="color:Green;">-- High Degree Institution FICE</span>
+    ,[LastFICE] <span style="color:Blue;">AS</span> [LastFICE]							<span style="color:Green;">-- Last FICE</span>
+    ,[HSFICE] <span style="color:Blue;">AS</span> [HSFICE]								<span style="color:Green;">-- High School FICE</span>
+    ,[HSTransferGPA] <span style="color:Blue;">AS</span> [HSTransferGPA]					<span style="color:Green;">-- High School/Transfer GPA</span>
+    ,[TestScoreID] <span style="color:Blue;">AS</span> [TestScoreID]						<span style="color:Green;">-- Test Score ID</span>
+    ,[VerbalScore] <span style="color:Blue;">AS</span> [VerbalScore]						<span style="color:Green;">-- Verbal Score</span>
+    ,[QuantitativeScore] <span style="color:Blue;">AS</span> [QuantitativeScore]			<span style="color:Green;">-- Quantative Score</span>
+    ,[AnalyticalScore] <span style="color:Blue;">AS</span> [AnalyticalScore]				<span style="color:Green;">-- Analytical Score</span>
+    ,[SocialScienceScore] <span style="color:Blue;">AS</span> [SocialScienceScore]		<span style="color:Green;">-- Social Science Score</span>
+    ,[TotalScore] <span style="color:Blue;">AS</span> [TotalScore]						<span style="color:Green;">-- Total Score</span>
+    ,[TestDate] <span style="color:Blue;">AS</span> [TestDate]							<span style="color:Green;">-- Test Date (YYYYMM)</span>
+    ,[MatriculationCounty] <span style="color:Blue;">AS</span> [MatriculationCounty]		<span style="color:Green;">-- Matriculation County Code</span>
+    ,[MatriculationCountry] <span style="color:Blue;">AS</span> [MatriculationCountry]	<span style="color:Green;">-- Matriculation Country Code</span>
+    ,[MatriculationStatus] <span style="color:Blue;">AS</span> [MatriculationStatus]		<span style="color:Green;">-- Matriculation Status Code</span>
+    ,[MatriculationTerm6] <span style="color:Blue;">AS</span> [MatriculationTerm6]		<span style="color:Green;">-- Matriculation Term (6 char)</span>
+    ,[RealCatalogYear] <span style="color:Blue;">AS</span> [RealCatalogYear]				<span style="color:Green;">-- Real Catalog Year</span>
+    ,[Gender] <span style="color:Blue;">AS</span> [Gender]								<span style="color:Green;">-- Gender</span>
+    ,[Residency] <span style="color:Blue;">AS</span> [Residency]							<span style="color:Green;">-- Residency</span>
+    ,[Ethnicity] <span style="color:Blue;">AS</span> [Ethnicity]							<span style="color:Green;">-- Ethnicity</span>
+    ,[Citizenship] <span style="color:Blue;">AS</span> [Citizenship]						<span style="color:Green;">-- Citizenship</span>
+    ,[UniversalTrackingTerm] <span style="color:Blue;">AS</span> [UniversalTrackingTerm]	<span style="color:Green;">-- Universal Tracking Term</span>
+    ,[SummerA] <span style="color:Blue;">AS</span> [SummerA]								<span style="color:Green;">-- Summer A Flag</span>
+    ,[SummerB] <span style="color:Blue;">AS</span> [SummerB]								<span style="color:Green;">-- Summer B Flag</span>
+    ,[SummerC] <span style="color:Blue;">AS</span> [SummerC]								<span style="color:Green;">-- Summer C Flag</span>
+    ,[PrivacyFlag] <span style="color:Blue;">AS</span> [PrivacyFlag]						<span style="color:Green;">-- Privacy Flag</span>
+    ,[SpecialProgram] <span style="color:Blue;">AS</span> [SpecialProgram]				<span style="color:Green;">-- Special Program</span>
+    ,[SassDegreeProgram] <span style="color:Blue;">AS</span> [SassDegreeProgram]			<span style="color:Green;">-- SASS Degree Program </span>
+  	,[PostBacApplicationType] <span style="color:Blue;">AS</span> [PostBacApplicationType]<span style="color:Green;">-- Post_Bac Application Type </span>
+  	,[CurrentCollege2] <span style="color:Blue;">AS</span> [CurrentCollege2]             <span style="color:Green;">-- 2nd Major College</span>
+  	,[CurrentMajor2] <span style="color:Blue;">AS</span> [CurrentMajor2]                 <span style="color:Green;">-- 2nd Major</span>
+  	,[CurrentDegreeTrack2] <span style="color:Blue;">AS</span> [CurrentDegreeTrack2]     <span style="color:Green;">-- 2nd Major Track</span>
+  	,[CurrentDegree2] <span style="color:Blue;">AS</span> [CurrentDegree2]               <span style="color:Green;">-- 2nd Major Degree</span>
+  	,[CurrentCollege3] <span style="color:Blue;">AS</span> [CurrentCollege3]             <span style="color:Green;">-- 3rd Major College</span>
+  	,[CurrentMajor3] <span style="color:Blue;">AS</span> [CurrentMajor3]                 <span style="color:Green;">-- 3rd Major</span>
+  	,[CurrentDegreeTrack3] <span style="color:Blue;">AS</span> [CurrentDegreeTrack3]     <span style="color:Green;">-- 3rd Major Track</span>
+  	,[CurrentDegree3] <span style="color:Blue;">AS</span> [CurrentDegree3]               <span style="color:Green;">-- 3rd Major Degree</span>
+  	,[CurrentCollege4] <span style="color:Blue;">AS</span> [CurrentCollege4]             <span style="color:Green;">-- 4th Major College</span>
+  	,[CurrentMajor4] <span style="color:Blue;">AS</span> [CurrentMajor4]                 <span style="color:Green;">-- 4th Major</span>
+  	,[CurrentDegreeTrack4] <span style="color:Blue;">AS</span> [CurrentDegreeTrack4]     <span style="color:Green;">-- 4th Major Track</span>
+  	,[CurrentDegree4] <span style="color:Blue;">AS</span> [CurrentDegree4]               <span style="color:Green;">-- 4th Major Degree</span>
+  	,[CurrentCollege5] <span style="color:Blue;">AS</span> [CurrentCollege5]             <span style="color:Green;">-- 5th Major College</span>
+  	,[CurrentMajor5] <span style="color:Blue;">AS</span> [CurrentMajor5]                 <span style="color:Green;">-- 5th Major</span>
+  	,[CurrentDegreeTrack5] <span style="color:Blue;">AS</span> [CurrentDegreeTrack5]     <span style="color:Green;">-- 5th Major Track</span>
+  	,[CurrentDegree5] <span style="color:Blue;">AS</span> [CurrentDegree5]               <span style="color:Green;">-- 5th Major Degree</span>
+  	,[IsSummerA] <span style="color:Blue;">AS</span> [IsSummerA]                         <span style="color:Green;">-- Summer A data capture flag</span>
+  	,[Minor2] <span style="color:Blue;">AS</span> [Minor2]                               <span style="color:Green;">-- 2nd Minor</span>
+  	,[Minor3] <span style="color:Blue;">AS</span> [Minor3]                               <span style="color:Green;">-- 3rd Minor</span>
+  	,[Minor4] <span style="color:Blue;">AS</span> [Minor4]                               <span style="color:Green;">-- 4th Minor</span>
+  	,[Minor5] <span style="color:Blue;">AS</span> [Minor5]                               <span style="color:Green;">-- 5th </span>
+    ,[CombinedDegreeIndicator]                          <span style="color:Green;">-- Combined Degree Indicator</span>
+<span style="color:Blue;">FROM</span> 
+    [BaseDataHistory].[dbo].[ht_StudentCurrentRecord]
+<span style="color:Blue;">WHERE</span> 
+    [IsSummerA] = 0
+</pre></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></div>
+  </body>
+</html>

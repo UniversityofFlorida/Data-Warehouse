@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions" class="ajax" data-target="#right">Functions</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_ConvertDropAddDate" class="ajax" data-target="#right">dbo.fn_ConvertDropAddDate</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-function "></i>dbo.fn_ConvertDropAddDate</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>fn_ConvertDropAddDate</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>OUT</td>
+              <td>Returns</td>
+              <td>datetime</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>IN</td>
+              <td>DropAddCode</td>
+              <td>varchar(20)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>IN</td>
+              <td>Term6</td>
+              <td>varchar(6)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">FUNCTION</span> [dbo].[fn_ConvertDropAddDate] 
+(
+    @DropAddCode <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(20),
+    @Term6 <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(6)
+)
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        fn_ConvertDropAddDate
+
+  Description:	    BaseViews - Converts a drop/add code to a valid date
+  
+  Input:            @DropAddCode - UF drop/add code. e.g. &#39;6000008191654&#39;
+                    @Term6 - Term during which the drop/add occurred. 
+  
+  Usage:            BaseViews.dbo.fn_ConvertDropAddDate(&#39;6000008191654&#39;, &#39;201308&#39;)
+  
+                    Example: SELECT BaseViews.dbo.fn_ConvertDropAddDate(&#39;200608&#39;, 3)
+                    Returns: &#39;068&#39;
+
+  Created:	        09/10/2013 by William McCombie
+
+  Modified:
+  	
+**************************************************************************************************/</span>
+
+<span style="color:Blue;">RETURNS</span> <span style="color:Blue;">DATETIME</span>
+
+<span style="color:Blue;">AS</span>
+
+<span style="color:Blue;">BEGIN</span>
+    <span style="color:Green;">--DECLARE @DropAddCode VARCHAR(20) = &#39;6000008191654&#39;; DECLARE @Term6 varchar(6) = &#39;201308&#39;</span>
+	
+	<span style="color:Blue;">DECLARE</span> @Month <span style="color:Blue;">INT</span> = <span style="color:Magenta;">CAST</span>(<span style="color:Magenta;">SUBSTRING</span>(@DropAddCode, 6, 2) <span style="color:Blue;">AS</span> <span style="color:Blue;">INT</span>)
+	<span style="color:Blue;">DECLARE</span> @Day <span style="color:Blue;">INT</span> = <span style="color:Magenta;">CAST</span>(<span style="color:Magenta;">SUBSTRING</span>(@DropAddCode, 8, 2) <span style="color:Blue;">AS</span> <span style="color:Blue;">INT</span>)
+	<span style="color:Blue;">DECLARE</span> @Hour <span style="color:Blue;">INT</span> = <span style="color:Magenta;">CAST</span>(<span style="color:Magenta;">SUBSTRING</span>(@DropAddCode, 10, 2) <span style="color:Blue;">AS</span> <span style="color:Blue;">INT</span>)
+	<span style="color:Blue;">DECLARE</span> @Minute <span style="color:Blue;">INT</span> = <span style="color:Magenta;">CAST</span>(<span style="color:Magenta;">SUBSTRING</span>(@DropAddCode, 12, 2) <span style="color:Blue;">AS</span> <span style="color:Blue;">INT</span>)
+
+	<span style="color:Blue;">DECLARE</span> @Year <span style="color:Blue;">INT</span> = <span style="color:Magenta;">CAST</span>(<span style="color:Blue;">LEFT</span>(@Term6, 4) <span style="color:Blue;">AS</span> <span style="color:Blue;">int</span>)
+
+	<span style="color:Blue;">DECLARE</span> @TermYear <span style="color:Blue;">varchar</span>(4) = 
+		<span style="color:Magenta;">CAST</span>
+			(<span style="color:Blue;">CASE</span> 
+				<span style="color:Blue;">WHEN</span> <span style="color:Blue;">RIGHT</span>(@Term6, 2) = <span style="color:#A31515;">&#39;01&#39;</span> <span style="color:Blue;">AND</span> @Month &gt;= 6 <span style="color:Blue;">THEN</span> @Year - 1 <span style="color:Green;">-- spring </span>
+				<span style="color:Blue;">WHEN</span> <span style="color:Blue;">RIGHT</span>(@Term6, 2)= <span style="color:#A31515;">&#39;01&#39;</span> <span style="color:Blue;">THEN</span> @Year
+				<span style="color:Blue;">WHEN</span> <span style="color:Blue;">RIGHT</span>(@Term6, 2)= <span style="color:#A31515;">&#39;05&#39;</span> <span style="color:Blue;">AND</span> @Month &gt; 8 <span style="color:Blue;">THEN</span> @Year - 1 
+				<span style="color:Blue;">WHEN</span> <span style="color:Blue;">RIGHT</span>(@Term6, 2) = <span style="color:#A31515;">&#39;05&#39;</span> <span style="color:Blue;">THEN</span> @Year
+				<span style="color:Blue;">WHEN</span> <span style="color:Blue;">RIGHT</span>(@Term6, 2) = <span style="color:#A31515;">&#39;08&#39;</span> <span style="color:Blue;">THEN</span> @Year
+				<span style="color:Blue;">ELSE</span> @Year <span style="color:Blue;">END</span> <span style="color:Blue;">AS</span> <span style="color:Blue;">int</span>)
+
+	<span style="color:Green;">-- Return the result</span>
+	<span style="color:Blue;">RETURN</span> 
+	<span style="color:Magenta;">CAST</span>(
+	<span style="color:Magenta;">CAST</span>(@TermYear <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>) + <span style="color:#A31515;">&#39;-&#39;</span> + <span style="color:Magenta;">CAST</span>(@Month <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>) + <span style="color:#A31515;">&#39;-&#39;</span> + <span style="color:Magenta;">CAST</span>(@Day <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">CAST</span>(@Hour <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>) + <span style="color:#A31515;">&#39;:&#39;</span> + <span style="color:Magenta;">Cast</span>(@Minute <span style="color:Blue;">AS</span> <span style="color:Blue;">varchar</span>)
+	<span style="color:Blue;">AS</span> <span style="color:Blue;">DATETIME</span>)
+
+	
+<span style="color:Blue;">END</span>
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

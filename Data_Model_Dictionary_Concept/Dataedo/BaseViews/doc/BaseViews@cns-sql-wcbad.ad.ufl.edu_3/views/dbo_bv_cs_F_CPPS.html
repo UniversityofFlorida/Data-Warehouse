@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="cf">
+        <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views" class="ajax" data-target="#right">Views</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_bv_cs_F_CPPS" class="ajax" data-target="#right">dbo.bv_cs_F_CPPS</a></div>
+        <div id="tools">
+          <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+        </div>
+      </div>
+      <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+      <h1><i class=" icon2x-view "></i>dbo.bv_cs_F_CPPS</h1>
+      <table class="table table-vertical">
+        <tbody>
+          <tr>
+            <td>Schema</td>
+            <td>dbo</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>bv_cs_F_CPPS</td>
+          </tr>
+          <tr>
+            <td>ExtendedProp</td>
+            <td>Student Career/Program/Plan/SubPlan/Degree with Effective Date - Campus Solutions data</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="collapsible" data-key="uses">
+        <div class="collapsible-link font-large font-bold">Uses</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+                <td>
+                  <div style="margin-left: 0px">
+                    <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-view" title="View"></i></div>
+                    <div style="margin-left: 44px">dbo.bv_cs_F_CPPS</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">BaseData.bd.bt_cs_F_CPPS</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="script">
+        <div class="collapsible-link font-large font-bold">Script</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">VIEW</span> [dbo].[bv_cs_F_CPPS] <span style="color:Blue;">AS</span>
+
+<span style="color:Green;">/*****************************************************************************************
+
+  Name:		    bv_cs_F_CPPS
+
+  Description:  Student Career/Program/Plan/SubPlan/Degree with Effective Dates - Campus Solutions data
+
+				A fact table containing the measures of the Academic Career, Academic Program, 
+				Academic Plan, Academic Sub Plan, and Degree for the student. Recorded with 
+				effective start and end dates...
+				***This fact table should always be filtered with time***
+				 
+				Use SIDs to join to dimensions.
+
+  Created:	    04/10/2018 by John Holmes
+
+  Modified:     05/22/2018 by John Holmes
+				Add new row
+                
+*****************************************************************************************/</span>
+
+<span style="color:Blue;">SELECT</span>
+	EMPLID,
+	ACAD_CAREER,
+	STDNT_CAR_NBR,
+	EFFDT_SID,
+	END_EFFDT_SID,
+	EFF_TERM_SID,
+	END_EFF_TERM_SID,
+	EFFSEQ,
+	ACAD_PLAN,
+	ACAD_SUB_PLAN,
+	ACAD_LOAD_APPR,
+	CAMPUS,
+	ADM_APPL_NBR,
+	ACAD_PROG,
+	STDNT_DEGR,
+	PLAN_SEQUENCE,
+	PROG_STATUS_SID,
+	PROG_ACTION_SID,
+	PROG_REASON_SID,
+	ACAD_CAR_SID,
+	ACAD_PROG_SID,
+	ACAD_PLAN_SID,
+	ACAD_SPLAN_SID,
+	ADMIT_TERM_SID,
+	EXP_GRAD_TERM_TERM_SID,
+	PROG_REQ_TERM_SID,
+	PLAN_REQ_TERM_SID,
+	SUBPLAN_REQ_TERM_SID,
+	PROG_COMPLETION_TERM_SID,
+	PLAN_COMPLETION_TERM_SID,
+	PERSON_SID,
+	ACTION_DT_SID,
+	PLAN_DECLARE_DT_SID,
+	SUBPLAN_DECLARE_DT_SID,
+	ACAD_GRP_SID,
+	INSTITUTION_SID,
+	DEGREE_SID,
+	DEGR_CHKOUT_STAT_SID,
+	ACAD_ORG_SID,
+	ACAD_ORG_PERCENT_OWNED,
+	STDNT_PLAN_CAF_SID,
+	SCC_ROW_UPD_OPRID,
+	SCC_ROW_UPD_DTTM,
+	LASTUPD_EW_DTTM,
+	UF_MAX_CHG_TERM_FLG,
+	TERM_CD,
+	TERM6
+<span style="color:Blue;">FROM</span>
+	BaseData.bd.bt_cs_F_CPPS
+;
+</pre></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></div>
+  </body>
+</html>

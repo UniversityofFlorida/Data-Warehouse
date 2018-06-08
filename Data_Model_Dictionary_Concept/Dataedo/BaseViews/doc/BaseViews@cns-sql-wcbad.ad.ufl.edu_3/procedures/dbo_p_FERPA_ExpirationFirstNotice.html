@@ -1,0 +1,582 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures" class="ajax" data-target="#right">Procedures</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_FERPA_ExpirationFirstNotice" class="ajax" data-target="#right">dbo.p_FERPA_ExpirationFirstNotice</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-procedure "></i>dbo.p_FERPA_ExpirationFirstNotice</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>p_FERPA_ExpirationFirstNotice</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>IN</td>
+              <td>test</td>
+              <td>bit</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>IN</td>
+              <td>testEmail</td>
+              <td>varchar(254)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>IN</td>
+              <td>testName</td>
+              <td>varchar(44)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="uses">
+      <div class="collapsible-link font-large font-bold">Uses</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+              <td>
+                <div style="margin-left: 0px">
+                  <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-procedure" title="Procedure"></i></div>
+                  <div style="margin-left: 44px">dbo.p_FERPA_ExpirationFirstNotice</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="3" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-view" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_bv_FERPACertifications_simple" class="ajax" data-target="#right">dbo.bv_FERPACertifications_simple</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="8" data-parent-node-id="3">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.bt_COURSE_COMPLETIONS</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="4" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-view" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_bv_UFDirPeopleActive" class="ajax" data-target="#right">dbo.bv_UFDirPeopleActive</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="9" data-parent-node-id="4">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.bt_GL_ACCT</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="10" data-parent-node-id="4">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.bt_UFDIR_NAME</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="11" data-parent-node-id="4">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.bt_UFDIR_PERSON</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="5" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-view" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_pv_WcbaPeople" class="ajax" data-target="#right">dbo.pv_WcbaPeople</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="18" data-parent-node-id="5">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetUFBusinessNamePart" class="ajax" data-target="#right">dbo.fn_GetUFBusinessNamePart</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="20" data-parent-node-id="18">
+              <td>
+                <div style="margin-left: 66px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_LRTrim" class="ajax" data-target="#right">dbo.fn_LRTrim</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="19" data-parent-node-id="5">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_ProperCase" class="ajax" data-target="#right">dbo.fn_ProperCase</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="12" data-parent-node-id="5">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_email</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="13" data-parent-node-id="5">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_legacy</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="14" data-parent-node-id="5">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_locations</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="15" data-parent-node-id="5">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_people</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="16" data-parent-node-id="5">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_positionAssignments</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="17" data-parent-node-id="5">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_telephone</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="7" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-procedure" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_SendEmail" class="ajax" data-target="#right">dbo.p_SendEmail</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="21" data-parent-node-id="7">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">msdb.dbo.sp_send_dbmail</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="6" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_LRTrim" class="ajax" data-target="#right">dbo.fn_LRTrim</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.t_FERPAEventLog</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">PROCEDURE</span> [dbo].[p_FERPA_ExpirationFirstNotice] 
+
+     @test			[bit]			= 0
+    ,@testEmail		[varchar](254)	= <span style="color:Blue;">NULL</span>
+    ,@testName		[varchar](44)	= <span style="color:Blue;">NULL</span>
+	
+<span style="color:Blue;">AS</span> 
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        p_FERPA_ExpirationFirstNotice
+
+  Description:	    Email an expiration notice to users whose FERPA certification will expire in 30 days.
+                    A personally addressed email is sent to each user.
+  
+					PARAM NAME      DATATYPE		REQUIRED    NOTES
+  Input:			@test           bit             No			Test mode flag. See notes below
+																0 (Default) = normal operation
+																1 = Enable test mode 
+  
+                    @testEmail      varchar(254)	No			Email address for test mode
+																NULL (default)
+                    
+                    @testName       varchar(44)		No			Name for text mode
+																NULL (default)
+                    
+  Notes:            Test Mode: When @test is set to 1, test mode is enabled.
+                         - Both @testEmail and @testName must be supplied.
+                         - All email generated will be sent to @testEmail (i.e. nether users, nor the
+                           &#39;Reports&#39; system email address will receive email).
+                    
+  
+  Output:           One or more email messages are sent
+  
+  Usage:            EXEC [BaseViews].[dbo].[p_FERPA_ExpirationFirstNotice] @test, @testEmail, @testName
+                    Example:
+                        Enable Test mode:
+                        EXEC [BaseViews].[dbo].[p_FERPA_ExpirationFirstNotice] 
+                             @test = 1
+                            ,@testEmail = &#39;jcholmes@ufl.edu&#39;
+                            ,@testName = &#39;Albert Alligator&#39; ;
+  
+  Created:	        05/20/2015 by John Holmes
+
+  Modified:         01/04/2017 by John Holmes
+					Reference bv_FERPACertifications_simple
+
+					02/20/2018 by John Holmes
+					Modified register for course instructions for new MyTraining site
+  	
+**************************************************************************************************/</span>
+
+<span style="color:Blue;">BEGIN</span>
+
+    <span style="color:Blue;">SET</span> <span style="color:Blue;">NOCOUNT</span> <span style="color:Blue;">ON</span> ;
+    
+    <span style="color:Green;">-- Validate input</span>
+    <span style="color:Blue;">IF</span> (
+        @test = 0    <span style="color:Green;">-- normal operation mode</span>
+        <span style="color:Blue;">OR</span> 
+        (   <span style="color:Green;">-- all params for Test mode provided</span>
+            @test = 1
+            <span style="color:Blue;">AND</span> @testEmail <span style="color:Blue;">IS</span> <span style="color:Blue;">NOT</span> <span style="color:Blue;">NULL</span>
+            <span style="color:Blue;">AND</span> @testName <span style="color:Blue;">IS</span> <span style="color:Blue;">NOT</span> <span style="color:Blue;">NULL</span>
+        )
+    )
+        <span style="color:Blue;">BEGIN</span>   <span style="color:Green;">-- Valid input</span>
+        
+            <span style="color:Green;">-- For Testing</span>
+            <span style="color:Green;">--DECLARE @test BIT = 1, @testEmail VARCHAR(254) = &#39;jcholmes@ufl.edu&#39;, @testName VARCHAR(44) = &#39;Albert Alligator&#39; ;</span>
+            
+            <span style="color:Green;">--------------------- Declare working vars ---------------------</span>
+            
+            <span style="color:Blue;">DECLARE</span> @date			[nvarchar](20)	= <span style="color:Blue;">DATENAME</span>(MM, <span style="color:Magenta;">GETDATE</span>()) + <span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(12), <span style="color:Magenta;">GETDATE</span>(), 107), 9) ;  <span style="color:Green;">-- Today&#39;s data formatted as Month DD, YYYY</span>
+            <span style="color:Blue;">DECLARE</span> @body			[nvarchar](<span style="color:Magenta;">MAX</span>)	= <span style="color:#A31515;">&#39;&#39;</span> ;		<span style="color:Green;">-- Final body of email</span>
+            <span style="color:Blue;">DECLARE</span> @body1			[nvarchar](<span style="color:Magenta;">MAX</span>) = <span style="color:#A31515;">&#39;&#39;</span> ;		<span style="color:Green;">-- Pt 1 of email body</span>
+            <span style="color:Blue;">DECLARE</span> @body2			[nvarchar](<span style="color:Magenta;">MAX</span>) = <span style="color:#A31515;">&#39;&#39;</span> ;		<span style="color:Green;">-- Pt 2 of email body</span>
+            <span style="color:Blue;">DECLARE</span> @body3			[nvarchar](<span style="color:Magenta;">MAX</span>) = <span style="color:#A31515;">&#39;&#39;</span> ;		<span style="color:Green;">-- Pt 3 of email body</span>
+            <span style="color:Blue;">DECLARE</span> @body3a			[nvarchar](<span style="color:Magenta;">MAX</span>) = <span style="color:#A31515;">&#39;&#39;</span> ;		<span style="color:Green;">-- Pt 3a of email body</span>
+            <span style="color:Blue;">DECLARE</span> @body4			[nvarchar](<span style="color:Magenta;">MAX</span>) = <span style="color:#A31515;">&#39;&#39;</span> ;		<span style="color:Green;">-- Pt 4 of email body</span>
+            <span style="color:Blue;">DECLARE</span> @subjectText	[varchar](<span style="color:Magenta;">MAX</span>)	= <span style="color:#A31515;">&#39;&#39;</span> ;		<span style="color:Green;">-- Email subject line</span>
+            <span style="color:Blue;">DECLARE</span> @recipEmail		[varchar](254)	= <span style="color:#A31515;">&#39;&#39;</span> ;		<span style="color:Green;">-- Recipient&#39;s email address</span>
+            <span style="color:Blue;">DECLARE</span> @recipName		[varchar](254)	= <span style="color:#A31515;">&#39;&#39;</span> ;		<span style="color:Green;">-- Recipient&#39;s name</span>
+            <span style="color:Blue;">DECLARE</span> @courseNum		[varchar](7)	= <span style="color:#A31515;">&#39;&#39;</span> ;		<span style="color:Green;">-- Course Number</span>
+            <span style="color:Blue;">DECLARE</span> @courseTitle	[varchar](30)	= <span style="color:#A31515;">&#39;&#39;</span> ;		<span style="color:Green;">-- Course Title</span>
+            <span style="color:Blue;">DECLARE</span> @certDate		[varchar](30) 	= <span style="color:#A31515;">&#39;&#39;</span> ;		<span style="color:Green;">-- Certification Date</span>
+            <span style="color:Blue;">DECLARE</span> @expDate		[varchar](30)	= <span style="color:#A31515;">&#39;&#39;</span> ;		<span style="color:Green;">-- Expiration Date</span>
+            <span style="color:Blue;">DECLARE</span> @xml			[nvarchar](<span style="color:Magenta;">MAX</span>) = <span style="color:#A31515;">&#39;&#39;</span> ;		<span style="color:Green;">-- Report data</span>
+            <span style="color:Blue;">DECLARE</span> @reportRecip	[varchar](256)	= <span style="color:#A31515;">&#39;&#39;</span> ;		<span style="color:Green;">-- Report recipient</span>
+            
+            <span style="color:Green;">-- Declare and populate the recipient table var</span>
+            <span style="color:Blue;">DECLARE</span> @recipList <span style="color:Blue;">AS</span> <span style="color:Blue;">TABLE</span>(
+                 [UFID]			[varchar](8)
+                ,[Email]		[varchar](254)
+                ,[Name]			[varchar](44)
+				,[Department]	[varchar](6)
+                ,[Course]		[varchar](7)
+                ,[CourseTitle]	[varchar](30)
+                ,[CertDate]		[date] 
+                ,[ExpDate]		[date] 
+            ) ;
+            
+            
+            <span style="color:Green;">--------------------- Get recipient list ---------------------</span>
+            
+            <span style="color:Blue;">IF</span> @test = 0    <span style="color:Green;">-- normal operation mode</span>
+                <span style="color:Blue;">BEGIN</span> 
+                    <span style="color:Blue;">INSERT</span> <span style="color:Blue;">INTO</span> @recipList(
+                         [UFID]
+                        ,[Email]
+                        ,[Name]
+						,[Department]
+                        ,[Course]
+                        ,[CourseTitle]
+						,[CertDate]
+                        ,[ExpDate]
+                    )
+                    <span style="color:Blue;">SELECT</span> 
+                         [p].[UFID]
+                        ,<span style="color:Blue;">CASE</span> 
+							<span style="color:Blue;">WHEN</span> [BaseViews].[dbo].[fn_LRTrim](<span style="color:Magenta;">COALESCE</span>([p].[Email],<span style="color:#A31515;">&#39;&#39;</span>)) = <span style="color:#A31515;">&#39;&#39;</span> <span style="color:Blue;">THEN</span> [ufp].[Email]
+							<span style="color:Blue;">ELSE</span> [p].[Email]
+						 <span style="color:Blue;">END</span> <span style="color:Blue;">AS</span> [Email]
+                        ,[p].[FirstName] + <span style="color:#A31515;">&#39; &#39;</span> + [p].[LastName]
+						,[p].[Department]
+                        ,[fc].[Course]
+                        ,[fc].[CourseTitle]
+						,[fc].[CertificationDate]
+                        ,[fc].[ExpirationDate]
+                    <span style="color:Blue;">FROM</span> 
+                        [BaseViews].[dbo].[pv_WcbaPeople] <span style="color:Blue;">AS</span> [p]
+                    <span style="color:Blue;">JOIN</span> 
+                        [BaseViews].[dbo].[bv_FERPACertifications_simple] <span style="color:Blue;">AS</span> [fc]
+                        <span style="color:Blue;">ON</span> [p].[UFID] = [fc].[UFID]
+					<span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> 
+						[BaseViews].[dbo].[bv_UFDirPeopleActive] <span style="color:Blue;">AS</span> [ufp]
+						<span style="color:Blue;">ON</span> [p].[UFID] = [ufp].[UFID]
+                    <span style="color:Blue;">WHERE</span> 
+                        [p].[ActiveFlag] = <span style="color:#A31515;">&#39;Y&#39;</span>                                              <span style="color:Green;">-- User is active in WCBA Directory</span>
+                        <span style="color:Blue;">AND</span> [fc].[DaysUntilExpiration] = 30 ;								<span style="color:Green;">-- Expiration is in 30 days</span>
+                <span style="color:Blue;">END</span> ;   <span style="color:Green;">-- End Get Active WCBA users</span>
+            <span style="color:Blue;">ELSE</span> 
+                <span style="color:Blue;">BEGIN</span>   <span style="color:Green;">-- Test mode recipient</span>
+                    <span style="color:Blue;">INSERT</span> <span style="color:Blue;">INTO</span> @recipList(
+                         [UFID]
+                        ,[Email]
+                        ,[Name]
+						,[Department]
+                        ,[Course]
+                        ,[CourseTitle]
+						,[CertDate]
+                        ,[ExpDate]
+                    )
+                    <span style="color:Blue;">VALUES</span>
+                        (<span style="color:#A31515;">&#39;00000000&#39;</span>, @testEmail, @testName, <span style="color:#A31515;">&#39;Dept&#39;</span>, <span style="color:#A31515;">&#39;PRV802&#39;</span>, <span style="color:#A31515;">&#39;FERPA Basics&#39;</span>, <span style="color:Magenta;">CAST</span>(<span style="color:Magenta;">GETDATE</span>() <span style="color:Blue;">AS</span> <span style="color:Blue;">DATE</span>), <span style="color:Magenta;">CAST</span>(<span style="color:Blue;">DATEADD</span>(<span style="color:Magenta;">DAY</span>,30,<span style="color:Magenta;">GETDATE</span>()) <span style="color:Blue;">AS</span> <span style="color:Blue;">DATE</span>)) ;
+                <span style="color:Blue;">END</span> ;   <span style="color:Green;">-- End Test mode recipient</span>
+            
+            
+			
+            <span style="color:Green;">--------------------- Send user emails ---------------------</span>
+            
+            <span style="color:Blue;">SET</span> @body1 = <span style="color:#A31515;">&#39;
+                &lt;html&gt;
+                &lt;head&gt;
+                    &lt;style&gt;
+                        body {
+                            margin-left:20px;
+                            font:10px Verdana, Geneva, Arial, Helvetica, sans-serif;
+                        }
+                        h1 {
+                            font:12px Verdana, Geneva, Arial, Helvetica, sans-serif;
+                            font-weight:bold;
+                            margin-bottom:10px;
+                        }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &#39;</span> + @date + <span style="color:#A31515;">&#39;
+                    &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+                    Dear &#39;</span> ;
+                    
+            <span style="color:Blue;">SET</span> @body2 = 
+                <span style="color:#A31515;">&#39;,   
+                    &lt;br/&gt;&lt;br/&gt;
+                    &lt;h1&gt;Your FERPA Certification &quot;&#39;</span> ;
+                            
+            <span style="color:Blue;">SET</span> @body3 = <span style="color:#A31515;">&#39;&quot; will expire in 30 days on &#39;</span> ;
+                    
+            <span style="color:Blue;">SET</span> @body3a = <span style="color:#A31515;">&#39;.&lt;/h1&gt;
+					&lt;h1&gt;Please renew soon!&lt;/h1&gt;
+                    &lt;b&gt;Access to FERPA protected student data supplied by the Warrington College of Business Administration is dependent upon you 
+                    maintaining a FERPA certification that is less than one (1) year old,  Thus, FERPA certifications must be renewed each year.&lt;/b&gt;
+                    &lt;br/&gt;&lt;br/&gt;
+                    You may renew your FERPA Certification by re-taking the course.
+                    &lt;br/&gt;&lt;br/&gt;
+                    To register for the course:
+                    &lt;ol&gt;
+                        &lt;li&gt;Browse to &lt;a href=&#39;</span><span style="color:#A31515;">&#39;http://mytraining.hr.ufl.edu&#39;</span><span style="color:#A31515;">&#39;&gt;MyTraining.hr.ufl.edu&lt;/a&gt; and click &quot;University of Florida&quot;.&lt;/li&gt;
+                        &lt;li&gt;Log in using your GatorLink credentials.&lt;/li&gt;
+                        &lt;li&gt;Click the &quot;Activity Search&quot; button, then enter &quot;FERPA&quot; and press Enter (Return)&lt;/li&gt;
+                        &lt;li&gt;Locate the &quot;&#39;</span> ;
+                                
+            <span style="color:Blue;">SET</span> @body4 = <span style="color:#A31515;">&#39;&quot; course and click &quot;Select&quot;, then click &quot;Start&quot;.&lt;/li&gt;
+                        &lt;li&gt;Complete both the course content and final assessment.&lt;/li&gt;
+                    &lt;/ol&gt;
+                    &lt;br/&gt;
+                    Once completed, it may take &lt;b&gt;&lt;em&gt;3-4 business days&lt;/em&gt;&lt;/b&gt; for your (re)certification to be acknowledged by all UF systems.
+                    &lt;br/&gt;&lt;br/&gt;
+                    You will receive a confirmation email once your certification is received by the Warrington College of Business.
+                &lt;/body&gt;
+                &lt;/html&gt;&#39;</span> ;
+                    
+                    
+            <span style="color:Green;">-- Declare a cursor to loop through recipient list</span>
+            <span style="color:Blue;">DECLARE</span> [email_cursor] <span style="color:Blue;">CURSOR</span> READ_ONLY <span style="color:Blue;">FOR</span> 
+                <span style="color:Blue;">SELECT</span> 
+					 [Email]
+					,[Name]
+					,[Course]
+					,[CourseTitle]
+					,<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">varchar</span>(30), [CertDate], 101)
+					,<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">varchar</span>(30), [ExpDate], 101)
+				<span style="color:Blue;">FROM</span> 
+					@recipList ;
+                    
+                    
+            <span style="color:Green;">-- Open and use the cursor</span>
+            <span style="color:Blue;">OPEN</span> email_cursor ;
+            <span style="color:Blue;">FETCH</span> <span style="color:Blue;">NEXT</span> <span style="color:Blue;">FROM</span> [email_cursor] <span style="color:Blue;">INTO</span> @recipEmail, @recipName, @courseNum, @courseTitle, @certDate, @expDate ;
+            <span style="color:Blue;">WHILE</span> (<span style="color:Magenta;">@@fetch_status</span> &lt;&gt; -1) 
+                <span style="color:Blue;">BEGIN</span>
+
+                    <span style="color:Blue;">IF</span> (<span style="color:Magenta;">@@fetch_status</span> &lt;&gt; -2) 
+                        <span style="color:Blue;">BEGIN</span>
+                            <span style="color:Green;">-- Set up the HTML document</span>
+                            <span style="color:Blue;">SET</span> @body = @body1 + @recipName + @body2 + @courseNum + <span style="color:#A31515;">&#39; - &#39;</span> + @courseTitle + @body3 + @expDate + @body3a + @courseTitle + @body4 ;
+                                    
+                            <span style="color:Green;">-- Construct the message subject</span>
+                            <span style="color:Blue;">SET</span> @subjectText = <span style="color:#A31515;">&#39;Your FERPA certification &quot;&#39;</span> + @courseNum + <span style="color:#A31515;">&#39; - &#39;</span> + @courseTitle + <span style="color:#A31515;">&#39;&quot; expires in 30 days on &#39;</span> + @expDate ;
+                                    
+                            <span style="color:Green;">-- Send the email    </span>
+                            <span style="color:Blue;">EXEC</span> [BaseViews].[dbo].[p_SendEmail] 
+								 @recipList = @recipEmail
+                                ,@subjectText = @subjectText 
+                                ,@bodyText = @body
+                                ,@bodyFormatType = <span style="color:#A31515;">&#39;HTML&#39;</span>
+                                ,@profileName = <span style="color:#A31515;">&#39;FERPANotifications&#39;</span> ;
+                                    
+                        <span style="color:Blue;">END</span> ;
+								
+                    <span style="color:Blue;">FETCH</span> <span style="color:Blue;">NEXT</span> <span style="color:Blue;">FROM</span> email_cursor <span style="color:Blue;">INTO</span> @recipEmail, @recipName, @courseNum, @courseTitle, @certDate, @expDate ;
+
+                <span style="color:Blue;">END</span> ;
+                    
+            <span style="color:Green;">-- Close and deallocate cursor</span>
+            <span style="color:Blue;">CLOSE</span> [email_cursor] ;
+            <span style="color:Blue;">DEALLOCATE</span> [email_cursor] ;
+           
+            
+            <span style="color:Green;">--------------------- Log event data ---------------------</span>
+
+			<span style="color:Blue;">INSERT</span> <span style="color:Blue;">INTO</span> [BaseData].[bd].[t_FERPAEventLog](
+				 [UFID]
+				,[Email]
+				,[Name]
+				,[Department]
+				,[Course]
+				,[CourseTitle]
+				,[CertDate]
+				,[ExpDate]
+				,[Event]
+			)
+            <span style="color:Blue;">SELECT</span>
+                [UFID]
+               ,[Email]
+               ,[Name]
+               ,[Department]
+               ,[Course]
+               ,[CourseTitle]
+               ,[CertDate]
+               ,[ExpDate]
+			   ,<span style="color:#A31515;">&#39;30 Days&#39;</span>
+            <span style="color:Blue;">FROM</span>
+                @recipList;
+
+		<span style="color:Blue;">END</span> ;	<span style="color:Green;">-- End valid input</span>
+        
+    <span style="color:Blue;">ELSE</span>    <span style="color:Green;">-- Invalid input</span>
+        <span style="color:Blue;">SELECT</span> <span style="color:#A31515;">&#39;Test mode enabled without required parameters.&#39;</span> <span style="color:Blue;">AS</span> [Error] ;
+        
+<span style="color:Blue;">END</span> ;   <span style="color:Green;">-- End p_FERPA_ExpirationFirstNotice</span>
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

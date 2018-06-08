@@ -1,0 +1,375 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures" class="ajax" data-target="#right">Procedures</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_PersonInfo_Get" class="ajax" data-target="#right">dbo.p_PersonInfo_Get</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-procedure "></i>dbo.p_PersonInfo_Get</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>p_PersonInfo_Get</td>
+        </tr>
+        <tr>
+          <td>ExtendedProp</td>
+          <td>Retrieves user information. If no parameters supplied, returns all active people in WCBA Directory.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>IN</td>
+              <td>gl</td>
+              <td>varchar(70)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">OPTIONAL. GatorLink ID. e.g. "alberta".</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>IN</td>
+              <td>ufid</td>
+              <td>varchar(8)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">OPTIONAL. UF Identifier. e.g. "02062630".</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>IN</td>
+              <td>name</td>
+              <td>varchar(44)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">OPTIONAL. Name fragment. e.g. "gator".</td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="uses">
+      <div class="collapsible-link font-large font-bold">Uses</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+              <td>
+                <div style="margin-left: 0px">
+                  <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-procedure" title="Procedure"></i></div>
+                  <div style="margin-left: 44px">dbo.p_PersonInfo_Get</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-view" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_bv_UFDirPeople" class="ajax" data-target="#right">dbo.bv_UFDirPeople</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="5" data-parent-node-id="2">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.bt_GL_ACCT</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="6" data-parent-node-id="2">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.bt_UFDIR_NAME</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="7" data-parent-node-id="2">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.bt_UFDIR_PERSON</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="3" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-view" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_bv_UFDirPeopleActive" class="ajax" data-target="#right">dbo.bv_UFDirPeopleActive</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="8" data-parent-node-id="3">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.bt_GL_ACCT</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="9" data-parent-node-id="3">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.bt_UFDIR_NAME</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="10" data-parent-node-id="3">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">BaseData.bd.bt_UFDIR_PERSON</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="4" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-view" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_pv_WcbaPeople" class="ajax" data-target="#right">dbo.pv_WcbaPeople</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="17" data-parent-node-id="4">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetUFBusinessNamePart" class="ajax" data-target="#right">dbo.fn_GetUFBusinessNamePart</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="19" data-parent-node-id="17">
+              <td>
+                <div style="margin-left: 66px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_LRTrim" class="ajax" data-target="#right">dbo.fn_LRTrim</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="18" data-parent-node-id="4">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_ProperCase" class="ajax" data-target="#right">dbo.fn_ProperCase</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="11" data-parent-node-id="4">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_email</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="12" data-parent-node-id="4">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_legacy</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="13" data-parent-node-id="4">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_locations</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="14" data-parent-node-id="4">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_people</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="15" data-parent-node-id="4">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_positionAssignments</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="16" data-parent-node-id="4">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_telephone</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">PROCEDURE</span> [dbo].[p_PersonInfo_Get]
+
+    @gl [varchar](70) = <span style="color:Blue;">NULL</span>
+   ,@ufid [varchar](8) = <span style="color:Blue;">NULL</span>
+   ,@name [varchar](44) = <span style="color:Blue;">NULL</span>
+
+<span style="color:Blue;">AS</span> 
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        p_PersonInfo_Get
+
+  Description:	    Retrieves user information. 
+                    If parameters are supplied, returns date from UF Directory.
+                    If no parameters supplied, returns all active people in WCBA Directory.
+  
+  Input:            @gl     varchar(70)     OPTIONAL. GatorLink ID. e.g. &quot;alberta&quot;.
+                    
+					@ufid   varchar(8)      OPTIONAL. UF Identifier. e.g. &quot;02062630&quot;.
+
+					@name   varchar(44)     OPTIONAL. Name fragment. e.g. &quot;gator&quot;.
+
+  Output:           On Success: A table of UFID, UFBusinessName and GatorlinkID.
+                    On Failure: System error message.
+  
+  Notes:            Input parameter priority is GatorLink, UFID, Name.
+                    I.E., If @gl is specified, @ufid and @name are ignored.
+                    If @ufid is specified, @name is ignored
+  
+  Usage:            EXEC [dbo],[p_PersonInfo_Get] @gl, @ufid, @name
+                    Examples:
+                        EXEC [dbo].[p_PersonInfo_Get] @gl = &#39;alberta&#39;
+					    EXEC [dbo].[p_PersonInfo_Get] @ufid = &#39;02062630&#39;
+					    EXEC [dbo].[p_PersonInfo_Get] @name = &#39;gator&#39;
+  
+  Created:	        01/08/2015 by John Holmes
+
+  Modified:         
+  	
+**************************************************************************************************/</span>
+
+<span style="color:Blue;">BEGIN</span>
+	
+
+	<span style="color:Blue;">SET</span> <span style="color:Blue;">NOCOUNT</span> <span style="color:Blue;">ON</span>;
+	
+    <span style="color:Blue;">IF</span> @gl <span style="color:Blue;">IS</span> <span style="color:Blue;">NOT</span> <span style="color:Blue;">NULL</span> 
+        <span style="color:Blue;">BEGIN</span>
+            <span style="color:Blue;">SELECT</span>
+                 [UFID]
+                ,[UFBusinessName]
+                ,[GatorLinkID]
+				,[Email]
+            <span style="color:Blue;">FROM</span>
+                [BaseViews].[dbo].[bv_UFDirPeople]
+            <span style="color:Blue;">WHERE</span>
+                [GatorLinkID] = @gl ;
+        <span style="color:Blue;">END</span> ;
+    <span style="color:Blue;">ELSE</span> <span style="color:Blue;">IF</span> @ufid <span style="color:Blue;">IS</span> <span style="color:Blue;">NOT</span> <span style="color:Blue;">NULL</span> 
+        <span style="color:Blue;">BEGIN</span>
+            <span style="color:Blue;">SELECT</span>
+                 @ufid <span style="color:Blue;">AS</span> [UFID]
+                ,[UFBusinessName]
+                ,[GatorLinkID]
+				,[Email]
+            <span style="color:Blue;">FROM</span>
+                [BaseViews].[dbo].[bv_UFDirPeople]
+            <span style="color:Blue;">WHERE</span>
+                [UFID] = @ufid ;
+        <span style="color:Blue;">END</span> ;
+    <span style="color:Blue;">ELSE</span> <span style="color:Blue;">IF</span> @name <span style="color:Blue;">IS</span> <span style="color:Blue;">NOT</span> <span style="color:Blue;">NULL</span> 
+        <span style="color:Blue;">BEGIN</span>
+            <span style="color:Blue;">SELECT</span>
+                 [UFID]
+                ,[UFBusinessName]
+                ,[GatorLinkID]
+				,[Email]
+            <span style="color:Blue;">FROM</span>
+                [BaseViews].[dbo].[bv_UFDirPeople]
+            <span style="color:Blue;">WHERE</span>
+                [UFBusinessName] <span style="color:Blue;">LIKE</span> (<span style="color:#A31515;">&#39;%&#39;</span> + @name + <span style="color:#A31515;">&#39;%&#39;</span>) ;
+        <span style="color:Blue;">END</span> ;
+    <span style="color:Blue;">ELSE</span> 
+        <span style="color:Blue;">BEGIN</span>
+            <span style="color:Blue;">SELECT</span>
+                 WCBA.UFID
+                ,[People].[UFBusinessName]
+                ,[People].[GatorLinkID]
+				,[People].[Email]
+            <span style="color:Blue;">FROM</span>
+                [BaseViews].[dbo].[pv_WcbaPeople] <span style="color:Blue;">AS</span> [WCBA]
+            <span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> 
+                [BaseViews].[dbo].[bv_UFDirPeopleActive] <span style="color:Blue;">AS</span> [People]
+                <span style="color:Blue;">ON</span> [People].[UFID] = [WCBA].[UFID]
+            <span style="color:Blue;">WHERE</span>
+                [WCBA].[ActiveFlag] = <span style="color:#A31515;">&#39;Y&#39;</span>
+				<span style="color:Blue;">AND</span> [People].[UFBusinessName] <span style="color:Blue;">IS</span> <span style="color:Blue;">NOT</span> <span style="color:Blue;">NULL</span> ;
+        <span style="color:Blue;">END</span> ;
+<span style="color:Blue;">END</span> ;
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

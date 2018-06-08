@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="cf">
+        <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views" class="ajax" data-target="#right">Views</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_bv_UFDirPeople_wdir" class="ajax" data-target="#right">dbo.bv_UFDirPeople_wdir</a></div>
+        <div id="tools">
+          <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+        </div>
+      </div>
+      <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+      <h1><i class=" icon2x-view "></i>dbo.bv_UFDirPeople_wdir</h1>
+      <table class="table table-vertical">
+        <tbody>
+          <tr>
+            <td>Schema</td>
+            <td>dbo</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>bv_UFDirPeople_wdir</td>
+          </tr>
+          <tr>
+            <td>ExtendedProp</td>
+            <td>UF Directory: People - filtered to include only people in Warrington Directory</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="collapsible" data-key="uses">
+        <div class="collapsible-link font-large font-bold">Uses</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+                <td>
+                  <div style="margin-left: 0px">
+                    <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-view" title="View"></i></div>
+                    <div style="margin-left: 44px">dbo.bv_UFDirPeople_wdir</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">BaseData.bd.bt_GL_ACCT</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="3" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">BaseData.bd.bt_UFDIR_NAME_wdir</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="4" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">BaseData.bd.bt_UFDIR_PERSON_wdir</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="script">
+        <div class="collapsible-link font-large font-bold">Script</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">VIEW</span> [dbo].[bv_UFDirPeople_wdir] <span style="color:Blue;">AS</span> 
+    
+<span style="color:Green;">/*****************************************************************************************
+  Name:		    bv_UFDirPeople_wdir
+
+  Description:  UF Directory: People - filtered to include only people in Warrington Directory
+
+  Created:	    11/14/2017 by John Holmes
+
+  Modified:     
+                
+*****************************************************************************************/</span> 
+    
+<span style="color:Blue;">WITH</span> 
+[ufBusinessName] ([UFID], [Name]) <span style="color:Blue;">AS</span> (
+	<span style="color:Blue;">SELECT</span> 
+		 [UF_UFID]
+		,[UF_NAME_TXT]
+	<span style="color:Blue;">FROM</span> 
+		[BaseData].[bd].[bt_UFDIR_NAME_wdir]
+	<span style="color:Blue;">WHERE</span> 
+		[UF_TYPE_CD] = 33
+)
+<span style="color:Blue;">SELECT</span> 
+     [p].[UF_UFID] <span style="color:Blue;">AS</span> [UFID]                    <span style="color:Green;">-- UFID</span>
+    ,[n].[Name] <span style="color:Blue;">AS</span> [UFBusinessName]				<span style="color:Green;">-- UF Business Name</span>
+    ,[p].[UF_DISPLAY_NM] <span style="color:Blue;">AS</span> [UFDisplayName]     <span style="color:Green;">-- UF Display Name</span>
+    ,[a].[USERIDALIAS] <span style="color:Blue;">AS</span> [GatorLinkID]         <span style="color:Green;">-- Gatorlink ID</span>
+    ,[p].[UF_EMAIL] <span style="color:Blue;">AS</span> [Email]                  <span style="color:Green;">-- UF Business Email</span>
+    ,<span style="color:Blue;">CASE</span> <span style="color:Magenta;">COALESCE</span>([a].[UF_GL_STATE], <span style="color:#A31515;">&#39;&#39;</span>)
+        <span style="color:Blue;">WHEN</span> <span style="color:#A31515;">&#39;A&#39;</span> <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(1 <span style="color:Blue;">AS</span> <span style="color:Blue;">BIT</span>) 
+        <span style="color:Blue;">ELSE</span> <span style="color:Magenta;">CAST</span>(0 <span style="color:Blue;">AS</span> <span style="color:Blue;">BIT</span>) 
+     <span style="color:Blue;">END</span>  <span style="color:Blue;">AS</span> [IsActive]                         <span style="color:Green;">-- Active Flag</span>
+    ,[p].[UF_PRIMARY_AFFL] <span style="color:Blue;">AS</span> [Affiliation]     <span style="color:Green;">-- Primary Affiliation</span>
+    ,[p].[UF_PROTECT_FLG] <span style="color:Blue;">AS</span> [ProtectFlag]      <span style="color:Green;">-- Protect Flag (Y|N) </span>
+    ,[p].[UF_PUBLISH_FLG] <span style="color:Blue;">AS</span> [PublishFlag]      <span style="color:Green;">-- Publish Flag (Y|N)</span>
+    ,[p].[UF_SECURITY_FLG] <span style="color:Blue;">AS</span> [SecurityFlag]    <span style="color:Green;">-- Security Flag (Y|N)</span>
+    ,[p].[UF_ETHNICITY_CD] <span style="color:Blue;">AS</span> [Ethnicity]       <span style="color:Green;">-- Ethnicity Code</span>
+    ,[p].[UF_GENDER_CD] <span style="color:Blue;">AS</span> [Gender]             <span style="color:Green;">-- Gender Code</span>
+    ,[p].[UF_CITIZEN_CTRY] <span style="color:Blue;">AS</span> [Citizenship]     <span style="color:Green;">-- Country of Citizenship (2 char. code)</span>
+    ,[p].[UF_BIRTH_DT] <span style="color:Blue;">AS</span> [BirthDate]           <span style="color:Green;">-- Birth Date</span>
+	,[p].[UF_WORK_TITLE] <span style="color:Blue;">AS</span> [UFWorkingTitle]	<span style="color:Green;">-- UF Working Title</span>
+
+<span style="color:Blue;">FROM</span> 
+    [BaseData].[bd].[bt_UFDIR_PERSON_wdir] [p]
+<span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> 
+    [BaseData].[bd].[bt_GL_ACCT] [a]
+    <span style="color:Blue;">ON</span> [p].[UF_UFID] = [a].[OPRID] 
+<span style="color:Blue;">LEFT</span> <span style="color:Blue;">JOIN</span> 
+    [ufBusinessName] <span style="color:Blue;">AS</span> [n] 
+    <span style="color:Blue;">ON</span> [p].[UF_UFID] = [n].[UFID]
+;
+</pre></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></div>
+  </body>
+</html>

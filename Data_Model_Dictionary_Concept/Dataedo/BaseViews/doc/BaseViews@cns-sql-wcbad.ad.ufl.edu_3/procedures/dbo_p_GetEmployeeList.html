@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures" class="ajax" data-target="#right">Procedures</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/procedures/dbo_p_GetEmployeeList" class="ajax" data-target="#right">dbo.p_GetEmployeeList</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-procedure "></i>dbo.p_GetEmployeeList</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>p_GetEmployeeList</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>IN</td>
+              <td>Dept</td>
+              <td>varchar(6)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>IN</td>
+              <td>Type</td>
+              <td>varchar(6)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>IN</td>
+              <td>Active</td>
+              <td>varchar(1)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="uses">
+      <div class="collapsible-link font-large font-bold">Uses</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+              <td>
+                <div style="margin-left: 0px">
+                  <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-procedure" title="Procedure"></i></div>
+                  <div style="margin-left: 44px">dbo.p_GetEmployeeList</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+              <td>
+                <div style="margin-left: 22px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-view" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_pv_WcbaPeople" class="ajax" data-target="#right">dbo.pv_WcbaPeople</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="9" data-parent-node-id="2">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span class="expand"><i class="icon-expand"></i></span><span class="collapse" style="display: none"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetUFBusinessNamePart" class="ajax" data-target="#right">dbo.fn_GetUFBusinessNamePart</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="11" data-parent-node-id="9">
+              <td>
+                <div style="margin-left: 66px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_LRTrim" class="ajax" data-target="#right">dbo.fn_LRTrim</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="10" data-parent-node-id="2">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-function" title="Uses "></i></div>
+                  <div style="margin-left: 44px"><a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_ProperCase" class="ajax" data-target="#right">dbo.fn_ProperCase</a></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="3" data-parent-node-id="2">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_email</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="4" data-parent-node-id="2">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_legacy</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="5" data-parent-node-id="2">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_locations</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="6" data-parent-node-id="2">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_people</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="7" data-parent-node-id="2">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_positionAssignments</div>
+                </div>
+              </td>
+            </tr>
+            <tr class="dependency-node" style="display: none" data-node-id="8" data-parent-node-id="2">
+              <td>
+                <div style="margin-left: 44px">
+                  <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                  <div style="margin-left: 44px">warringtonDirectory.dbo.v_telephone</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">PROCEDURE</span> [dbo].[p_GetEmployeeList] 
+
+     @Dept <span style="color:Blue;">varchar</span>(6) = <span style="color:Blue;">NULL</span> 
+	,@Type <span style="color:Blue;">varchar</span>(6) = <span style="color:Blue;">NULL</span> 
+	,@Active <span style="color:Blue;">varchar</span>(1) = <span style="color:Blue;">NULL</span> 
+	
+<span style="color:Blue;">AS</span> 
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        p_GetEmployeeList
+
+  Description:	    Return list of employee gatorlink usernames with non-NULL email addresses
+  
+					PARAM NAME		DATATYPE    REQUIRED    NOTES
+  Input:			@Dept			varchar(6)	No			Department Code
+															NULL (default) = No restriction
+
+					@Type			varchar(6)	No			Employee Type [ FAC | STAFF | OPS ]
+															NULL (default) = No restriction
+
+					@Activew		varchar(1)	No			Active Flag
+															NULL (default) = No restriction
+															&#39;Y&#39;			   = Active only
+															&#39;N&#39;			   = Inactive only  
+  
+  Output:			A record set
+  
+  Usage:			Return active Dean staff:
+						EXEC [dbo].[p_GetEmployeeList] 
+							 @Dept		= &#39;DEAN&#39;
+							,@Type		= &#39;STAFF&#39;
+							,@Active	= &#39;Y&#39;
+						;
+  
+  Created:	        04/28/2016 by John Holmes
+
+  Modified:
+  	
+**************************************************************************************************/</span>
+
+<span style="color:Blue;">BEGIN</span>
+	
+	<span style="color:Green;">-- For Testing</span>
+	<span style="color:Green;">-- DECLARE @Dept VARCHAR(6) = &#39;DEAN&#39;, @Type VARCHAR(6) = &#39;STAFF&#39;, @Active VARCHAR(1) = &#39;Y&#39; ;</span>
+	
+	<span style="color:Blue;">SET</span> <span style="color:Blue;">NOCOUNT</span> <span style="color:Blue;">ON</span> ;
+	
+	<span style="color:Green;">-- FAC</span>
+	<span style="color:Blue;">IF</span> @Type = <span style="color:#A31515;">&#39;FAC&#39;</span>
+		<span style="color:Blue;">SELECT</span>
+			 [GatorLinkID]
+			,[Email]
+		<span style="color:Blue;">FROM</span>
+			[BaseViews].[dbo].[pv_WcbaPeople]
+		<span style="color:Blue;">WHERE</span>
+			[Department] = @Dept
+			<span style="color:Blue;">AND</span> [UFPositionType] <span style="color:Blue;">IN</span> (<span style="color:#A31515;">&#39;FAC&#39;</span>)
+			<span style="color:Green;">--AND [UFPositionCategory] != &#39;OPS&#39;</span>
+			<span style="color:Blue;">AND</span> [ActiveFlag] = <span style="color:Magenta;">COALESCE</span>(@Active, [ActiveFlag])
+			<span style="color:Blue;">AND</span> [GatorLinkID] <span style="color:Blue;">IS</span> <span style="color:Blue;">NOT</span> <span style="color:Blue;">NULL</span>
+			<span style="color:Blue;">AND</span> <span style="color:Magenta;">COALESCE</span>([Email], <span style="color:#A31515;">&#39;&#39;</span>) != <span style="color:#A31515;">&#39;&#39;</span>
+		;
+
+	<span style="color:Green;">-- STAFF</span>
+	<span style="color:Blue;">IF</span> @Type = <span style="color:#A31515;">&#39;STAFF&#39;</span>
+		<span style="color:Blue;">SELECT</span>
+			 [GatorLinkID]
+			,[Email]
+		<span style="color:Blue;">FROM</span>
+			[BaseViews].[dbo].[pv_WcbaPeople]
+		<span style="color:Blue;">WHERE</span>
+			[Department] = @Dept
+			<span style="color:Blue;">AND</span> [UFPositionType] = <span style="color:#A31515;">&#39;STAFF&#39;</span>
+			<span style="color:Blue;">AND</span> [UFPositionCategory] != <span style="color:#A31515;">&#39;OPS&#39;</span>
+			<span style="color:Blue;">AND</span> [ActiveFlag] = <span style="color:Magenta;">COALESCE</span>(@Active, [ActiveFlag])
+			<span style="color:Blue;">AND</span> [GatorLinkID] <span style="color:Blue;">IS</span> <span style="color:Blue;">NOT</span> <span style="color:Blue;">NULL</span>
+			<span style="color:Blue;">AND</span> <span style="color:Magenta;">COALESCE</span>([Email], <span style="color:#A31515;">&#39;&#39;</span>) != <span style="color:#A31515;">&#39;&#39;</span>
+		;
+
+	<span style="color:Green;">-- OPS</span>
+	<span style="color:Blue;">IF</span> @Type = <span style="color:#A31515;">&#39;OPS&#39;</span>
+		<span style="color:Blue;">SELECT</span>
+			 [GatorLinkID]
+			,[Email]
+		<span style="color:Blue;">FROM</span>
+			[BaseViews].[dbo].[pv_WcbaPeople]
+		<span style="color:Blue;">WHERE</span>
+			[Department] = @Dept
+			<span style="color:Blue;">AND</span> [UFPositionType] != <span style="color:#A31515;">&#39;FAC&#39;</span>
+			<span style="color:Blue;">AND</span> [UFPositionCategory] = <span style="color:#A31515;">&#39;OPS&#39;</span>
+			<span style="color:Blue;">AND</span> [ActiveFlag] = <span style="color:Magenta;">COALESCE</span>(@Active, [ActiveFlag])
+			<span style="color:Blue;">AND</span> [GatorLinkID] <span style="color:Blue;">IS</span> <span style="color:Blue;">NOT</span> <span style="color:Blue;">NULL</span>
+			<span style="color:Blue;">AND</span> <span style="color:Magenta;">COALESCE</span>([Email], <span style="color:#A31515;">&#39;&#39;</span>) != <span style="color:#A31515;">&#39;&#39;</span>
+		;
+    
+<span style="color:Blue;">END</span> ;
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

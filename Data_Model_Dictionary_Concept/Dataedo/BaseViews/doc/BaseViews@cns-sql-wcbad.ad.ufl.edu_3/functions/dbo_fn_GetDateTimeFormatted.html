@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div id="header" class="cf">
+      <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions" class="ajax" data-target="#right">Functions</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/functions/dbo_fn_GetDateTimeFormatted" class="ajax" data-target="#right">dbo.fn_GetDateTimeFormatted</a></div>
+      <div id="tools">
+        <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+      </div>
+    </div>
+    <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+    <h1><i class=" icon2x-function "></i>dbo.fn_GetDateTimeFormatted</h1>
+    <table class="table table-vertical">
+      <tbody>
+        <tr>
+          <td>Schema</td>
+          <td>dbo</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>fn_GetDateTimeFormatted</td>
+        </tr>
+        <tr>
+          <td>ExtendedProp</td>
+          <td>Returns a formatted DateTime string (for display).</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="collapsible" data-key="input-output">
+      <div class="collapsible-link font-large font-bold">Input/Output</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 40px !important"></th>
+              <th style="width: 100px">Mode</th>
+              <th>Name</th>
+              <th style="width: 170px">Data type</th>
+              <th class="only-desktop">Description</th>
+              <th class="only-desktop">ExtendedProp</th>
+              <th class="only-desktop">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>OUT</td>
+              <td>Returns</td>
+              <td>varchar(50)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>IN</td>
+              <td>dt</td>
+              <td>datetime2(2)</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>IN</td>
+              <td>format</td>
+              <td>int</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>IN</td>
+              <td>uppercase</td>
+              <td>bit</td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+              <td class="only-desktop">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="collapsible" data-key="script">
+      <div class="collapsible-link font-large font-bold">Script</div>
+      <div class="collapsible-area">
+        <table class="table">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">FUNCTION</span> [dbo].[fn_GetDateTimeFormatted](
+    
+	 @dt DATETIME2(2) = <span style="color:Blue;">NULL</span>
+	,@format <span style="color:Blue;">INT</span> = 32
+	,@uppercase <span style="color:Blue;">BIT</span> = 0
+	
+)
+
+<span style="color:Green;">/**************************************************************************************************
+
+  Name:		        fn_GetDateTimeFormatted
+
+  Description:	    Returns a formatted DateTime string (for display).
+  
+  Input:            @dt DATETIME2(2)    - The DateTime object to be formatted.
+                                        NULL = Current DateTime
+                                      
+                    @format INT         - The format to return.
+                    
+                                        @format Pattern                             Sample
+                                        ------- -------------------------------     --------------------------
+                                            1	DD Mon YY	                        25 Nov 56
+                                            2	DD Mon YYYY	                        25 Nov 1956
+                                            3   DD Mon YYYY HH:MM:SS.MM (12h)	    25 Nov 1956 3:23:32:00 pm
+                                            4	DD Mon YYYY HH:MM:SS.MM (24h)	    25 Nov 1956 15:23:32:00
+                                            5	DD Month	                        25 November
+                                            6	DD Month YY	                        25 November 56
+                                            7	DD Month YYYY	                    25 November 1956
+                                            8	DD.MM.YY	                        25.11.56
+                                            9	DD.MM.YYYY	                        25.11.1956
+                                           10	DD/MM/YY	                        25/11/56
+                                           11	DD/MM/YYYY	                        25/11/1956
+                                           12	DDMMYY	                            251156
+                                           13	DD-MM-YY	                        25-11-56
+                                           14	DDMMYYYY	                        25111956
+                                           15	DD-MM-YYYY	                        25-11-1956
+                                           16	DD-Mon-YY	                        25-Nov-56
+                                           17	DD-Mon-YYYY	                        25-Nov-1956
+                                           18   HH:MM:SS (12h)                      3:23:32 pm
+                                           19	HH:MM:SS (24h)                      15:23:32
+                                           20   HH:MM:SS.MM (12h)                   3:23:32.00 pm
+                                           21	HH:MM:SS.MM (24h)	                15:23:32:00
+                                           22	MM/DD/YY	                        11/25/56
+                                           23	MM/DD/YYYY	                        11/25/1956
+                                           24	MM/YY	                            11/56
+                                           25	MM/YYYY	                            11/1956
+                                           26	MMDDYY	                            112556
+                                           27	MM-DD-YY	                        11-25-56
+                                           28	MMDDYYYY	                        11251956
+                                           29	MM-DD-YYYY	                        11-25-1956
+                                           30	MM-YY	                            11-56
+                                           31	MM-YYYY	                            11-1956
+                                           32	Mon DD, YYYY HH:MI (12h)		    Nov 25, 1956 3:23 pm
+                                           33   Mon DD, YYYY HH:MI (24h)		    Nov 25, 1956 15:23
+                                           34   Mon DD, YYYY HH:MI:SS (12h)		    Nov 25, 1956 3:23:32 pm
+                                           35   Mon DD, YYYY HH:MI:SS (24h)		    Nov 25, 1956 15:23:32
+                                           36	Mon DD, YYYY HH:MI:SS.MM (12h)	    Nov 25, 1956 3:23:32.00 pm
+                                           37   Mon DD, YYYY HH:MI:SS.MM (24h)	    Nov 25, 1956 15:23:32.00
+                                           38	Mon DD, YY	                        Nov 25, 56
+                                           39	Mon DD, YYYY	                    Nov 25, 1956
+                                           40	Mon YYYY	                        Nov 1956
+                                           41	Month DD	                        November 25
+                                           42	Month DD, YYYY	                    November 25, 1956
+                                           43	Month YYYY	                        November 1956
+                                           44	Mon-YY	                            Nov-56
+                                           45	Mon-YYYY	                        Nov-1956
+                                           46	YY.MM.DD	                        56.11.25
+                                           47	YY/MM	                            56/11
+                                           48	YY/MM/DD	                        56/11/25
+                                           49	YY-MM	                            56-11
+                                           50	YYMMDD	                            561125
+                                           51	YY-MM-DD	                        56-11-25
+                                           52	YYYY.MM.DD	                        1956.11.25
+                                           53	YYYY/MM	                            1956/11
+                                           54	YYYY/MM/DD	                        1956/11/25
+                                           55	YYYY-MM	                            1956-11
+                                           56	YYYYMMDD	                        19561125
+                                           57	YYYY-MM-DD	                        1956-11-25
+                                           58   YYYY-MM-DD HH:MI:SS (12h)	        1956-11-25 3:23:32 pm
+                                           59	YYYY-MM-DD HH:MI:SS (24h)	        1956-11-25 15:23:32
+                                           60   YYYY-MM-DD HH:MI:SS.MM (12h)	    1956-11-25 3:23:32.00 pm
+                                           61	YYYY-MM-DD HH:MI:SS.MM (24h)	    1956-11-25 15:23:32.00
+                                      
+                    @uppercase BIT      - Convert returned string to all uppercase.
+                                          0 = Do not uppercase
+                                          1 = Uppercase
+  
+  Usage:            [BaseViews].[dbo].[fn_GetDateTimeFormatted](@dt, @formt, @uppercase)
+  
+                    Examples: 
+                        SELECT [BaseViews].[dbo].[fn_GetDateTimeFormatted](DEFAULT, DEFAULT, DEFAULT)
+                        Returns: DateTime sting using default parameter values (NULL, 32, 0), eg:  &#39;Jul 17, 2012 12:52 pm&#39;
+                        
+                        SELECT [BaseViews].[dbo].[fn_GetDateTimeFormatted](NULL,18,0)
+                        Returns: Current time formatted as &#39;11:29:31 am&#39;
+                        
+                        SELECT [BaseViews].[dbo].[fn_GetDateTimeFormatted](NULL,23,0)
+                        Returns: Current date and time formatted as &#39;07/17/2012&#39;
+                        
+                        SELECT [BaseViews].[dbo].[fn_GetDateTimeFormatted](&#39;1956-11-25 23:23:32&#39;,42,1)
+                        Returns: &#39;NOVEMBER 25, 1956&#39;
+
+  Created:	        07/17/2012 by John Holmes
+
+  Modified:
+  	
+**************************************************************************************************/</span>
+
+<span style="color:Blue;">RETURNS</span> <span style="color:Blue;">VARCHAR</span>(50)
+
+<span style="color:Blue;">AS</span>
+
+<span style="color:Blue;">BEGIN</span>
+    
+	<span style="color:Green;">-- Declare the return variable</span>
+	<span style="color:Blue;">DECLARE</span> @out <span style="color:Blue;">AS</span> [VARCHAR](50) ;
+	
+	<span style="color:Green;">-- If no datetime obj passed in, use current datetime</span>
+	<span style="color:Blue;">IF</span> @dt <span style="color:Blue;">IS</span> <span style="color:Blue;">NULL</span> 
+	    <span style="color:Blue;">SET</span> @dt = <span style="color:Magenta;">GETDATE</span>() ;
+	    
+	<span style="color:Green;">-- Do the work	</span>
+	<span style="color:Blue;">SET</span> @out = 
+	    <span style="color:Blue;">CASE</span> @format
+            <span style="color:Blue;">WHEN</span>  1 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(9), @dt, 6)
+            <span style="color:Blue;">WHEN</span>  2 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(11), @dt, 106)
+            <span style="color:Blue;">WHEN</span>  3 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(11), @dt, 106) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">LTRIM</span>(<span style="color:Blue;">LEFT</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109),<span style="color:Magenta;">LEN</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109))-12),8) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">LOWER</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109),2)))
+            <span style="color:Blue;">WHEN</span>  4 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(24), @dt, 113)
+            <span style="color:Blue;">WHEN</span>  5 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(<span style="color:Magenta;">DAY</span>(@dt) <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(2)) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Blue;">DATENAME</span>(MM, @dt)
+            <span style="color:Blue;">WHEN</span>  6 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(<span style="color:Magenta;">DAY</span>(@dt) <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(2)) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Blue;">DATENAME</span>(MM, @dt) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CAST</span>(<span style="color:Magenta;">YEAR</span>(@dt) <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(4)), 2)
+            <span style="color:Blue;">WHEN</span>  7 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CAST</span>(<span style="color:Magenta;">DAY</span>(@dt) <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(2)) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Blue;">DATENAME</span>(MM, @dt) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">CAST</span>(<span style="color:Magenta;">YEAR</span>(@dt) <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(4))
+            <span style="color:Blue;">WHEN</span>  8 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(8), @dt, 4)
+            <span style="color:Blue;">WHEN</span>  9 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(10), @dt, 104)
+            <span style="color:Blue;">WHEN</span> 10 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(8), @dt, 3)
+            <span style="color:Blue;">WHEN</span> 11 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(10), @dt, 103)
+            <span style="color:Blue;">WHEN</span> 12 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">REPLACE</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(10), @dt, 3), <span style="color:#A31515;">&#39;/&#39;</span>, <span style="color:#A31515;">&#39;&#39;</span>)
+            <span style="color:Blue;">WHEN</span> 13 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(8), @dt, 5)
+            <span style="color:Blue;">WHEN</span> 14 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">REPLACE</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(10), @dt, 103), <span style="color:#A31515;">&#39;/&#39;</span>, <span style="color:#A31515;">&#39;&#39;</span>)
+            <span style="color:Blue;">WHEN</span> 15 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(10), @dt, 105)
+            <span style="color:Blue;">WHEN</span> 16 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">REPLACE</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(9), @dt, 6), <span style="color:#A31515;">&#39; &#39;</span>, <span style="color:#A31515;">&#39;-&#39;</span>)
+            <span style="color:Blue;">WHEN</span> 17 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">REPLACE</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(11), @dt, 106), <span style="color:#A31515;">&#39; &#39;</span>, <span style="color:#A31515;">&#39;-&#39;</span>)
+            <span style="color:Blue;">WHEN</span> 18 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">LTRIM</span>(<span style="color:Blue;">LEFT</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109),<span style="color:Magenta;">LEN</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109))-12),8) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">LOWER</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109),2)))
+            <span style="color:Blue;">WHEN</span> 19 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(8), @dt, 108)
+            <span style="color:Blue;">WHEN</span> 20 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">LTRIM</span>(<span style="color:Blue;">LEFT</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109),<span style="color:Magenta;">LEN</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109))-12),11) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">LOWER</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109),2)))
+            <span style="color:Blue;">WHEN</span> 21 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(12), @dt, 114)
+            <span style="color:Blue;">WHEN</span> 22 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(8), @dt, 1)
+            <span style="color:Blue;">WHEN</span> 23 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(10), @dt, 101)
+            <span style="color:Blue;">WHEN</span> 24 <span style="color:Blue;">THEN</span> <span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(8), @dt, 3), 5)
+            <span style="color:Blue;">WHEN</span> 25 <span style="color:Blue;">THEN</span> <span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(8), @dt, 103), 7)
+            <span style="color:Blue;">WHEN</span> 26 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">REPLACE</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(10), @dt, 1), <span style="color:#A31515;">&#39;/&#39;</span>, <span style="color:#A31515;">&#39;&#39;</span>)
+            <span style="color:Blue;">WHEN</span> 27 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(8), @dt, 10)
+            <span style="color:Blue;">WHEN</span> 28 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">REPLACE</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(10), @dt, 101), <span style="color:#A31515;">&#39;/&#39;</span>, <span style="color:#A31515;">&#39;&#39;</span>)
+            <span style="color:Blue;">WHEN</span> 29 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(10), @dt, 110)
+            <span style="color:Blue;">WHEN</span> 30 <span style="color:Blue;">THEN</span> <span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(8), @dt, 5), 5)
+            <span style="color:Blue;">WHEN</span> 31 <span style="color:Blue;">THEN</span> <span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(10), @dt, 105), 7)
+            <span style="color:Blue;">WHEN</span> 32 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(12), @dt, 107) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">LTRIM</span>(<span style="color:Blue;">LEFT</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109),<span style="color:Magenta;">LEN</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109))-12),5) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">LOWER</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109),2)))
+            <span style="color:Blue;">WHEN</span> 33 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(12), @dt, 107) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Blue;">LEFT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(8), @dt, 108),5)
+            <span style="color:Blue;">WHEN</span> 34 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(12), @dt, 107) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">LTRIM</span>(<span style="color:Blue;">LEFT</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109),<span style="color:Magenta;">LEN</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109))-12),8) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">LOWER</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109),2)))
+            <span style="color:Blue;">WHEN</span> 35 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(12), @dt, 107) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(8), @dt, 108)
+            <span style="color:Blue;">WHEN</span> 36 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(12), @dt, 107) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">LTRIM</span>(<span style="color:Blue;">LEFT</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109),<span style="color:Magenta;">LEN</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109))-12),11) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">LOWER</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109),2)))
+            <span style="color:Blue;">WHEN</span> 37 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(12), @dt, 107) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(12), @dt, 114)
+            <span style="color:Blue;">WHEN</span> 38 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(10), @dt, 7)
+            <span style="color:Blue;">WHEN</span> 39 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(12), @dt, 107)
+            <span style="color:Blue;">WHEN</span> 40 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">SUBSTRING</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(11), @dt, 113), 4, 8)
+            <span style="color:Blue;">WHEN</span> 41 <span style="color:Blue;">THEN</span> <span style="color:Blue;">DATENAME</span>(MM, @dt) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">CAST</span>(<span style="color:Magenta;">DAY</span>(@dt) <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(2))
+            <span style="color:Blue;">WHEN</span> 42 <span style="color:Blue;">THEN</span> <span style="color:Blue;">DATENAME</span>(MM, @dt) + <span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(12), @dt, 107), 9)
+            <span style="color:Blue;">WHEN</span> 43 <span style="color:Blue;">THEN</span> <span style="color:Blue;">DATENAME</span>(MM, @dt) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">CAST</span>(<span style="color:Magenta;">YEAR</span>(@dt) <span style="color:Blue;">AS</span> <span style="color:Blue;">VARCHAR</span>(4))
+            <span style="color:Blue;">WHEN</span> 44 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">REPLACE</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(9), @dt, 6), 6), <span style="color:#A31515;">&#39; &#39;</span>, <span style="color:#A31515;">&#39;-&#39;</span>)
+            <span style="color:Blue;">WHEN</span> 45 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">REPLACE</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(11), @dt, 106), 8), <span style="color:#A31515;">&#39; &#39;</span>, <span style="color:#A31515;">&#39;-&#39;</span>)
+            <span style="color:Blue;">WHEN</span> 46 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(8), @dt, 2)
+            <span style="color:Blue;">WHEN</span> 47 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(5), @dt, 11)
+            <span style="color:Blue;">WHEN</span> 48 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(8), @dt, 11)
+            <span style="color:Blue;">WHEN</span> 49 <span style="color:Blue;">THEN</span> <span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(7), @dt, 120), 5)
+            <span style="color:Blue;">WHEN</span> 50 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(6), @dt, 12)
+            <span style="color:Blue;">WHEN</span> 51 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">REPLACE</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(8), @dt, 11), <span style="color:#A31515;">&#39;/&#39;</span>, <span style="color:#A31515;">&#39;-&#39;</span>)
+            <span style="color:Blue;">WHEN</span> 52 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(10), @dt, 102)
+            <span style="color:Blue;">WHEN</span> 53 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(7), @dt, 111)
+            <span style="color:Blue;">WHEN</span> 54 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(10), @dt, 111)
+            <span style="color:Blue;">WHEN</span> 55 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(7), @dt, 120)
+            <span style="color:Blue;">WHEN</span> 56 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(8), @dt, 112)
+            <span style="color:Blue;">WHEN</span> 57 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">REPLACE</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(10), @dt, 111), <span style="color:#A31515;">&#39;/&#39;</span>, <span style="color:#A31515;">&#39;-&#39;</span>)
+            <span style="color:Blue;">WHEN</span> 58 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">REPLACE</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(10), @dt, 111), <span style="color:#A31515;">&#39;/&#39;</span>, <span style="color:#A31515;">&#39;-&#39;</span>) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">LTRIM</span>(<span style="color:Blue;">LEFT</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109),<span style="color:Magenta;">LEN</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109))-12),8) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">LOWER</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109),2)))
+            <span style="color:Blue;">WHEN</span> 59 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(19), @dt, 120)
+            <span style="color:Blue;">WHEN</span> 60 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">REPLACE</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(10), @dt, 111), <span style="color:#A31515;">&#39;/&#39;</span>, <span style="color:#A31515;">&#39;-&#39;</span>) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">LTRIM</span>(<span style="color:Blue;">LEFT</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109),<span style="color:Magenta;">LEN</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109))-12),11) + <span style="color:#A31515;">&#39; &#39;</span> + <span style="color:Magenta;">LOWER</span>(<span style="color:Blue;">RIGHT</span>(<span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(26), @dt, 109),2)))
+            <span style="color:Blue;">WHEN</span> 61 <span style="color:Blue;">THEN</span> <span style="color:Magenta;">CONVERT</span>(<span style="color:Blue;">VARCHAR</span>(23), @dt, 121)
+	        <span style="color:Blue;">ELSE</span> <span style="color:#A31515;">&#39;Invalid @format input specified.&#39;</span>
+	    <span style="color:Blue;">END</span> ;
+	    
+	<span style="color:Blue;">IF</span> @uppercase = 1
+	    <span style="color:Blue;">SET</span> @out = <span style="color:Magenta;">UPPER</span>(@out) ;
+	
+	<span style="color:Green;">-- Return the result</span>
+	<span style="color:Blue;">RETURN</span> @out ;
+	
+<span style="color:Blue;">END</span> ;   <span style="color:Green;">-- fn_GetDateTimeFormatted()</span>
+</pre></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></body>
+</html>

@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns:ms="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="cf">
+        <div id="breadcrumb" class="font-small"><a href="#index" class="ajax" data-target="#right">Repository</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/home" class="ajax" data-target="#right">BaseViews@cns-sql-wcbad.ad.ufl.edu</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views" class="ajax" data-target="#right">Views</a> › <a href="#doc/BaseViews@cns-sql-wcbad.ad.ufl.edu_3/views/dbo_bv_UFDepartments" class="ajax" data-target="#right">dbo.bv_UFDepartments</a></div>
+        <div id="tools">
+          <div class="font-size"><a data-class="font-size-small" class="small"> A </a><a data-class="font-size-medium" class="medium"> A </a><a data-class="font-size-large" class="large"> A </a></div>
+        </div>
+      </div>
+      <div class="trial trial-content"> Generated with <a href="https://dataedo.com">Dataedo</a> (Trial) </div>
+      <h1><i class=" icon2x-view "></i>dbo.bv_UFDepartments</h1>
+      <table class="table table-vertical">
+        <tbody>
+          <tr>
+            <td>Schema</td>
+            <td>dbo</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>bv_UFDepartments</td>
+          </tr>
+          <tr>
+            <td>ExtendedProp</td>
+            <td>UF College Departments</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="collapsible" data-key="uses">
+        <div class="collapsible-link font-large font-bold">Uses</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="dependency-node" style="font-weight: bold" data-node-id="1" data-parent-node-id="0">
+                <td>
+                  <div style="margin-left: 0px">
+                    <div style="float: left"><span class="expand" style="display: none"><i class="icon-expand"></i></span><span class="collapse"><i class="icon-collapse"></i></span><i class="&#xA;                  icon-view" title="View"></i></div>
+                    <div style="margin-left: 44px">dbo.bv_UFDepartments</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dependency-node" style="" data-node-id="2" data-parent-node-id="1">
+                <td>
+                  <div style="margin-left: 22px">
+                    <div style="float: left"><span><i class="icon-none"></i></span><i class="&#xA;                  icon-used-by-unresolved" title="Uses "></i></div>
+                    <div style="margin-left: 44px">BaseData.bd.bt_DEPARTMENTS</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapsible" data-key="script">
+        <div class="collapsible-link font-large font-bold">Script</div>
+        <div class="collapsible-area">
+          <table class="table">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">CREATE</span> <span style="color:Blue;">VIEW</span> [dbo].[bv_UFDepartments] <span style="color:Blue;">AS</span> 
+    
+<span style="color:Green;">/*****************************************************************************************
+  Name:		    bv_UFDepartments
+
+  Description:  UF College Departments
+
+  Created:	    09/25/2009 by John Holmes
+
+  Modified:     09/06/2011 by John Holmes
+                v1.1.0 - Source object renaming in support of ERP (Oracle) Warehouse.
+                
+*****************************************************************************************/</span> 
+    
+<span style="color:Blue;">SELECT</span>  
+	[UF_DEP_CD] <span style="color:Blue;">AS</span> [DepartmentCode],          <span style="color:Green;">-- Department Code</span>
+	[UF_COLLEGE_CD] <span style="color:Blue;">AS</span> [CollegeCode],         <span style="color:Green;">-- College Code</span>
+	[UF_DEP_NAME] <span style="color:Blue;">AS</span> [Name],                <span style="color:Green;">-- Department Name</span>
+	[UF_DEP_TITLE] <span style="color:Blue;">AS</span> [Title],                <span style="color:Green;">-- Department Title</span>
+	[UF_DEP_ADDRESS] <span style="color:Blue;">AS</span> [Address],          <span style="color:Green;">-- Department Address</span>
+	[UF_DEP_PHONE] <span style="color:Blue;">AS</span> [Phone],                <span style="color:Green;">-- Department Phone</span>
+	[UF_HEADING] <span style="color:Blue;">AS</span> [Heading],                <span style="color:Green;">-- Heading</span>
+	[UF_BUILDING] <span style="color:Blue;">AS</span> [Building],              <span style="color:Green;">-- Building</span>
+	[UF_ROOM_NUMBER] <span style="color:Blue;">AS</span> [RoomNumber],         <span style="color:Green;">-- Room Number</span>
+	[UF_LVL_ROOM_NO] <span style="color:Blue;">AS</span> [RoomLevel],          <span style="color:Green;">-- Level of Room</span>
+	[UF_PRFX_ROOM_NO] <span style="color:Blue;">AS</span> [RoomPrefix],        <span style="color:Green;">-- Prefix of Room</span>
+<span style="color:Green;">--	[UF_WAIT_LISTS] AS [WaitList],            -- Waiting Lists? (Y/N)</span>
+<span style="color:Green;">--	[UF_DROPADD_APPT] AS [AppointmentCheck],  -- Drop/Add Appointment Check?</span>
+<span style="color:Green;">--	[UF_DAROPADD_PH] AS [DropAddPhone],       -- Drop/Add Local Phone</span>
+<span style="color:Green;">--	[UF_ACCOUNT_NO] AS [GLAccountNumber],     -- GL Account Number</span>
+<span style="color:Green;">--	[UF_BUDGET_CD] AS [BudgetCode],           -- Budget Code</span>
+<span style="color:Green;">--	[UF_CIP_CD] AS [CIPNumber],               -- CIP Number</span>
+<span style="color:Green;">--	[UF_CIP_CD_OLD] AS [OldCIPNumber],        -- Old CIP Number</span>
+<span style="color:Green;">--	[UF_WWW_SOC_KEY] AS [WWWSOCKey],          -- WWW SOC Key</span>
+<span style="color:Green;">--  [UF_MODIFIED] AS [LastModifiedDate],      -- Last Modified Timestamp</span>
+	[UF_MOD_DTTM] <span style="color:Blue;">AS</span> [LastModifiedDate],      <span style="color:Green;">-- Last Modified Timestamp</span>
+	[LOAD_DTTM] <span style="color:Blue;">AS</span> [LoadDate]                 <span style="color:Green;">-- Load Timestamp</span>
+<span style="color:Blue;">FROM</span> 
+    [BaseData].[bd].[bt_DEPARTMENTS]
+</pre></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="margin-top: 15px"><span class="font-gray font-small font-small">
+        Exported: <b>2018-06-07 16:44</b>, Last imported: <b>2018-06-07 16:41</b></span></div><script>
+      $('.dependency-node .expand').click(function () {
+        expand(this, true);
+      });
+
+      $('.dependency-node .collapse').click(function () {
+        collapse(this, true);
+      });
+    </script></div>
+  </body>
+</html>
